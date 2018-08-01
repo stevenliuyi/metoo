@@ -3,6 +3,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap/dist/css/bootstrap-theme.css'
 import { Grid } from 'react-bootstrap'
+import { FaTimes } from 'react-icons/fa'
 import data from '../data/data.js'
 import PersonDetail from './PersonDetail'
 
@@ -15,7 +16,9 @@ class App extends Component {
     return (
       <div className='App'>
         <Grid>
-          <div className="h1"><strong>#MeToo 中国</strong></div>
+          <a href='/'>
+            <div id='title' className="h1"><strong>#MeToo <span id='times'><FaTimes size={30} /></span> 中国</strong></div>
+          </a>
           <div id='info'>
            { this.state.currentPerson == null ?
              <div>
@@ -35,9 +38,10 @@ class App extends Component {
           <div id='people-grid'>
           {
             Object.keys(data).map(name => (
-              <div className='person' key={`person-${name}`} onClick={() => this.setState({ currentPerson: name })}>
+              <div className={`person ${ this.state.currentPerson === name ? 'person-highlight' : ''}`}
+                key={`person-${name}`} onClick={() => this.setState({ currentPerson: name })}>
                 <img className='thumb' src={`/images/${data[name].photo}`} width={75} height={75} alt={name} />
-                <div>{ name }</div>
+                <div className='person-name'>{ name }</div>
               </div>
             ))
           }

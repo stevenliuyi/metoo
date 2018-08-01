@@ -34,16 +34,28 @@
   font-weight: normal;  
 }
 
+.person:hover,
+.person-highlight {
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);
+  font-weight: bold;  
+}
+
 .thumb {
   border-radius: 50%;
   border: 2px solid #ccc;
   margin: 5px;
 }
 
-.person:hover {
-  -webkit-filter: grayscale(0%);
-  filter: grayscale(0%);
-  font-weight: bold;  
+.person:hover > .thumb,
+.person-highlight > .thumb {
+  border: 2px solid #10e3ea;
+}
+
+.person:hover > .person-name,
+.person-highlight > .person-name {
+  background-color: #10e3ea;
+  color: #fff;
 }
 
 #info {
@@ -56,6 +68,25 @@
   font-weight: bold;
   font-size: 3vh;
   color: #fff;
+  overflow-y: auto;
+}
+
+#title {
+  color: #000 !important;
+}
+
+#title:hover {
+  color: #10e3ea !important;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+
+#times {
+  color: #10e3ea;
+  vertical-align: middle;
 }
 
 #number {
@@ -69,6 +100,8 @@
   justify-content: center;
   text-align: center;
   padding-top: 30px;
+  overflow-y: auto;
+  max-height: 40vh;
 }
 
 #detail-box {
@@ -99,11 +132,15 @@
   align-self: center;
   font-size: 20px;
   color: #10e3ea;
+  font-family: serif;
+  font-weight: bold;
 }
 
 #quote-by {
   font-size: 14px;
   padding-top: 5px;
+  font-family: sans-serif;
+  font-weight: normal;
 }
 
 .intro {
