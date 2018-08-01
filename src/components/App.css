@@ -99,7 +99,7 @@ a {
   flex-wrap: wrap;
   justify-content: center;
   text-align: center;
-  padding-top: 30px;
+  padding-top: 10px;
   overflow-y: auto;
   max-height: 40vh;
 }
@@ -178,4 +178,9 @@ a {
 .tooltip > .tooltip-inner {
   color: #000 !important;
   background-color: #ccc !important;
+}
+
+#subtitle {
+  padding-top: -20px;
+  padding-bottom: 10px;
 }

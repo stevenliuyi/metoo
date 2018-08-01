@@ -19,6 +19,9 @@ class App extends Component {
           <a href='/'>
             <div id='title' className="h1"><strong>#MeToo <span id='times'><FaTimes size={30} /></span> 中国</strong></div>
           </a>
+          <div id='subtitle' className='text-muted'>
+            人类历史上最大规模的屠杀，是房思琪式的强暴。
+          </div>
           <div id='info'>
            { this.state.currentPerson == null ?
              <div>
@@ -40,7 +43,7 @@ class App extends Component {
             Object.keys(data).sort().map(name => (
               <div className={`person ${ this.state.currentPerson === name ? 'person-highlight' : ''}`}
                 key={`person-${name}`} onClick={() => this.setState({ currentPerson: name })}>
-                <img className='thumb' src={`/images/${data[name].photo}`} width={75} height={75} alt={name} />
+                <img className='thumb' src={`/images/${data[name].photo}`} width={72} height={72} alt={name} />
                 <div className='person-name'>{ name }</div>
               </div>
             ))
