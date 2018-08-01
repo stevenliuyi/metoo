@@ -1,15 +1,35 @@
 import React, { Component } from 'react';
+import { Label } from 'react-bootstrap'
+import Links from './Links'
 
 class PersonDetail extends Component {
   render() {
+    const { intro, date, details, accusations, links, wikipedia, zhihu, quote, quoteby } = this.props.data
     return (
       <div id='detail-box'>
-        <div id='detail'>
+        <div id='person-information'>
           <div>{ this.props.name }</div>
-          <div id='intro'>{ this.props.data.intro }</div>
+          <div className='intro'>{ intro }</div>
+          <div className='intro'>
+          {
+            `${date.getFullYear()}年${date.getMonth()+1}月${date.getDate()}日被指控`
+          }
+          </div>
+          <div id='detail'>{ details }</div>
+          <span className='link'><Label>指控</Label>
+            <Links links={accusations} />
+          </span>
+          <span className='link' style={{ marginLeft: '10px' }}><Label>链接</Label>
+            <Links links={links} />
+            <Links links={wikipedia} type='wikipedia' />
+            <Links links={zhihu} type='zhihu' />
+          </span>
         </div>
         <div id='quote'>
-          { `“${this.props.data.quote }”` }
+          { `“${quote}”` }
+          <div id='quote-by'>
+            { `── ${quoteby}` }
+          </div>
         </div>
       </div>
     );

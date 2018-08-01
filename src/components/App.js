@@ -36,7 +36,7 @@ class App extends Component {
           {
             Object.keys(data).map(name => (
               <div className='person' key={`person-${name}`} onClick={() => this.setState({ currentPerson: name })}>
-                <img className='thumb' src={`/images/${data[name].photo}`} width={100} height={100} alt={name} />
+                <img className='thumb' src={`/images/${data[name].photo}`} width={75} height={75} alt={name} />
                 <div>{ name }</div>
               </div>
             ))
