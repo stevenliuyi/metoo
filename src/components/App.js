@@ -43,7 +43,7 @@ class App extends Component {
             Object.keys(data).sort().map(name => (
               <div className={`person ${ this.state.currentPerson === name ? 'person-highlight' : ''}`}
                 key={`person-${name}`} onClick={() => this.setState({ currentPerson: name })}>
-                <img className='thumb' src={`/images/${data[name].photo}`} width={72} height={72} alt={name} />
+                <img className='thumb' src={data[name].photo != null ? `/images/${data[name].photo}` : '/images/avatar.jpg'} width={72} height={72} alt={name} />
                 <div className='person-name'>{ name }</div>
               </div>
             ))
