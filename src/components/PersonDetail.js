@@ -16,14 +16,18 @@ class PersonDetail extends Component {
           }
           </div>
           <div id='detail'>{ details }</div>
-          <span className='link'><Label>指控</Label>
-            <Links links={accusations} />
-          </span>
-          <span className='link' style={{ marginLeft: '10px' }}><Label>链接</Label>
-            <Links links={links} />
-            <Links links={wikipedia} type='wikipedia' />
-            <Links links={zhihu} type='zhihu' />
-          </span>
+          { accusations &&
+            <span className='link' style={{ marginRight: '10px' }}><Label>指控</Label>
+              <Links links={accusations} />
+            </span>
+          }
+          { (links || wikipedia || zhihu) &&
+            <span className='link'><Label>链接</Label>
+              <Links links={links} />
+              <Links links={wikipedia} type='wikipedia' />
+              <Links links={zhihu} type='zhihu' />
+            </span>
+          }
         </div>
         <div id='quote'>
           { `“${quote}”` }

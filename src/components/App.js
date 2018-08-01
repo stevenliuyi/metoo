@@ -20,13 +20,13 @@ class App extends Component {
            { this.state.currentPerson == null ?
              <div>
                <div>
-                 2017年10月Me Too运动爆发后，以下
+                 2017年 #MeToo 运动爆发后，以下
                </div>
                <div id='number'>
                  {Object.keys(data).length}
                </div>
                <div>
-               位中国公众人物遭到了性骚扰或性侵犯的指控。
+               位中国公众人物被指控性骚扰或性侵犯。
                </div>
              </div>
              : <PersonDetail name={this.state.currentPerson} data={data[this.state.currentPerson]} />
