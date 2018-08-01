@@ -87,7 +87,7 @@ const data = {
     date: new Date('2018-3-10'),
     details: '美国卫斯理安大学（Wesleyan University）王敖在豆瓣与知乎上指控徐钢长期性侵学生，此后亦有多名受害者发声揭露徐钢的性骚扰、性侵犯行径。',
     quote: '看到这个帖子里徐钢的照片仍会生理性恶心，脑海中一直闪回噩梦般的经历。徐钢的丑恶嘴脸和各种变态性癖好，依然历历在目。',
-    quoteby: '原UIUC 学生 Survivor2018（化名）',
+    quoteby: '原 UIUC 学生 Survivor2018（化名）',
     accusations: [ { url: 'https://www.zhihu.com/question/268596088/answer/339312013', title: '王敖在知乎对徐钢的指控' } ],
     zhihu: [ { url: 'https://www.zhihu.com/question/268596088', title: '怎么看Wesleyan University 任教的王敖教授发出示警，指UIUC 的徐钢是性侵惯犯？' }, { url: 'https://www.zhihu.com/question/268889325', title: '如何评价UIUC 教授徐钢造谣并威胁揭露他的王敖教授？' } ]
   },
@@ -138,7 +138,7 @@ const data = {
     details: '作家春树在豆瓣上指控张弛曾对其性侵，并使其得急性性病。',
     quote: '当时我不但生气害怕还非常失望，因为我对我们共同认识的朋友说了这件事，他不置可否。',
     quoteby: '作家春树',
-    accusations: [ { url: 'http://web.okjike.com/message-detail/5b58848e0a69bb00167f1c53/originalPost', title: '春树指控存档' }]
+    accusations: [ { url: 'https://www.douban.com/people/1292389/status/2199489443/', title: '春树豆瓣指控' }]
   },
   孙冕: {
     photo: 'Sun_Mian.jpg',
@@ -147,7 +147,7 @@ const data = {
     details: '作家春树在豆瓣上指控曾是其领导的孙冕在她刚入职时将她带回了住处并侵犯了她。',
     quote: '当时我还要假装一切都没有发生，实际上第二天我就颓了。',
     quoteby: '作家春树',
-    accusations: [ { url: 'http://web.okjike.com/message-detail/5b58848e0a69bb00167f1c53/originalPost', title: '春树指控存档' }]
+    accusations: [ { url: 'https://www.douban.com/people/1292389/status/2199506255/', title: '春树豆瓣指控' }]
   },
   熊培云: {
     photo: 'Xiong_Peiyun.jpg',
@@ -158,6 +158,75 @@ const data = {
     quoteby: '女权活动人士赵思乐',
     accusations: [ { url: 'https://www.weibo.com/1287965472/GsuE9DJq8?type=comment&pcfrom=msgbox#_rnd1533119801718', title: '本不该需要的声明' } ],
     zhihu: [ { url: 'https://www.zhihu.com/question/286901848', title: '如何看待熊培云“性骚扰”事件?' } ]
+  },
+  释学诚: {
+    photo: 'Shi_Xuecheng.jpg',
+    intro: '中国佛教学会会长、全国政协常委、北京龙泉寺住持',
+    date: new Date('2018-07-15'),
+    details: '北京龙泉寺两位都监释贤佳、释贤启举报释学诚性侵多位出家女弟子，并对其实施精神控制。',
+    quote: '我现在晚上睡觉都不想穿衣服。师父让我想象过多少次跟师父一起睡的场景，现在已经成为习惯。',
+    quoteby: '比丘尼释贤丙（化名）发给释学诚的短信',
+    accusations: [ { url: 'https://drive.google.com/file/d/1wnhh-iXEV283nfUn5a1wbJYH8bv9bYYt/view', title: '检举文件' } ],
+    wikipedia: [ { url: 'https://zh.wikipedia.org/wiki/%E9%87%8A%E5%AD%A6%E8%AF%9A#%E7%96%91%E4%BC%BC%E4%B8%8D%E6%B3%95%E8%A1%8C%E4%B8%BA', title: '释学诚#疑似不法行为' } ]
+  },
+  信力建: {
+    photo: 'Xin_Lijian.jpg',
+    intro: '民办教育专家、信孚教育集团创始人',
+    date: new Date('2018-07-25'),
+    details: '媒体人何满在 Facebook 上指控信力建于2007年在酒店房间内对其性骚扰。',
+    quote: '他突然整个人扑过来，抱住我，嘴还往我脸上亲，我整个人惊呆了，僵住了。',
+    quoteby: '何满',
+    accusations: [ { url: 'https://www.facebook.com/liankihe/posts/993967040783438', title: '何满 Facebook 状态' } ],
+    links: [ { url: 'http://culture.dwnews.com/renwen/news/2018-07-26/60073361.html', title: '信孚集团创始人被指控性骚扰 曾以敢言而闻名' } ]
+  },
+  张锦雄: {
+    photo: 'Zhang_Jinxiong.jpg',
+    intro: '同性恋运动人士，香港彩虹与彩虹中国创办人',
+    date: new Date('2018-07-24'),
+    details: '三位匿名男性举报人指控张锦雄在分享会期间对其有性骚扰举动。' ,
+    quote: '他就紧贴着站我后面，手搭着我在后面蹭。蹭了一会儿我能感觉到他明显硬了并试图在那里顶。',
+    quoteby: '小L（化名）',
+    accusations: [ { url: 'https://mp.weixin.qq.com/s/mMvLwDCmk696s3dcgGOFvg', title: '举报张锦雄性骚扰' } ]
+  },
+  赵秉志: {
+    photo: 'Zhao_Binzhi.jpg',
+    intro: '原北京师范大学刑事法律科学研究院院长',
+    date: new Date('2018-07-24'),
+    details: '赵秉志因生活作风问题被北师大免职处分。',
+    links: [ { url: 'https://m.sohu.com/a/243087690_118622', title: '因生活作风问题 知名法学家赵秉志被处分' } ],
+    zhihu: [ { url: 'https://www.zhihu.com/question/286732744', title: '如何看待北师大刑法学院院长、知名法学家赵秉志因生活作风问题被处分？' } ]
+  },
+  陈小武: {
+    photo: 'Chen_Xiaowu.jpg',
+    intro: '原长江学者特聘教授、北京航空航天大学计算机学院教授',
+    date: new Date('2017-10-15'),
+    details: '北京航空航天大学博士罗茜茜在知乎发文表示其在攻读博士期间被副导师陈小武性骚扰，此外亦有其他多名女生表示有类似遭遇，2018年1月罗茜茜正式实名举报陈小武。',
+    quote: '他说你知道吗这事其实很有趣的，然后他就要霸王硬上弓要扑。',
+    quoteby: '北航博士罗茜茜',
+    accusations: [ { url: 'https://www.weibo.com/ttarticle/p/show?id=2309404191342451406043', title: '我要实名举报北航教授、长江学者陈小武性骚扰女学生' } ],
+    zhihu: [ { url: 'https://www.zhihu.com/question/264917016', title: '如何看待已毕业女博士罗茜茜实名举报性骚扰、北航长江学者陈小武被撤职？' }, { url: 'https://www.zhihu.com/question/67218088', title: '北航的陈小武老师是一位怎样的老师？' } ],
+    wikipedia: [ { url: 'https://zh.wikipedia.org/wiki/Me_Too#%E9%99%88%E5%B0%8F%E6%AD%A6%E4%BA%8B%E4%BB%B6', title: 'Me Too#陈小武事件' } ]
+  },
+  张晓: {
+    photo: 'Zhang_Xiao.jpg',
+    intro: '西北大学新闻传播学院教师',
+    date: new Date('2018-07-29'),
+    details: '清华大学教授常江代一西北大学新闻传播学院女生发文，文中指张晓曾对她与他女生实施猥亵。',
+    quote: '我当时身体立刻变得很僵硬，几秒后反应过来觉得极其恐慌想要挣脱，但他力气很大，死死楼住我的肩膀。',
+    quoteby: '西北大学一女生',
+    accusations: [ { url: 'https://weibo.com/1220099695/Gsb804bwE', title: '清华常江微博' } ],
+    zhihu: [ { url: 'https://www.zhihu.com/question/287458925', title: '如何评价西北大学张晓事件？' } ]
+  },
+  周斌: {
+    photo: 'Zhou_Bin.jpg',
+    intro: '南昌大学国学研究院原副院长',
+    date: new Date('2017-12-19'),
+    details: '南昌大学2017届毕业生小柔发文指控周斌曾对其性侵长达七月。',
+    quote: '隔了几天那里还是微疼，特别是晚上睡觉时感受明显。特别用力特别疼那第二次。',
+    quoteby: '小柔（化名）发给周斌的短信',
+    accusations: [ { url: 'https://m.weibo.cn/status/4186661074734644?featurecode=newtitle&wm=3333_2001&sourcetype=qq&from=107C193010', title: '南昌大学国学院副院长性侵女学生事件' } ],
+    wikipedia: [ { url: 'https://zh.wikipedia.org/wiki/%E5%8D%97%E6%98%8C%E5%A4%A7%E5%AD%A6%E6%80%A7%E4%BE%B5%E6%A1%88', title: '南昌大学性侵案' } ],
+    zhihu: [ { url: 'https://www.zhihu.com/question/264328124', title: '如何评价南昌大学国学院性侵事件？' } ]
   }
 }
 

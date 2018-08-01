@@ -29,12 +29,14 @@ class PersonDetail extends Component {
             </span>
           }
         </div>
-        <div id='quote'>
-          { `“${quote}”` }
-          <div id='quote-by'>
-            { `── ${quoteby}` }
+        { quote &&
+          <div id='quote'>
+            { `“${quote}”` }
+            <div id='quote-by'>
+              { `── ${quoteby}` }
+            </div>
           </div>
-        </div>
+        }
       </div>
     );
   }
