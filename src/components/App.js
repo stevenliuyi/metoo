@@ -26,7 +26,7 @@ class App extends Component {
            { this.state.currentPerson == null ?
              <div>
                <div>
-                 2017年 #MeToo 运动席卷全球后也在中国掀起风浪，以下
+                 2017年 #MeToo 运动席卷全球后也来到中国，以下
                </div>
                <div id='number'>
                  {Object.keys(data).length}
