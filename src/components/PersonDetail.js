@@ -12,7 +12,7 @@ class PersonDetail extends Component {
           <div className='intro'>{ intro }</div>
           <div className='intro'>
           {
-            `${date.getFullYear()}年${date.getMonth()+1}月${date.getDate()}日被指控`
+            `${date[0]}年${date[1]}月${date[2]}日被指控`
           }
           </div>
           <div id='detail'>{ details }</div>
