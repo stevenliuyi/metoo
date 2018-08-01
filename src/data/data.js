@@ -90,6 +90,74 @@ const data = {
     quoteby: '原UIUC 学生 Survivor2018（化名）',
     accusations: [ { url: 'https://www.zhihu.com/question/268596088/answer/339312013', title: '王敖在知乎对徐钢的指控' } ],
     zhihu: [ { url: 'https://www.zhihu.com/question/268596088', title: '怎么看Wesleyan University 任教的王敖教授发出示警，指UIUC 的徐钢是性侵惯犯？' }, { url: 'https://www.zhihu.com/question/268889325', title: '如何评价UIUC 教授徐钢造谣并威胁揭露他的王敖教授？' } ]
+  },
+  张鹏: {
+    photo: 'Zhang_Peng.jpg',
+    intro: '中山大学社会学与人类学学院教授、青年长江学者',
+    date: new Date('2018-4-8'),
+    details: '2018年4月起数名女生向中山大学纪委举报张鹏的性骚扰行为，此后网文《她曾以为自己能逃开教授的手》批露了张鹏长期对多名女学生与女教师的骚扰行径。',
+    quote: '动作越来越过分，往耳朵吹手，抚摸胸部，语言上多次要求发生男女关系。',
+    quoteby: '中大外国语学院一女教师',
+    links: [ { url: 'https://www.douban.com/note/682286878/', title: '她曾以为自己能逃开教授的手' }, { url: 'http://opinion.caixin.com/2018-07-11/101299229.html', title: '全程未提“性骚扰”，中山大学处理张鹏事件的尴尬' } ],
+    zhihu: [ { url: 'https://www.zhihu.com/question/284576472', title: '如何评价中山大学社会与人类学院教授张鹏？' }, { url: 'https://www.zhihu.com/question/284462232', title: '如何看待文章《她曾以为自己能逃开教授的手》？' } ]
+  },
+  袁天鹏: {
+    photo: 'Yuan_Tianpeng.jpg',
+    intro: '议事规则专家',
+    date: new Date('2018-7-20'),
+    details: '一曾在广州市恭明社会组织发展中心工作的女性在微信朋友圈中爆料，指控袁天鹏曾于2012或2013年在一次培训时对其实施了性骚扰。',
+    quote: '进了房间他就开始动手动脚，把我往床上压。',
+    quoteby: '匿名',
+    links: [ { url: 'https://theinitium.com/article/20180726-morning-brief/', title: '中国 #MeToo 运动升级，多名媒体人、公益人、作家被爆性侵' } ]
+  },
+  冯永锋: {
+    photo: 'Feng_Yongfeng.jpg',
+    intro: '知名环保人士、自然大学发起人',
+    date: new Date('2018-7-23'),
+    details: '一环保人士在微信朋友圈发文指控冯永锋对其机构的多位女实习生与女员工实施各种性骚扰行为。',
+    quote: '老流氓，你个老流氓，你给我跪下，你给我赔礼道歉。',
+    quoteby: '自然大学成员黄斐（化名）当众指控冯永锋非礼',
+    links: [ { url: 'http://www.chinanews.com/sh/2018/07-24/8577997.shtml', title: '环保公益人冯永锋被曝性骚扰 回应：戒酒 绝不再犯' }, { url: 'https://www.thepaper.cn/newsDetail_forward_2288617', title: '南都公益基金会：一女性员工去年10月曾被冯永锋性骚扰'} ],
+    zhihu: [ { url: 'https://www.zhihu.com/question/286690022', title: '如何评价南都公益基金会称，一女性员工去年 10 月曾被冯永锋性骚扰？' } ]
+  },
+  章文: {
+    photo: 'Zhang_Wen.jpg',
+    intro: '知名媒体人',
+    date: new Date('2018-7-24'),
+    details: '一女性发文称章文于2018年5月在酒后对其实施强奸，此后作家蒋方舟、记者易小荷等亦发声揭露章文曾性骚扰过自己。',
+    quote: '见面第一句话，他对我说‘你永远摆脱不了做我女人的命运，我上过100多个女生’。',
+    quoteby: '匿名',
+    accusations: [ { url: 'https://www.zhihu.com/pin/1005411998686932992', title: '章文，停止你的侵害！' } ],
+    links: [ { url: 'http://www.bjnews.com.cn/news/2018/07/26/496797.html', title: '章文被多名女性指控“性侵性骚扰”' }, { url: 'http://www.sohu.com/a/243309906_617717', title: '匿名举报章文性侵的爆料女孩：我留有证据，没报警有原因' } ],
+    zhihu: [ { url: 'https://www.zhihu.com/question/286906311', title: '如何看待章文性侵事件当事人发布声明：他试图通过“荡妇羞辱”逃脱罪责？' } , { url: 'https://zhuanlan.zhihu.com/p/40578932', title: '章文强奸事件——“双方你情我愿，不算强奸”' } ]
+  },
+  张弛: {
+    photo: 'Zhang_Chi.jpg',
+    intro: '作家',
+    date: new Date('2018-7-25'),
+    details: '作家春树在豆瓣上指控张弛曾对其性侵，并使其得急性性病。',
+    quote: '当时我不但生气害怕还非常失望，因为我对我们共同认识的朋友说了这件事，他不置可否。',
+    quoteby: '作家春树',
+    accusations: [ { url: 'http://web.okjike.com/message-detail/5b58848e0a69bb00167f1c53/originalPost', title: '春树指控存档' }]
+  },
+  孙冕: {
+    photo: 'Sun_Mian.jpg',
+    intro: '《新周刊》创始人、社长',
+    date: new Date('2018-7-25'),
+    details: '作家春树在豆瓣上指控曾是其领导的孙冕在她刚入职时将她带回了住处并侵犯了她。',
+    quote: '当时我还要假装一切都没有发生，实际上第二天我就颓了。',
+    quoteby: '作家春树',
+    accusations: [ { url: 'http://web.okjike.com/message-detail/5b58848e0a69bb00167f1c53/originalPost', title: '春树指控存档' }]
+  },
+  熊培云: {
+    photo: 'Xiong_Peiyun.jpg',
+    intro: '南开大学副教授、公共知识分子',
+    date: new Date('2018-7-25'),
+    details: '知名女权活动人士赵思乐在微信朋友圈指控熊培云曾于2012年在一次活动中对其进行了骚扰。',
+    quote: '那就是故意的！故意的笑！故意的‘调戏’！',
+    quoteby: '女权活动人士赵思乐',
+    accusations: [ { url: 'https://www.weibo.com/1287965472/GsuE9DJq8?type=comment&pcfrom=msgbox#_rnd1533119801718', title: '本不该需要的声明' } ],
+    zhihu: [ { url: 'https://www.zhihu.com/question/286901848', title: '如何看待熊培云“性骚扰”事件?' } ]
   }
 }
 

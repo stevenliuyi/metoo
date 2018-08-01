@@ -23,13 +23,13 @@ class App extends Component {
            { this.state.currentPerson == null ?
              <div>
                <div>
-                 2017年 #MeToo 运动爆发后，以下
+                 2017年 #MeToo 运动席卷全球后也在中国掀起风浪，以下
                </div>
                <div id='number'>
                  {Object.keys(data).length}
                </div>
                <div>
-               位中国公众人物被指控性骚扰或性侵犯。
+                 位中国公众人物被指控性骚扰或性侵犯。
                </div>
              </div>
              : <PersonDetail name={this.state.currentPerson} data={data[this.state.currentPerson]} />
@@ -37,7 +37,7 @@ class App extends Component {
           </div>
           <div id='people-grid'>
           {
-            Object.keys(data).map(name => (
+            Object.keys(data).sort().map(name => (
               <div className={`person ${ this.state.currentPerson === name ? 'person-highlight' : ''}`}
                 key={`person-${name}`} onClick={() => this.setState({ currentPerson: name })}>
                 <img className='thumb' src={`/images/${data[name].photo}`} width={75} height={75} alt={name} />
