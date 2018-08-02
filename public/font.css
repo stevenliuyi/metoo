@@ -1,0 +1,13 @@
+@font-face {
+  font-family: 'source-han-serif';
+  src: url('./font/SourceHanSerifCN-Bold.eot');
+  src:
+    url('./font/SourceHanSerifCN-Bold.eot?#font-spider') format('embedded-opentype'),
+    url('./font/SourceHanSerifCN-Bold.woff2') format('woff2'),
+    url('./font/SourceHanSerifCN-Bold.woff') format('woff'),
+    url('./font/SourceHanSerifCN-Bold.ttf') format('truetype'),
+    url('./font/SourceHanSerifCN-Bold.svg') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+p { font-family: 'source-han-serif'; }
