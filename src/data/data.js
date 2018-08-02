@@ -390,7 +390,7 @@ const data = {
   释学诚: {
     photo: 'Shi_Xuecheng.jpeg',
     intro: '中国佛教学会会长、全国政协常委、北京龙泉寺住持',
-    date: [2018, 7, 15],
+    date: [2018, 8, 1],
     details:
       '北京龙泉寺两位都监释贤佳、释贤启举报释学诚性侵多位出家女弟子，并对其实施精神控制。',
     quote:
@@ -712,15 +712,19 @@ const data = {
   邓飞: {
     photo: 'Deng_Fei.jpg',
     intro: '知名记者、公益人，《凤凰周刊》记者部主任',
-    date: [],
+    date: [2018, 7, 27],
     details:
-      '媒体人黄章晋代一女性发文，文中揭露2009年时作为实习生的她被邓飞带到一家酒店试图性侵。',
+      '微博用户“不要怕不要怂”指控邓飞于2011年“免费午餐”活动期间在酒店对其性骚扰。后又有多人发文指控邓飞性骚扰，并试图性侵。',
     quote:
       '他扑过来，抱我，强吻，脱我的衣服，脱了自己的裤子。多年来我一直抗拒回想他的动作和具体细节，这个令全身每一个角落都感到恶心的时刻却从未离开我。',
-    quoteby: '匿名',
+    quoteby: 'C（化名）',
     accusations: [
       {
-        url: 'http://inews.ifeng.com/59554635/news.shtml',
+        url: 'https://www.weibo.com/5621152082/GrLMsuId1',
+        title: '“不要怕不要怂”指控微博'
+      },
+      {
+        url: 'https://mp.weixin.qq.com/s/ap7Bj3XiJ2R1CgHigodVmA',
         title: '「未遂」之后呢？成功say NO又如何？'
       }
     ]
