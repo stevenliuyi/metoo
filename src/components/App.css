@@ -88,7 +88,8 @@
   color: #000 !important;
 }
 
-#title:hover {
+#title:hover,
+#title:active {
   color: #10e3ea !important;
 }
 
@@ -113,6 +114,8 @@ a {
   justify-content: center;
   text-align: center;
   padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
   overflow-y: auto;
   max-height: 40vh;
 }
@@ -141,8 +144,7 @@ a {
 #quote {
   width: 50%;
   text-align: right;
-  margin: 30px;
-  align-self: center;
+  margin: 35px;
   font-size: 20px;
   color: #10e3ea;
   font-family: 'source-han-serif',serif;

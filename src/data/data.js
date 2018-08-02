@@ -388,6 +388,7 @@ const data = {
     ]
   },
   释学诚: {
+    photo: 'Shi_Xuecheng.jpeg',
     intro: '中国佛教学会会长、全国政协常委、北京龙泉寺住持',
     date: [2018, 7, 15],
     details:
@@ -411,6 +412,7 @@ const data = {
     ]
   },
   信力建: {
+    photo: 'Xin_Lijian.jpg',
     intro: '民办教育专家、信孚教育集团创始人',
     date: [2018, 7, 25],
     details:
@@ -432,6 +434,7 @@ const data = {
     ]
   },
   张锦雄: {
+    photo: 'Zhang_Jinxiong.jpg',
     intro: '同性恋运动人士，香港彩虹与彩虹中国创办人',
     date: [2018, 7, 24],
     details: '三位匿名男性举报人指控张锦雄在分享会期间对其有性骚扰举动。',
@@ -446,6 +449,7 @@ const data = {
     ]
   },
   赵秉志: {
+    photo: 'Zhao_Binzhi.jpg',
     intro: '原北京师范大学刑事法律科学研究院院长',
     date: [2018, 7, 24],
     details: '赵秉志因生活作风问题被北师大免职处分。',
@@ -464,6 +468,7 @@ const data = {
     ]
   },
   陈小武: {
+    photo: 'Chen_Xiaowu.jpg',
     intro: '原长江学者特聘教授、北京航空航天大学计算机学院教授',
     date: [2017, 10, 15],
     details:
@@ -496,6 +501,7 @@ const data = {
     ]
   },
   张晓: {
+    photo: 'Zhang_Xiao.jpg',
     intro: '西北大学新闻传播学院教师',
     date: [2018, 7, 29],
     details:
@@ -514,6 +520,7 @@ const data = {
     ]
   },
   周斌: {
+    photo: 'Zhou_Bin.png',
     intro: '南昌大学国学研究院原副院长',
     date: [2017, 12, 19],
     details: '南昌大学2017届毕业生小柔发文指控周斌曾对其性侵长达七月。',
@@ -542,6 +549,7 @@ const data = {
     ]
   },
   刘坚军: {
+    photo: 'Liu_Jianjun.jpeg',
     intro: '宁波羽毛球队总教练，前羽毛球世界冠军',
     date: [2018, 7, 26],
     details:
@@ -563,6 +571,7 @@ const data = {
     ]
   },
   张伟: {
+    photo: 'Zhang_Wei.jpeg',
     intro: '宁波羽毛球队教练，前羽毛球国家队队员',
     date: [2018, 7, 26],
     details:
@@ -585,6 +594,7 @@ const data = {
     ]
   },
   周翊: {
+    photo: 'Zhou_Yi.jpeg',
     intro: '迷笛公司副总裁',
     date: [2018, 7, 28],
     details:
@@ -605,6 +615,7 @@ const data = {
     ]
   },
   曾志伟: {
+    photo: 'Eric_Tsang.jpeg',
     intro: '香港知名演员',
     date: [2018, 1, 10],
     details:
@@ -632,6 +643,7 @@ const data = {
     ]
   },
   邓光荣: {
+    photo: 'Alan_Tang.jpeg',
     intro: '香港知名演员',
     date: [2018, 1, 10],
     details:
@@ -644,6 +656,7 @@ const data = {
     ]
   },
   薛原: {
+    photo: 'Xue_Yuan.jpeg',
     intro: '对外经贸大学统计学院副教授',
     date: [2018, 1, 11],
     details:
@@ -659,6 +672,7 @@ const data = {
     ]
   },
   司屠: {
+    photo: 'Situ.jpg',
     intro: '作家',
     date: [2018, 7, 26],
     details: '豆瓣网友 liuliu 指控司屠于2012年曾试图对其实施侵犯。',
