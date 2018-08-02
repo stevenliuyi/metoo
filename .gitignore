@@ -29,3 +29,5 @@ public/quotes.html
 # duplicate
 src/data/data.mjs
 
+# reduced font files
+public/font/*
