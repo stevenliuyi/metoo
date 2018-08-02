@@ -2,15 +2,28 @@ import React, { Component } from 'react'
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap/dist/css/bootstrap-theme.css'
-import { Grid } from 'react-bootstrap'
+import { Grid, DropdownButton, MenuItem } from 'react-bootstrap'
 import { FaTimes } from 'react-icons/fa'
+import { MdSort, MdDone } from 'react-icons/md'
 import data from '../data/data.js'
 import PersonDetail from './PersonDetail'
 
 class App extends Component {
   state = {
-    currentPerson: null
+    currentPerson: null,
+    sortMethod: 1
   }
+
+  sort = array =>
+    this.state.sortMethod === 1
+      ? array.sort((a, b) => a.localeCompare(b, 'zh-CN'))
+      : array.sort(
+          (a, b) =>
+            data[a].date[0] + data[a].date[1] / 12.0 + data[a].date[2] / 365.0 >
+            data[b].date[0] + data[b].date[1] / 12.0 + data[b].date[2] / 365.0
+              ? 1
+              : -1
+        )
 
   render() {
     return (
@@ -44,10 +57,32 @@ class App extends Component {
               />
             )}
           </div>
-          <div id="people-grid">
-            {Object.keys(data)
-              .sort()
-              .map(name => (
+          <div id="people-grid-wrapper">
+            <div id="sort-icon">
+              <DropdownButton
+                noCaret
+                id="sort-dropdown"
+                title={<MdSort size={30} />}
+                onSelect={val =>
+                  this.setState({ sortMethod: parseInt(val, 10) })
+                }
+              >
+                {['按拼音排序', '按指控日期排序'].map((method, idx) => (
+                  <MenuItem key={`menutiem-${idx}`} eventKey={idx + 1}>
+                    {method}{' '}
+                    <span
+                      className={`check-icon ${
+                        this.state.sortMethod === idx + 1 ? '' : 'unchecked'
+                      }`}
+                    >
+                      <MdDone size={12} />
+                    </span>
+                  </MenuItem>
+                ))}
+              </DropdownButton>
+            </div>
+            <div id="people-grid">
+              {this.sort(Object.keys(data)).map(name => (
                 <div
                   className={`person ${
                     this.state.currentPerson === name ? 'person-highlight' : ''
@@ -69,6 +104,7 @@ class App extends Component {
                   <div className="person-name">{name}</div>
                 </div>
               ))}
+            </div>
           </div>
         </Grid>
       </div>

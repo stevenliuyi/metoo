@@ -108,7 +108,25 @@ a {
   color: #10e3ea;
 }
 
+#sort-icon {
+  text-align: left;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  cursor: pointer;
+  margin-left: -15px;
+}
+
+#people-grid-wrapper {
+  position: relative;
+}
+
 #people-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -198,4 +216,24 @@ a {
 #subtitle {
   padding-top: -20px;
   padding-bottom: 10px;
+}
+
+.check-icon {
+  float: right;    
+  padding-top: 2px;
+}
+
+.unchecked {
+  visibility: hidden; 
+}
+
+.dropdown > .btn-default {
+  background-image: none !important;
+  background-color: rgba(0,0,0,0) !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.dropdown-menu {
+  font-size: 12px !important;
 }
