@@ -28,85 +28,99 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Grid>
-          <a href="/">
-            <div id="title" className="h1">
-              <strong>
-                #MeToo{' '}
-                <span id="times">
-                  <FaTimes size={30} />
-                </span>{' '}
-                中国
-              </strong>
-            </div>
-          </a>
-          <div id="subtitle" className="text-muted">
-            人类历史上最大规模的屠杀，是房思琪式的强暴。
-          </div>
-          <div id="info">
-            {this.state.currentPerson == null ? (
-              <div>
-                <div>2017年起 #MeToo 运动席卷全球，在中国有以下</div>
-                <div id="number">{Object.keys(data).length}</div>
-                <div>人被指控性骚扰或性侵犯。</div>
+        <div id="content">
+          <Grid>
+            <a href="/">
+              <div id="title" className="h1">
+                <strong>
+                  #MeToo{' '}
+                  <span id="times">
+                    <FaTimes size={30} />
+                  </span>{' '}
+                  中国
+                </strong>
               </div>
-            ) : (
-              <PersonDetail
-                name={this.state.currentPerson}
-                data={data[this.state.currentPerson]}
-              />
-            )}
-          </div>
-          <div id="people-grid-wrapper">
-            <div id="sort-icon">
-              <DropdownButton
-                noCaret
-                id="sort-dropdown"
-                title={<MdSort size={30} />}
-                onSelect={val =>
-                  this.setState({ sortMethod: parseInt(val, 10) })
-                }
-              >
-                {['按拼音排序', '按指控日期排序'].map((method, idx) => (
-                  <MenuItem key={`menutiem-${idx}`} eventKey={idx + 1}>
-                    {method}{' '}
-                    <span
-                      className={`check-icon ${
-                        this.state.sortMethod === idx + 1 ? '' : 'unchecked'
-                      }`}
-                    >
-                      <MdDone size={12} />
-                    </span>
-                  </MenuItem>
-                ))}
-              </DropdownButton>
+            </a>
+            <div id="subtitle" className="text-muted">
+              人类历史上最大规模的屠杀，是房思琪式的强暴。
             </div>
-            <div id="people-grid">
-              {this.sort(Object.keys(data)).map(name => (
-                <div
-                  className={`person ${
-                    this.state.currentPerson === name ? 'person-highlight' : ''
-                  }`}
-                  key={`person-${name}`}
-                  onClick={() => this.setState({ currentPerson: name })}
-                >
-                  <img
-                    className="thumb"
-                    src={
-                      data[name].photo != null
-                        ? `/images/${data[name].photo}`
-                        : '/images/avatar.jpg'
-                    }
-                    width={72}
-                    height={72}
-                    alt={name}
-                  />
-                  <div className="person-name">{name}</div>
+            <div id="info">
+              {this.state.currentPerson == null ? (
+                <div>
+                  <div>2017年起 #MeToo 运动席卷全球，在中国有以下</div>
+                  <div id="number">{Object.keys(data).length}</div>
+                  <div>人被指控性骚扰或性侵犯。</div>
                 </div>
-              ))}
+              ) : (
+                <PersonDetail
+                  name={this.state.currentPerson}
+                  data={data[this.state.currentPerson]}
+                />
+              )}
             </div>
-          </div>
-        </Grid>
+            <div id="people-grid-wrapper">
+              <div id="sort-icon">
+                <DropdownButton
+                  noCaret
+                  id="sort-dropdown"
+                  title={<MdSort size={30} />}
+                  onSelect={val =>
+                    this.setState({ sortMethod: parseInt(val, 10) })
+                  }
+                >
+                  {['按拼音排序', '按指控日期排序'].map((method, idx) => (
+                    <MenuItem key={`menutiem-${idx}`} eventKey={idx + 1}>
+                      {method}{' '}
+                      <span
+                        className={`check-icon ${
+                          this.state.sortMethod === idx + 1 ? '' : 'unchecked'
+                        }`}
+                      >
+                        <MdDone size={12} />
+                      </span>
+                    </MenuItem>
+                  ))}
+                </DropdownButton>
+              </div>
+              <div id="people-grid">
+                {this.sort(Object.keys(data)).map(name => (
+                  <div
+                    className={`person ${
+                      this.state.currentPerson === name
+                        ? 'person-highlight'
+                        : ''
+                    }`}
+                    key={`person-${name}`}
+                    onClick={() => this.setState({ currentPerson: name })}
+                  >
+                    <img
+                      className="thumb"
+                      src={
+                        data[name].photo != null
+                          ? `/images/${data[name].photo}`
+                          : '/images/avatar.jpg'
+                      }
+                      width={72}
+                      height={72}
+                      alt={name}
+                    />
+                    <div className="person-name">{name}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </Grid>
+        </div>
+        <div id="footer">
+          <img
+            id="rabbit-icon"
+            src="/favicon-32x32.png"
+            width={24}
+            height={24}
+            alt="MeToo logo"
+          />{' '}
+          米兔在中国‧2018
+        </div>
       </div>
     )
   }
