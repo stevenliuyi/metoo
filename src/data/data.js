@@ -47,7 +47,7 @@ const data = {
       '原中国人民大学学生、新浪微博网友夜凭阑发微博指控张康之曾于2005年在宿舍对其性骚扰。她同时举报，其一师兄亦曾被张康之性骚扰。',
     quote:
       '他便反锁了门，掐我的脸，说我胖了，问我热不热，边说边伸手到我胸前要解扣子脱外套。',
-    quoteby: '原人大学生夜凭阑（化名）',
+    quoteby: '原人大学生夜凭阑（网名）',
     accusations: [
       {
         url:
@@ -86,7 +86,7 @@ const data = {
     date: [2018, 7, 28],
     details: '网友蜗牛揭露姚树洁曾在西安交通大学讲座期间对其性骚扰。',
     quote: '趁着我去拜访请教的时候，死拉硬拽让我坐他怀里。',
-    quoteby: '蜗牛（化名）',
+    quoteby: '蜗牛（网名）',
     accusations: [
       {
         url: 'https://twitter.com/jajia/status/1023310650125119488',
@@ -137,7 +137,7 @@ const data = {
       '中国传媒大学新闻学院大三女生面面儿呐揭露谢伦灿于2016年11月在饭店停车场与工作室对其性侵犯。',
     quote:
       '发现谢伦灿老师在亲我的脸，并且拉开了我的外套，一只手伸进我的毛衣里捏我的胸。',
-    quoteby: '中传学生面面儿呐（化名）',
+    quoteby: '中传学生面面儿呐（网名）',
     accusations: [
       {
         url: 'https://zhuanlan.zhihu.com/p/40704283',
@@ -209,7 +209,7 @@ const data = {
       '美国卫斯理安大学（Wesleyan University）王敖在豆瓣与知乎上指控徐钢长期性侵学生，此后亦有多名受害者发声揭露徐钢的性骚扰、性侵犯行径。',
     quote:
       '看到这个帖子里徐钢的照片仍会生理性恶心，脑海中一直闪回噩梦般的经历。徐钢的丑恶嘴脸和各种变态性癖好，依然历历在目。',
-    quoteby: '原 UIUC 学生 Survivor2018（化名）',
+    quoteby: '原 UIUC 学生 Survivor2018（网名）',
     accusations: [
       {
         url: 'https://www.zhihu.com/question/268596088/answer/339312013',
@@ -547,7 +547,7 @@ const data = {
     details:
       '17岁高二女生“孙孙向你扔了只狗”在微博指控刘坚军，称其未满14岁时便被刘坚军在宾馆房间性骚扰。',
     quote: '他把我叫到他房间，对我进行抱、亲等性骚扰，我当时未满14周岁。',
-    quoteby: '孙孙向你扔了只狗（化名）',
+    quoteby: '孙孙向你扔了只狗（网名）',
     accusations: [
       {
         url: 'https://weibo.com/5688970752/GrLyu7BOR',
@@ -569,7 +569,7 @@ const data = {
       '17岁高二女生“孙孙向你扔了只狗”在微博指控张伟，称其15岁赴台湾比赛时张伟曾试图强奸她。',
     quote:
       '试图强奸我，在我反抗之下强奸未遂，后来向他老婆和我父母等人诬陷我说是我挑衅，勾引他。',
-    quoteby: '孙孙向你扔了只狗（化名）',
+    quoteby: '孙孙向你扔了只狗（网名）',
     accusations: [
       {
         url: 'https://weibo.com/5688970752/GrLyu7BOR',
@@ -655,6 +655,20 @@ const data = {
         url: 'https://www.zhihu.com/question/265406739',
         title:
           '如何看待非贸大女研究生对于对外经贸大学统计学院薛原副教授实施猥亵及长期性骚扰的举报？'
+      }
+    ]
+  },
+  司屠: {
+    intro: '作家',
+    date: [2018, 7, 26],
+    details: '豆瓣网友 liuliu 指控司屠于2012年曾试图对其实施侵犯。',
+    quote:
+      '他突然站起来，我们中间隔了个小方桌，他扑过来抱住我强吻，并把我往床的方向拖。',
+    quoteby: 'liuliu（网名）',
+    accusations: [
+      {
+        url: 'https://www.douban.com/note/684299440/',
+        title: '我来爆自称为写作艺术家的性骚扰惯犯司屠'
       }
     ]
   }
