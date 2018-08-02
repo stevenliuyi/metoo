@@ -220,11 +220,11 @@ const data = {
       {
         url: 'https://www.zhihu.com/question/268596088',
         title:
-          '怎么看Wesleyan University 任教的王敖教授发出示警，指UIUC 的徐钢是性侵惯犯？'
+          '怎么看 Wesleyan University 任教的王敖教授发出示警，指 UIUC 的徐钢是性侵惯犯？'
       },
       {
         url: 'https://www.zhihu.com/question/268889325',
-        title: '如何评价UIUC 教授徐钢造谣并威胁揭露他的王敖教授？'
+        title: '如何评价 UIUC 教授徐钢造谣并威胁揭露他的王敖教授？'
       }
     ]
   },
@@ -538,6 +538,123 @@ const data = {
       {
         url: 'https://www.zhihu.com/question/264328124',
         title: '如何评价南昌大学国学院性侵事件？'
+      }
+    ]
+  },
+  刘坚军: {
+    intro: '宁波羽毛球队总教练，前羽毛球世界冠军',
+    date: [2018, 7, 26],
+    details:
+      '17岁高二女生“孙孙向你扔了只狗”在微博指控刘坚军，称其未满14岁时便被刘坚军在宾馆房间性骚扰。',
+    quote: '他把我叫到他房间，对我进行抱、亲等性骚扰，我当时未满14周岁。',
+    quoteby: '孙孙向你扔了只狗（化名）',
+    accusations: [
+      {
+        url: 'https://weibo.com/5688970752/GrLyu7BOR',
+        title: '孙孙向你扔了只狗指控微博'
+      }
+    ],
+    zhihu: [
+      {
+        url: 'https://www.zhihu.com/question/287118549',
+        title:
+          '如何看待 17 岁宁波女生指控羽毛球队教练刘坚军、张伟性骚扰 / 强奸未遂？体育界的性骚扰情况如何？'
+      }
+    ]
+  },
+  张伟: {
+    intro: '宁波羽毛球队教练，前羽毛球国家队队员',
+    date: [2018, 7, 26],
+    details:
+      '17岁高二女生“孙孙向你扔了只狗”在微博指控张伟，称其15岁赴台湾比赛时张伟曾试图强奸她。',
+    quote:
+      '试图强奸我，在我反抗之下强奸未遂，后来向他老婆和我父母等人诬陷我说是我挑衅，勾引他。',
+    quoteby: '孙孙向你扔了只狗（化名）',
+    accusations: [
+      {
+        url: 'https://weibo.com/5688970752/GrLyu7BOR',
+        title: '孙孙向你扔了只狗指控微博'
+      }
+    ],
+    zhihu: [
+      {
+        url: 'https://www.zhihu.com/question/287118549',
+        title:
+          '如何看待 17 岁宁波女生指控羽毛球队教练刘坚军、张伟性骚扰 / 强奸未遂？体育界的性骚扰情况如何？'
+      }
+    ]
+  },
+  周翊: {
+    intro: '迷笛公司副总裁',
+    date: [2018, 7, 28],
+    details:
+      '微博网友“我是落生”代一21岁女生发文指控周翊，表示她在2017年太湖迷笛音乐节做志愿者期间被周翊性侵，事后她被诊断为应激障碍与抑郁症。',
+    quote: '对所有女孩来说难忘的第一次，变成了让我难忘的噩梦和痛苦。',
+    quoteby: '匿名',
+    accusations: [
+      {
+        url: 'https://www.weibo.com/5822334131/GrZtr9aZL',
+        title: '我是落生指控微博'
+      }
+    ],
+    zhihu: [
+      {
+        url: 'https://www.zhihu.com/question/287291964',
+        title: '如何看待微博里迷笛志愿者被性侵，以及张帆校长的回复？'
+      }
+    ]
+  },
+  曾志伟: {
+    intro: '香港知名演员',
+    date: [2018, 1, 10],
+    details:
+      '娱乐记者卓伟在微博公布了一视频，声称是演员蓝洁瑛于2013年受访的视频，其中蓝洁瑛讲述了早年遭曾志伟性侵的经历。此后韩颖华亦称其性侵过不止一次女艺人。',
+    quote: '我看他大概是邪魔入体才会这样吧。',
+    quoteby: '演员蓝洁瑛',
+    accusations: [
+      {
+        url: 'https://www.youtube.com/watch?v=Oj0OPRDAnyw',
+        title: '蓝洁瑛指控视频'
+      }
+    ],
+    wikipedia: [
+      {
+        url:
+          'https://zh.wikipedia.org/wiki/%E6%9B%BE%E5%BF%97%E5%81%89#%E8%93%9D%E6%B4%81%E7%91%9B%E6%80%A7%E4%BE%B5%E4%BA%8B%E4%BB%B6',
+        title: '曾志伟#蓝洁瑛性侵事件'
+      }
+    ],
+    zhihu: [
+      {
+        url: 'https://www.zhihu.com/question/265366390',
+        title: '如何看待蓝洁瑛指控曾志伟性侵？'
+      }
+    ]
+  },
+  邓光荣: {
+    intro: '香港知名演员',
+    date: [2018, 1, 10],
+    details:
+      '娱乐记者卓伟在微博公布了一视频，声称是演员蓝洁瑛于2013年受访的视频，其中蓝洁瑛讲述了早年遭邓光荣性侵的经历。',
+    accusations: [
+      {
+        url: 'https://www.youtube.com/watch?v=Oj0OPRDAnyw',
+        title: '蓝洁瑛指控视频'
+      }
+    ]
+  },
+  薛原: {
+    intro: '对外经贸大学统计学院副教授',
+    date: [2018, 1, 11],
+    details:
+      '一北京在校大学生在知乎发问指控薛原于2016年起多次对其性骚扰。该问题下亦有其他学生表示薛原有骚扰行为。',
+    quote: '在我迟疑之际，他突然开始扯我衣服，并捂住我的嘴实施猥亵！',
+    quoteby: '匿名',
+    accusations: [
+      {
+        url: 'https://www.zhihu.com/question/265406739',
+        title:
+          '如何看待非贸大女研究生对于对外经贸大学统计学院薛原副教授实施猥亵及长期性骚扰的举报？'
       }
     ]
   }
