@@ -69,7 +69,7 @@ class App extends Component {
           <Grid>
             <div
               id="title"
-              className="h1"
+              className="h1 unselectable"
               onClick={() => this.setState({ currentPerson: null })}
             >
               <strong>
@@ -86,7 +86,7 @@ class App extends Component {
             <div id="info-wrapper">
               <div id="info">
                 {this.state.currentPerson == null ? (
-                  <div id="messages">
+                  <div id="messages" className="unselectable">
                     <div>2017年起 #MeToo 运动席卷全球，在中国有以下</div>
                     <div id="number">{Object.keys(data).length}</div>
                     <div>人被指控性骚扰或性侵犯。</div>
@@ -101,6 +101,7 @@ class App extends Component {
               {this.state.currentPerson != null && (
                 <img
                   id="photo"
+                  className="unselectable"
                   src="/images/alexander-krivitskiy-575481-unsplash.jpg"
                   alt="woman"
                 />
@@ -136,7 +137,7 @@ class App extends Component {
               <div id="people-grid">
                 {this.sort(Object.keys(data)).map(name => (
                   <div
-                    className={`person ${
+                    className={`person unselectable ${
                       this.state.currentPerson === name
                         ? 'person-highlight'
                         : ''
@@ -162,7 +163,7 @@ class App extends Component {
             </div>
           </Grid>
         </div>
-        <div id="footer">
+        <div id="footer" className="unselectable">
           <img
             id="rabbit-icon"
             src="/favicon-32x32.png"

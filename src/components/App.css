@@ -253,6 +253,13 @@ a {
   background-color: #10e3ea;
 }
 
+.unselectable {
+ -webkit-user-select: none;
+ -moz-user-select: none;
+ -ms-user-select: none;
+ user-select: none;
+}
+
 .link {
   font-size: 14px;
   padding-bottom: 20px;
