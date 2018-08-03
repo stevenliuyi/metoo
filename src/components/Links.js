@@ -22,7 +22,7 @@ class Links extends Component {
                 <Tooltip id={link.title}>{`${prefix}${link.title}`}</Tooltip>
               }
             >
-              <a href={link.url}>
+              <a href={link.url} target="_blank" rel="noopener noreferrer">
                 <span className="circle">
                   {this.props.type === 'wikipedia' ? (
                     <FaWikipediaW size={14} className="icon" />

@@ -67,17 +67,19 @@ class App extends Component {
       <div className="App">
         <div id="content">
           <Grid>
-            <a href="/">
-              <div id="title" className="h1">
-                <strong>
-                  #MeToo{' '}
-                  <span id="times">
-                    <FaTimes size={30} />
-                  </span>{' '}
-                  中国
-                </strong>
-              </div>
-            </a>
+            <div
+              id="title"
+              className="h1"
+              onClick={() => this.setState({ currentPerson: null })}
+            >
+              <strong>
+                #MeToo{' '}
+                <span id="times">
+                  <FaTimes size={30} />
+                </span>{' '}
+                中国
+              </strong>
+            </div>
             <div id="subtitle" className="text-muted">
               人类历史上最大规模的屠杀，是房思琪式的强暴。
             </div>
@@ -168,7 +170,10 @@ class App extends Component {
             height={24}
             alt="MeToo logo"
           />{' '}
-          米兔在中国&nbsp;‧&nbsp;2018&nbsp;‧&nbsp;
+          <span className="footer-item">米兔在中国</span>
+          &nbsp;‧&nbsp;
+          <span className="footer-item">2018</span>
+          &nbsp;‧&nbsp;
           <OverlayTrigger
             placement="top"
             overlay={

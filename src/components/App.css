@@ -118,6 +118,7 @@
 #title:hover,
 #title:active {
   color: #10e3ea !important;
+  cursor: pointer;
 }
 
 a {
@@ -324,4 +325,12 @@ a {
 
 #footer > a {
   color: #bbb;
+}
+
+#footer > a:hover {
+  color: #10e3ea;
+}
+
+.footer-item:hover {
+  color: #10e3ea;
 }
