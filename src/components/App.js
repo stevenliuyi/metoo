@@ -20,10 +20,18 @@ class App extends Component {
     sortMethod: 1
   }
 
+  sortToggle = val => {
+    this.setState({ sortMethod: parseInt(val, 10) })
+    // scroll back to top
+    document.getElementById('people-grid').scrollTop = 0
+  }
+
   sort = array =>
     this.state.sortMethod === 1
-      ? array.sort((a, b) => a.localeCompare(b, 'zh-CN'))
-      : array.sort(
+      ? // sort by pinyin
+        array.sort((a, b) => a.localeCompare(b, 'zh-CN'))
+      : // sort by accusation date
+        array.sort(
           (a, b) =>
             data[a].date[0] + data[a].date[1] / 12.0 + data[a].date[2] / 365.0 >
             data[b].date[0] + data[b].date[1] / 12.0 + data[b].date[2] / 365.0
@@ -53,7 +61,7 @@ class App extends Component {
             <div id="info-wrapper">
               <div id="info">
                 {this.state.currentPerson == null ? (
-                  <div>
+                  <div id="messages">
                     <div>2017年起 #MeToo 运动席卷全球，在中国有以下</div>
                     <div id="number">{Object.keys(data).length}</div>
                     <div>人被指控性骚扰或性侵犯。</div>
@@ -74,14 +82,17 @@ class App extends Component {
               )}
             </div>
             <div id="people-grid-wrapper">
-              <div id="sort-icon">
+              <div id="sort-button">
                 <DropdownButton
                   noCaret
                   id="sort-dropdown"
-                  title={<MdSort size={30} />}
-                  onSelect={val =>
-                    this.setState({ sortMethod: parseInt(val, 10) })
+                  title={
+                    <span id="sort-icon">
+                      <MdSort id="sort-main" size={30} />
+                      <MdSort id="sort-outline" size={30} />
+                    </span>
                   }
+                  onSelect={this.sortToggle}
                 >
                   {['按拼音排序', '按指控日期排序'].map((method, idx) => (
                     <MenuItem key={`menutiem-${idx}`} eventKey={idx + 1}>
@@ -137,7 +148,9 @@ class App extends Component {
           米兔在中国&nbsp;‧&nbsp;2018&nbsp;‧&nbsp;
           <OverlayTrigger
             placement="top"
-            overlay={<Tooltip>电子邮件：contact@metoochina.me</Tooltip>}
+            overlay={
+              <Tooltip id="email">电子邮件：contact@metoochina.me</Tooltip>
+            }
           >
             <a href="mailto:contact@metoochina.me">联系我们</a>
           </OverlayTrigger>
