@@ -2,7 +2,13 @@ import React, { Component } from 'react'
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap/dist/css/bootstrap-theme.css'
-import { Grid, DropdownButton, MenuItem } from 'react-bootstrap'
+import {
+  Grid,
+  DropdownButton,
+  MenuItem,
+  Tooltip,
+  OverlayTrigger
+} from 'react-bootstrap'
 import { FaTimes } from 'react-icons/fa'
 import { MdSort, MdDone } from 'react-icons/md'
 import data from '../data/data.js'
@@ -128,7 +134,13 @@ class App extends Component {
             height={24}
             alt="MeToo logo"
           />{' '}
-          米兔在中国‧2018
+          米兔在中国&nbsp;‧&nbsp;2018&nbsp;‧&nbsp;
+          <OverlayTrigger
+            placement="top"
+            overlay={<Tooltip>电子邮件：contact@metoochina.me</Tooltip>}
+          >
+            <a href="mailto:contact@metoochina.me">联系我们</a>
+          </OverlayTrigger>
         </div>
       </div>
     )
