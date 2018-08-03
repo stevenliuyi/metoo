@@ -44,17 +44,26 @@ class App extends Component {
             <div id="subtitle" className="text-muted">
               人类历史上最大规模的屠杀，是房思琪式的强暴。
             </div>
-            <div id="info">
-              {this.state.currentPerson == null ? (
-                <div>
-                  <div>2017年起 #MeToo 运动席卷全球，在中国有以下</div>
-                  <div id="number">{Object.keys(data).length}</div>
-                  <div>人被指控性骚扰或性侵犯。</div>
-                </div>
-              ) : (
-                <PersonDetail
-                  name={this.state.currentPerson}
-                  data={data[this.state.currentPerson]}
+            <div id="info-wrapper">
+              <div id="info">
+                {this.state.currentPerson == null ? (
+                  <div>
+                    <div>2017年起 #MeToo 运动席卷全球，在中国有以下</div>
+                    <div id="number">{Object.keys(data).length}</div>
+                    <div>人被指控性骚扰或性侵犯。</div>
+                  </div>
+                ) : (
+                  <PersonDetail
+                    name={this.state.currentPerson}
+                    data={data[this.state.currentPerson]}
+                  />
+                )}
+              </div>
+              {this.state.currentPerson != null && (
+                <img
+                  id="photo"
+                  src="/alexander-krivitskiy-575481-unsplash.jpg"
+                  alt="woman"
                 />
               )}
             </div>
