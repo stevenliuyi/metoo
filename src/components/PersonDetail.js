@@ -25,13 +25,13 @@ class PersonDetail extends Component {
           </div>
           <div id="detail">{details}</div>
           {accusations && (
-            <span className="link unseletable" style={{ marginRight: '10px' }}>
+            <span className="link unselectable" style={{ marginRight: '10px' }}>
               <Label>指控</Label>
               <Links links={accusations} />
             </span>
           )}
           {(links || wikipedia || zhihu) && (
-            <span className="link unseletable">
+            <span className="link unselectable">
               <Label>链接</Label>
               <Links links={links} />
               <Links links={wikipedia} type="wikipedia" />
