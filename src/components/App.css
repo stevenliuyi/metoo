@@ -301,12 +301,14 @@ a {
 
 #content {
   min-height: calc(100vh - 60px);
+  overflow-y: auto;
 }
 
 #footer {
   height: 60px;
   font-size: 12px;
   color: #bbb;
+  padding-top: 5px;
 }
 
 #rabbit-icon {

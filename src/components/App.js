@@ -11,6 +11,7 @@ import {
 } from 'react-bootstrap'
 import { FaTimes } from 'react-icons/fa'
 import { MdSort, MdDone } from 'react-icons/md'
+import { isMobile } from 'react-device-detect'
 import data from '../data/data.js'
 import PersonDetail from './PersonDetail'
 
@@ -18,6 +19,28 @@ class App extends Component {
   state = {
     currentPerson: null,
     sortMethod: 1
+  }
+
+  componentDidMount() {
+    // set vh-related styles on mobile devices
+    if (isMobile) {
+      this.setVhs()
+      window.addEventListener('deviceorientation', this.setVhs)
+    }
+  }
+
+  // fix the vh issue on mobile devices
+  // https://nicolas-hoizey.com/2015/02/viewport-height-is-taller-than-the-visible-part-of-the-document-in-some-mobile-browsers.html
+  setVhs = () => {
+    const vh = window.innerHeight
+    document.getElementById('content').style.minHeight = `${vh - 60}px`
+    document.getElementById('info-wrapper').style.height = `${0.35 * vh}px`
+    document.getElementById('people-grid').style.maxHeight = `${0.36 * vh}px`
+    document.getElementById('info').style.fontSize = `${0.03 * vh}px`
+    if (document.getElementById('number') != null)
+      document.getElementById('number').style.fontSize = `${0.1 * vh}px`
+    if (document.getElementById('photo') != null)
+      document.getElementById('photo').style.height = `${0.2 * vh}px`
   }
 
   sortToggle = val => {
