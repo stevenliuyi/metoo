@@ -101,7 +101,7 @@ class App extends Component {
               {this.state.currentPerson != null && (
                 <img
                   id="photo"
-                  src="/alexander-krivitskiy-575481-unsplash.jpg"
+                  src="/images/alexander-krivitskiy-575481-unsplash.jpg"
                   alt="woman"
                 />
               )}

@@ -728,6 +728,103 @@ const data = {
         title: '「未遂」之后呢？成功say NO又如何？'
       }
     ]
+  },
+  肖开愚: {
+    photo: 'Xiao_Kaiyu.jpg',
+    intro: '诗人、河南大学教授',
+    date: [2018, 5, 5],
+    details:
+      '北京大学博士、河南大学硕士王东东曾于2013年爆出肖开愚2008年时性骚扰王东东当时女友的事件。此次他旧事重提，并引发原河大学生南方、安的响应，指控肖开愚曾借他们认识他们的女友并实施性骚扰与性侵犯。',
+    quote: '他不顾我的挣扎，等我挣扎一段时间累了，没力气了，他就得逞了。',
+    quoteby: '异（化名）',
+    accusations: [
+      {
+        url: 'https://www.douban.com/note/668327053/',
+        title: '关于河南大学教授、诗人肖开愚性骚扰、性侵女学生的说明'
+      }
+    ],
+    links: [
+      {
+        url: 'https://www.douban.com/note/675430466/',
+        title: '是我亲手将女友推到教授的怀里'
+      }
+    ]
+  },
+  陈国昌: {
+    photo: 'Chen_Guochang.jpg',
+    intro: '广东外语外贸大学新闻与传播学院教师',
+    date: [2018, 7, 28],
+    details:
+      '广东外语外贸大学两位女生指控陈国昌对其言语性骚扰，并指他对许多女生有类似行为。',
+    quote: '他总会把话题引到SEX上，比如‘你声音这么好听，应该很会叫床吧’。',
+    quoteby: '广外2010级一女生',
+    zhihu: [
+      {
+        url: 'https://www.zhihu.com/question/287411820',
+        title:
+          '如何评价广外新闻学院陈国昌言语性骚扰女学生，以及团学下令堵嘴事件？'
+      }
+    ]
+  },
+  徐蜀辰: {
+    photo: 'Xu_Shucheng.jpg',
+    intro:
+      '同济大学建筑与城市规划学院博士生、苏黎世联邦理工学院未来城市研究室助理研究员',
+    date: [2018, 3, 27],
+    details:
+      '公众号“白沙漠”指控徐蜀辰性骚扰女研究生，此后又有多位女生在知乎等平台爆料徐蜀辰的性骚扰行为。',
+    quote:
+      '以他有权利修改我的成绩，来逼我和他约会甚至做一些龌龊的事情，每次拒绝之后就会恼羞成怒。',
+    quoteby: '同济一女生',
+    links: [
+      {
+        url: 'https://mp.weixin.qq.com/s/7mHi5aHY8OF7W6neX-zYEw',
+        title: '致每一个关心徐蜀辰涉嫌性骚扰同济女研究生事件的我们'
+      },
+      {
+        url: 'http://archive.li/t1bXj',
+        title: '时间轴——徐蜀辰涉嫌性骚扰同济女研究生事件'
+      }
+    ]
+  },
+  王以培: {
+    photo: 'Wang_Yipei.jpg',
+    intro: '诗人、原中国人民大学文学院副教授',
+    date: [2018, 5, 28],
+    details: '有受害者匿名指控王以培曾于2005年在酒店内对其性骚扰。',
+    quote: '当时天都塌了，三观尽毁，哭了很久。',
+    quoteby: '匿名',
+    links: [
+      {
+        url: 'http://news.dwnews.com/china/news/2018-05-28/60060882.html',
+        title: '北京高校再曝性侵案 中国人大开除知名副教授'
+      }
+    ]
+  },
+  谢耘耕: {
+    photo: 'Xie_Yungeng.jpg',
+    intro: '原上海交通大学媒体与与设计学院副院长',
+    date: [2018, 4, 25],
+    details:
+      '上海交通大学校方表示谢耘耕因在与学生接触时有“不当言论和不当肢体动作”而被免职。',
+    links: [
+      {
+        url: 'http://news.dwnews.com/china/news/2018-04-25/60054276.html',
+        title: '涉嫌性骚扰 上海交大副院长被撤职'
+      }
+    ]
+  },
+  周非: {
+    photo: 'Zhou_Fei.jpg',
+    intro: '世界自然基金会（WWF）北京代表处项目总监',
+    date: [2018, 7, 25],
+    details:
+      '原世界自然基金会（WWF）员工王琪实名指控其原上司周非曾于2016年在西双版纳一酒店强吻了她。',
+    quote: '我却被某周姓领导堵在房间门口在嘴上亲了一口。',
+    quoteby: '原WWF员工王琪',
+    accusations: [
+      { url: 'https://weibo.com/1757351275/GrAAXrgdU', title: '王琪指控微博' }
+    ]
   }
 }
 
