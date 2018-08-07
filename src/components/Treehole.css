@@ -54,3 +54,23 @@
 {
   color: #10e3ea;
 }
+
+.load-message {
+  margin-top: 50px;
+  color: #bbb;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#error-text {
+  cursor: pointer;
+  color: #bbb;
+  padding: 10px;
+}
+
+#loading-text {
+  padding: 10px;
+}

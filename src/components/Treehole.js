@@ -6,8 +6,14 @@ import {
   OverlayTrigger,
   Tooltip
 } from 'react-bootstrap'
-import { MdHome, MdRefresh, MdAddToPhotos } from 'react-icons/md'
+import {
+  MdHome,
+  MdRefresh,
+  MdAddToPhotos,
+  MdErrorOutline
+} from 'react-icons/md'
 import { Link } from 'react-router-dom'
+import { BeatLoader } from 'react-spinners'
 import { fetchAllPosts } from '../utils/api'
 import './Treehole.css'
 import Header from './Header'
@@ -90,10 +96,23 @@ class Treehole extends Component {
           </ListGroup>
         )}
         {this.state.status === 'loading' && (
-          <div style={{ color: '#bbb' }}>数据读取中……</div>
+          <div className="load-message">
+            <BeatLoader
+              color={'#bbb'}
+              size={20}
+              loading={true}
+              loaderStyle={{ textAlign: 'center' }}
+            />
+            <div id="loading-text">数据读取中</div>
+          </div>
         )}
         {this.state.status === 'error' && (
-          <div style={{ color: '#bbb' }}>数据读取失败，请刷新重试。</div>
+          <div className="load-message">
+            <MdErrorOutline size={64} color={'#bbb'} />
+            <div id="error-text" onClick={this.update}>
+              数据读取失败，请刷新重试。
+            </div>
+          </div>
         )}
       </Grid>
     )
