@@ -4,11 +4,14 @@
   "private": true,
   "dependencies": {
     "bootstrap": "3",
+    "form-serialize": "^0.7.2",
+    "moment": "^2.22.2",
     "react": "^16.4.1",
     "react-bootstrap": "^0.32.1",
     "react-device-detect": "^1.5.9",
     "react-dom": "^16.4.1",
     "react-icons": "^3.0.1",
+    "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.4"
   },
   "scripts": {

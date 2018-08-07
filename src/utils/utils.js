@@ -1,11 +1,18 @@
 // fix the vh issue on mobile devices
 // https://nicolas-hoizey.com/2015/02/viewport-height-is-taller-than-the-visible-part-of-the-document-in-some-mobile-browsers.html
+import moment from 'moment'
+import 'moment/locale/zh-cn'
+
 export const setVhs = () => {
   const vh = window.innerHeight
-  document.getElementById('content').style.minHeight = `${vh - 60}px`
-  document.getElementById('info-wrapper').style.height = `${0.35 * vh}px`
-  document.getElementById('people-grid').style.maxHeight = `${0.36 * vh}px`
-  document.getElementById('info').style.fontSize = `${0.03 * vh}px`
+  if (document.getElementById('content') != null)
+    document.getElementById('content').style.minHeight = `${vh - 60}px`
+  if (document.getElementById('info-wrapper') != null)
+    document.getElementById('info-wrapper').style.height = `${0.35 * vh}px`
+  if (document.getElementById('people-grid') != null)
+    document.getElementById('people-grid').style.maxHeight = `${0.36 * vh}px`
+  if (document.getElementById('info') != null)
+    document.getElementById('info').style.fontSize = `${0.03 * vh}px`
   if (document.getElementById('number') != null)
     document.getElementById('number').style.fontSize = `${0.1 * vh}px`
   if (document.getElementById('photo') != null)
@@ -24,3 +31,11 @@ export const sort = (data, sortMethod) =>
             ? 1
             : -1
       )
+
+export const displayName = name => (name == null || name === '' ? '匿名' : name)
+
+export const displayTimestamp = timestamp => {
+  return moment(timestamp)
+    .locale('zh-cn')
+    .fromNow()
+}

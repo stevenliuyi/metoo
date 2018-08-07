@@ -10,7 +10,9 @@ import Messages from './Messages'
 import PersonDetail from './PersonDetail'
 import AvatarGrid from './AvatarGrid'
 import Footer from './Footer'
+import Treehole from './Treehole'
 import { setVhs } from '../utils/utils'
+import { Switch, Route } from 'react-router'
 
 class App extends Component {
   state = {
@@ -38,35 +40,47 @@ class App extends Component {
     return (
       <div className="App">
         <div id="content">
-          <Grid>
-            <Header updatePerson={this.updatePerson} />
-            <div id="info-wrapper">
-              <div id="info">
-                {this.state.currentPerson == null ? (
-                  <Messages number={Object.keys(data).length} />
-                ) : (
-                  <PersonDetail
-                    name={this.state.currentPerson}
-                    data={data[this.state.currentPerson]}
+          <Switch>
+            <Route
+              exact
+              path="/"
+              render={() => (
+                <Grid>
+                  <Header
+                    title="中国"
+                    onClick={() => this.updatePerson(null)}
                   />
-                )}
-              </div>
-              {this.state.currentPerson != null && (
-                <img
-                  id="photo"
-                  className="unselectable"
-                  src="/images/alexander-krivitskiy-575481-unsplash.jpg"
-                  alt="woman"
-                />
+                  <div id="info-wrapper">
+                    <div id="info">
+                      {this.state.currentPerson == null ? (
+                        <Messages number={Object.keys(data).length} />
+                      ) : (
+                        <PersonDetail
+                          name={this.state.currentPerson}
+                          data={data[this.state.currentPerson]}
+                        />
+                      )}
+                    </div>
+                    {this.state.currentPerson != null && (
+                      <img
+                        id="photo"
+                        className="unselectable"
+                        src="/images/alexander-krivitskiy-575481-unsplash.jpg"
+                        alt="woman"
+                      />
+                    )}
+                  </div>
+                  <AvatarGrid
+                    data={data}
+                    sortToggle={this.sortToggle}
+                    updatePerson={this.updatePerson}
+                    {...this.state}
+                  />
+                </Grid>
               )}
-            </div>
-            <AvatarGrid
-              data={data}
-              sortToggle={this.sortToggle}
-              updatePerson={this.updatePerson}
-              {...this.state}
             />
-          </Grid>
+            <Route exact path="/treehole" component={Treehole} />
+          </Switch>
         </div>
         <Footer />
       </div>

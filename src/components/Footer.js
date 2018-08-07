@@ -1,5 +1,6 @@
 import React from 'react'
 import { Tooltip, OverlayTrigger } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
 const Footer = props => (
   <div id="footer" className="unselectable">
@@ -10,9 +11,13 @@ const Footer = props => (
       height={24}
       alt="MeToo logo"
     />{' '}
-    <span className="footer-item">米兔在中国</span>
+    <Link to="/">
+      <span className="footer-item">米兔在中国</span>
+    </Link>
     &nbsp;‧&nbsp;
-    <span className="footer-item">2018</span>
+    <Link to="/treehole">
+      <span className="footer-item">树洞</span>
+    </Link>
     &nbsp;‧&nbsp;
     <OverlayTrigger
       placement="top"
@@ -20,6 +25,8 @@ const Footer = props => (
     >
       <a href="mailto:contact@metoochina.me">联系我们</a>
     </OverlayTrigger>
+    &nbsp;‧&nbsp;
+    <span className="footer-item">2018</span>
   </div>
 )
 

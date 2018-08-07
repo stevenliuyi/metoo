@@ -1,0 +1,56 @@
+.post-content {
+  text-align: left;
+  padding: 15px;
+}
+
+#treehole-buttonbar {
+  text-align: right;
+  cursor: pointer;
+  padding-right: 10px;
+}
+
+.treehole-button {
+  color: #bbb;
+}
+
+.treehole-button:hover {
+  color: #aeaeae !important;
+}
+
+#submit-button {
+  color: #10e3ea;
+}
+
+#submit-button:hover {
+  color: #0eccd2 !important;
+}
+
+.btn-toolbar > .btn-default,
+.btn-toolbar > .btn-primary
+{
+  background-image: none !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+
+.btn-toolbar > .btn-primary {
+  background-color: #000;
+  color: #fff;
+  border-color: #000;
+}
+
+.post-info {
+  color: #bbb;
+  text-align: right;
+  padding-right: 20px;
+}
+
+.post-info > a {
+  color: #bbb;
+}
+
+.post-info > a:hover,
+.post-info > a:active
+{
+  color: #10e3ea;
+}

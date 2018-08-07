@@ -279,6 +279,10 @@ a {
   border-top-color: #ccc !important;
 }
 
+.tooltip.bottom .tooltip-arrow {
+  border-bottom-color: #ccc !important;
+}
+
 #subtitle {
   margin-top: -10px;
   margin-bottom: 10px;
