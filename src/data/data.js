@@ -619,7 +619,7 @@ const data = {
     intro: '香港知名演员',
     date: [2018, 1, 10],
     details:
-      '娱乐记者卓伟在微博公布了一视频，声称是演员蓝洁瑛于2013年受访的视频，其中蓝洁瑛讲述了早年遭曾志伟性侵的经历。此后韩颖华亦称其性侵过不止一次女艺人。',
+      '娱乐记者卓伟在微博公布了声称是演员蓝洁瑛于2013年受访的视频，其中蓝洁瑛讲述了早年遭曾志伟性侵的经历。此后韩颖华亦称其性侵过不止一次女艺人。',
     quote: '我看他大概是邪魔入体才会这样吧。',
     quoteby: '演员蓝洁瑛',
     accusations: [
@@ -647,7 +647,7 @@ const data = {
     intro: '香港知名演员',
     date: [2018, 1, 10],
     details:
-      '娱乐记者卓伟在微博公布了一视频，声称是演员蓝洁瑛于2013年受访的视频，其中蓝洁瑛讲述了早年遭邓光荣性侵的经历。',
+      '娱乐记者卓伟在微博公布了声称是演员蓝洁瑛于2013年受访的视频，其中蓝洁瑛讲述了早年遭邓光荣性侵的经历。',
     accusations: [
       {
         url: 'https://www.youtube.com/watch?v=Oj0OPRDAnyw',
@@ -824,6 +824,74 @@ const data = {
     quoteby: '原WWF员工王琪',
     accusations: [
       { url: 'https://weibo.com/1757351275/GrAAXrgdU', title: '王琪指控微博' }
+    ]
+  },
+  熊广基: {
+    photo: 'Xiong_Guangji.jpg',
+    intro: '湖南大学经济与贸易学院副教授',
+    date: [2018, 8, 2],
+    details:
+      '网友 whenyousaynothingatall585 在微博发文指控熊广基（原名熊伟）曾在办公室对其学妹实施性骚扰。',
+    quote:
+      '被熊老师抢先一步跑过去反锁住门，然后又被强行搂抱并听到老师在耳边说‘你好可爱，我想亲你’这样的话。',
+    quoteby: '原湖大学生 whenyousaynothingatall585（网名）',
+    accusations: [
+      {
+        url: 'https://weibo.com/6618186080/GsPGlgCnD',
+        title: 'whenyousaynothingatall585 指控微博'
+      }
+    ],
+    zhihu: [
+      {
+        url: 'https://www.zhihu.com/question/288374525',
+        title:
+          '如何评价湖南大学熊广基（原名熊伟）课堂上疑似传销，及其猥亵女学生事件？'
+      }
+    ]
+  },
+  潘杰客: {
+    photo: 'Pan_Jieke.jpg',
+    intro: '“为你读诗”创始人',
+    date: [2018, 7, 26],
+    details:
+      '网友 Steffi- 在微博上指控潘杰客（本名潘学光）曾对“为你读诗”多位女员工实施各种性骚扰。',
+    quote:
+      '他就趁机走到我身边对我说‘你小脸红彤彤的真好看’，然后用双手捧着我的脸。',
+    quoteby: '“为你读诗”前员工',
+    accusations: [
+      {
+        url: 'https://weibo.com/2169202817/GrK8IDYD1',
+        title: 'Steffi- 指控微博'
+      }
+    ],
+    links: [
+      {
+        url: 'https://mp.weixin.qq.com/s/0enUy_SfbTMPRAeh6B03fA',
+        title: '“为你读诗”前员工集体指控创始人潘杰客性骚扰！'
+      }
+    ],
+    zhihu: [
+      {
+        url: 'https://www.zhihu.com/question/27001727',
+        title: '你觉得为你读诗可以发展壮大吗?'
+      }
+    ]
+  },
+  任继长: {
+    photo: 'Ren_Jichang.jpg',
+    intro: '杭州文澜中学校长、余杭高级中学总校长，原全国人大代表',
+    date: [2018, 8, 3],
+    details:
+      '王五四在公众号上代一受害者发文，指控30年前时任杭州二中初中部教导主任时曾对当时13岁时受害者性骚扰。',
+    quote:
+      '他坐到椅子上，把我拉到他两腿之间，用两腿夹住我，一只手抱着我的腰，一只手抓我的胸部，并且不时掐乳头，我感觉到疼痛。',
+    quoteby: '原杭州二中一学生',
+    accusations: [
+      {
+        url:
+          'https://chinadigitaltimes.net/chinese/2018/08/%E7%8E%8B%E4%BA%94%E5%9B%9B%EF%BC%9A%E4%B8%89%E5%8D%81%E5%B9%B4%E5%89%8D%E4%BD%A0%E5%AF%B9%E5%A5%B3%E5%AD%A6%E7%94%9F%E5%81%9A%E7%9A%84%E4%BA%8B%EF%BC%8C%E4%BB%BB%E7%BB%A7%E9%95%BF%E6%A0%A1%E9%95%BF/',
+        title: '王五四：三十年前你对女学生做的事，任继长校长你还记得吗？'
+      }
     ]
   }
 }
