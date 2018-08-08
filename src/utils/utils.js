@@ -32,8 +32,6 @@ export const sort = (data, sortMethod) =>
             : -1
       )
 
-export const displayName = name => (name == null || name === '' ? '匿名' : name)
-
 export const displayTimestamp = timestamp => {
   return moment(timestamp)
     .locale('zh-cn')

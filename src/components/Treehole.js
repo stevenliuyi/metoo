@@ -33,7 +33,13 @@ class Treehole extends Component {
       if (res == null) {
         this.setState({ status: 'error' })
       } else {
-        this.setState({ posts: res, status: 'loaded' })
+        this.setState({
+          posts: res.map(v => {
+            v.showComments = false
+            return v
+          }),
+          status: 'loaded'
+        })
       }
     })
   }
@@ -90,8 +96,21 @@ class Treehole extends Component {
                 />
               </ListGroupItem>
             )}
-            {this.state.posts.map(post => (
-              <PostDetail key={`post-${post._id}`} post={post} />
+            {this.state.posts.map((post, idx) => (
+              <PostDetail
+                key={`post-${post._id}`}
+                post={post}
+                commentsToggle={() => {
+                  let posts = this.state.posts
+                  posts[idx].showComments = !posts[idx].showComments
+                  this.setState({ posts })
+                }}
+                commentCountInc={() => {
+                  let posts = this.state.posts
+                  posts[idx].commentCount += 1
+                  this.setState({ posts })
+                }}
+              />
             ))}
           </ListGroup>
         )}

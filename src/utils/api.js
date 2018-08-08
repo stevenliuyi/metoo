@@ -24,3 +24,30 @@ export const submitPost = post =>
       console.log(err)
       return null
     })
+
+export const fetchComments = postId =>
+  fetch(`https://metoo-treehole.appspot.com/comments/get/${postId}`, {
+    method: 'GET',
+    headers: new Headers({
+      'Content-Type': 'application/json'
+    })
+  })
+    .then(res => res.json())
+    .catch(err => {
+      console.log(err)
+      return null
+    })
+
+export const submitComment = comment =>
+  fetch('https://metoo-treehole.appspot.com/comments/add', {
+    method: 'POST',
+    headers: new Headers({
+      'Content-Type': 'application/json'
+    }),
+    body: JSON.stringify(comment)
+  })
+    .then(res => res.json())
+    .catch(err => {
+      console.log(err)
+      return null
+    })

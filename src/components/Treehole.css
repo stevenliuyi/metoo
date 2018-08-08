@@ -43,6 +43,7 @@
   color: #bbb;
   text-align: right;
   padding-right: 20px;
+  padding-bottom: 10px;
 }
 
 .post-info > a {
@@ -73,4 +74,34 @@
 
 #loading-text {
   padding: 10px;
+}
+
+#post-content {
+  max-width: 600px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: 0px;
+  margin-left: auto;
+}
+
+.comment-box {
+  border-top: 1px solid #ccc;
+  margin-right: 0px;
+  margin-left: auto;
+  width: 50%;
+  padding-bottom: 20px;
+  text-align: left;
+}
+
+#edit-comment {
+  margin-right: 0px;
+  margin-left: auto;
+  width: 50%;
+  padding-bottom: 20px;
+  text-align: left;
+}
+
+.comment-content {
+  padding-left: 20px;
+  padding-right: 20px;
 }
