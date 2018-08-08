@@ -20,6 +20,14 @@ export const submitPost = post =>
     body: JSON.stringify(post)
   })
     .then(res => res.json())
+    .then(res => {
+      if (!res.success) {
+        console.log(res)
+        return null
+      } else {
+        return res.newPost
+      }
+    })
     .catch(err => {
       console.log(err)
       return null
@@ -47,6 +55,14 @@ export const submitComment = comment =>
     body: JSON.stringify(comment)
   })
     .then(res => res.json())
+    .then(res => {
+      if (!res.success) {
+        console.log(res)
+        return null
+      } else {
+        return res.newComment
+      }
+    })
     .catch(err => {
       console.log(err)
       return null

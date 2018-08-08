@@ -55,6 +55,10 @@ class Treehole extends Component {
 
   componentDidMount() {
     this.update()
+    window.recaptchaOptions = {
+      lang: 'zh-cn',
+      useRecaptchaNet: true
+    }
   }
 
   render() {
@@ -105,7 +109,10 @@ class Treehole extends Component {
                       Alert.warning('提交失败，请稍候再试')
                     } else {
                       Alert.success('发布成功')
-                      this.setState({ posts: [newPost, ...this.state.posts] })
+                      this.setState({
+                        posts: [newPost, ...this.state.posts],
+                        editPost: false
+                      })
                     }
                   }}
                 />

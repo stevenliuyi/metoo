@@ -1,19 +1,24 @@
 import React, { Component } from 'react'
 import { FormControl } from 'react-bootstrap'
 import { ButtonToolbar, Button } from 'react-bootstrap'
+import ReCAPTCHA from 'react-google-recaptcha'
 import { ResizableBox } from 'react-resizable'
 import 'react-resizable/css/styles.css'
 import { submitPost } from '../utils/api'
 
 class EditPost extends Component {
+  state = {
+    captcha: null
+  }
+
   submitPost = e => {
     e.preventDefault()
     const newPost = {
+      captcha: this.state.captcha,
       content: document.querySelector('#post-content > textarea').value
     }
     submitPost(newPost).then(newPost => {
       this.props.onSubmit(newPost)
-      this.props.onClose()
     })
   }
 
@@ -22,10 +27,16 @@ class EditPost extends Component {
       <ResizableBox
         height={window.innerHeight * 0.25}
         width={Infinity}
-        minConstraints={[0, 80]}
+        minConstraints={[0, 200]}
         maxConstraints={[Infinity, window.innerHeight * 0.8]}
         axis="y"
       >
+        <div className="captcha-box">
+          <ReCAPTCHA
+            sitekey="6LdUC2kUAAAAAIBCb8UtopdHnt5t92AShps-sRPv"
+            onChange={val => this.setState({ captcha: val })}
+          />
+        </div>
         <div id="post-content">
           <FormControl
             componentClass="textarea"

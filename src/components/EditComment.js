@@ -2,20 +2,26 @@ import React, { Component } from 'react'
 import { FormControl } from 'react-bootstrap'
 import { ButtonToolbar, Button } from 'react-bootstrap'
 import { ResizableBox } from 'react-resizable'
+import ReCAPTCHA from 'react-google-recaptcha'
 import { submitComment } from '../utils/api'
 
 class EditComment extends Component {
+  state = {
+    captcha: null
+  }
+
   submitComment = e => {
     e.preventDefault()
     const newComment = {
+      captcha: this.state.captcha,
       content: document.querySelector(
         `#resizable-${this.props.postId} > textarea`
       ).value,
       postId: this.props.postId
     }
-    submitComment(newComment)
-      .then(newComment => this.props.onSubmit(newComment))
-      .then(() => this.props.onClose())
+    submitComment(newComment).then(newComment =>
+      this.props.onSubmit(newComment)
+    )
   }
 
   render() {
@@ -37,6 +43,12 @@ class EditComment extends Component {
               defaultValue=""
             />
           </ResizableBox>
+          <div className="edit-captcha-box">
+            <ReCAPTCHA
+              sitekey="6LdUC2kUAAAAAIBCb8UtopdHnt5t92AShps-sRPv"
+              onChange={val => this.setState({ captcha: val })}
+            />
+          </div>
           <ButtonToolbar style={{ paddingTop: '10px' }}>
             <Button className="pull-right" onClick={() => this.props.onClose()}>
               取消

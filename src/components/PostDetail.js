@@ -92,7 +92,8 @@ class PostDetail extends Component {
                   // success
                   Alert.success('评论发布成功')
                   this.setState({
-                    comments: [newComment, ...this.state.comments]
+                    comments: [newComment, ...this.state.comments],
+                    editComment: false
                   })
                   this.props.commentCountInc()
                 }
