@@ -39,7 +39,7 @@ class PostDetail extends Component {
                 <OverlayTrigger
                   placement="top"
                   overlay={
-                    <Tooltip>
+                    <Tooltip id="expand-comments">
                       {this.props.post.showComments ? '收起' : '展开'}
                     </Tooltip>
                   }

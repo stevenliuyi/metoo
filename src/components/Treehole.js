@@ -96,7 +96,7 @@ class Treehole extends Component {
         {this.state.status === 'loaded' && (
           <ListGroup>
             {this.state.editPost && (
-              <ListGroupItem>
+              <ListGroupItem id="edit-post-item">
                 <EditPost
                   onClose={() => this.setState({ editPost: false })}
                   onSubmit={newPost => {
