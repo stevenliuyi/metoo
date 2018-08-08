@@ -345,3 +345,12 @@ a {
 .footer-item:hover {
   color: #10e3ea;
 }
+
+/* override notification styles */
+.s-alert-success {
+  background-color: #10e3ea !important;
+}
+
+.s-alert-warning {
+  background-color: #10e3ea !important;
+}

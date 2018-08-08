@@ -8,16 +8,17 @@ class EditPost extends Component {
   submitPost = e => {
     e.preventDefault()
     const newPost = serializeForm(e.target, { hash: true })
-    submitPost(newPost)
-      .then(newPost => this.props.onSubmit(newPost))
-      .then(() => this.props.onClose())
+    submitPost(newPost).then(newPost => {
+      this.props.onSubmit(newPost)
+      this.props.onClose()
+    })
   }
 
   render() {
     return (
       <Form horizontal onSubmit={this.submitPost}>
         <FormGroup>
-          <div id="post-content">
+          <div className="edit-content" id="post-content">
             <FormControl
               componentClass="textarea"
               name="content"

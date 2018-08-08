@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { Row, ListGroupItem } from 'react-bootstrap'
 import { displayTimestamp } from '../utils/utils'
+import Alert from 'react-s-alert'
+import { FaAngleDown, FaAngleUp } from 'react-icons/fa'
 import Comments from './Comments'
 import EditComment from './EditComment'
 import { fetchComments } from '../utils/api'
@@ -25,7 +27,7 @@ class PostDetail extends Component {
     return (
       <ListGroupItem>
         <div
-          style={{ cursor: 'pointer' }}
+          className="post-box"
           onClick={() => {
             if (!this.state.editComment) this.props.commentsToggle()
           }}
@@ -34,6 +36,20 @@ class PostDetail extends Component {
           <Row>
             <div className="post-info">
               <span
+                style={{
+                  cursor: 'pointer',
+                  verticalAlign: '-webkit-baseline-middle',
+                  paddingRight: '5px'
+                }}
+              >
+                {this.props.post.showComments ? (
+                  <FaAngleUp size={20} />
+                ) : (
+                  <FaAngleDown size={20} />
+                )}
+              </span>
+              <span
+                style={{ cursor: 'pointer' }}
                 onClick={e => {
                   e.stopPropagation()
                   this.setState({ editComment: true })
@@ -50,10 +66,17 @@ class PostDetail extends Component {
               postId={this.props.post._id}
               onClose={() => this.setState({ editComment: false })}
               onSubmit={newComment => {
-                this.setState({
-                  comments: [newComment, ...this.state.comments]
-                })
-                this.props.commentCountInc()
+                if (newComment == null) {
+                  // error
+                  Alert.warning('回复提交失败，请稍候再试')
+                } else {
+                  // success
+                  Alert.success('回复发布成功')
+                  this.setState({
+                    comments: [newComment, ...this.state.comments]
+                  })
+                  this.props.commentCountInc()
+                }
               }}
             />
           )}

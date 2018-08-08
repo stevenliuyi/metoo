@@ -16,10 +16,10 @@ class EditComment extends Component {
 
   render() {
     return (
-      <div id="edit-comment">
+      <div className="edit-comment">
         <Form horizontal onSubmit={this.submitComment}>
           <FormGroup>
-            <div id="post-content">
+            <div className="edit-content">
               <FormControl
                 componentClass="textarea"
                 name="content"

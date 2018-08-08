@@ -76,7 +76,7 @@
   padding: 10px;
 }
 
-#post-content {
+.edit-content {
   max-width: 600px;
   padding-right: 15px;
   padding-left: 15px;
@@ -84,16 +84,26 @@
   margin-left: auto;
 }
 
+#post-content > textarea {
+  height: 25vh;
+  min-height: 40px;
+}
+
+.edit-content > textarea {
+  height: 15vh;
+  min-height: 40px;
+}
+
 .comment-box {
   border-top: 1px solid #ccc;
   margin-right: 0px;
   margin-left: auto;
-  width: 50%;
-  padding-bottom: 20px;
+  width: 600px;
+  max-width: 80%;
   text-align: left;
 }
 
-#edit-comment {
+.edit-comment {
   margin-right: 0px;
   margin-left: auto;
   width: 50%;
@@ -102,6 +112,11 @@
 }
 
 .comment-content {
+  padding-top: 10px;
   padding-left: 20px;
   padding-right: 20px;
+}
+
+textarea {
+  resize: vertical;
 }

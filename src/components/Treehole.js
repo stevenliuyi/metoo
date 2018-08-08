@@ -14,11 +14,20 @@ import {
 } from 'react-icons/md'
 import { Link } from 'react-router-dom'
 import { BeatLoader } from 'react-spinners'
+import Alert from 'react-s-alert'
+import 'react-s-alert/dist/s-alert-default.css'
+import 'react-s-alert/dist/s-alert-css-effects/stackslide.css'
 import { fetchAllPosts } from '../utils/api'
 import './Treehole.css'
 import Header from './Header'
 import PostDetail from './PostDetail'
 import EditPost from './EditPost'
+
+const alertOptions = {
+  position: 'bottom',
+  effect: 'stackslide',
+  timeout: 2000
+}
 
 class Treehole extends Component {
   state = {
@@ -90,9 +99,15 @@ class Treehole extends Component {
               <ListGroupItem>
                 <EditPost
                   onClose={() => this.setState({ editPost: false })}
-                  onSubmit={newPost =>
-                    this.setState({ posts: [newPost, ...this.state.posts] })
-                  }
+                  onSubmit={newPost => {
+                    if (newPost == null) {
+                      // error
+                      Alert.warning('提交失败，请稍候再试')
+                    } else {
+                      Alert.success('发布成功')
+                      this.setState({ posts: [newPost, ...this.state.posts] })
+                    }
+                  }}
                 />
               </ListGroupItem>
             )}
@@ -133,6 +148,7 @@ class Treehole extends Component {
             </div>
           </div>
         )}
+        <Alert stack={{ limit: 3 }} {...alertOptions} />
       </Grid>
     )
   }
