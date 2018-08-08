@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Row, ListGroupItem } from 'react-bootstrap'
+import { Row, ListGroupItem, OverlayTrigger, Tooltip } from 'react-bootstrap'
 import { displayTimestamp } from '../utils/utils'
 import Alert from 'react-s-alert'
 import { FaAngleDown, FaAngleUp } from 'react-icons/fa'
@@ -35,19 +35,30 @@ class PostDetail extends Component {
           <Row className="post-content">{this.props.post.content}</Row>
           <Row>
             <div className="post-info">
-              <span
-                style={{
-                  cursor: 'pointer',
-                  verticalAlign: '-webkit-baseline-middle',
-                  paddingRight: '5px'
-                }}
-              >
-                {this.props.post.showComments ? (
-                  <FaAngleUp size={20} />
-                ) : (
-                  <FaAngleDown size={20} />
-                )}
-              </span>
+              {this.state.comments.length > 0 && (
+                <OverlayTrigger
+                  placement="top"
+                  overlay={
+                    <Tooltip>
+                      {this.props.post.showComments ? '收起' : '展开'}
+                    </Tooltip>
+                  }
+                >
+                  <span
+                    style={{
+                      cursor: 'pointer',
+                      verticalAlign: '-webkit-baseline-middle',
+                      paddingRight: '5px'
+                    }}
+                  >
+                    {this.props.post.showComments ? (
+                      <FaAngleUp size={20} />
+                    ) : (
+                      <FaAngleDown size={20} />
+                    )}
+                  </span>
+                </OverlayTrigger>
+              )}
               <span
                 style={{ cursor: 'pointer' }}
                 onClick={e => {
@@ -55,9 +66,17 @@ class PostDetail extends Component {
                   this.setState({ editComment: true })
                 }}
               >
-                添加回复 &nbsp;‧&nbsp;
+                添加评论 &nbsp;‧&nbsp;
               </span>
-              回复 ({this.props.post.commentCount}) &nbsp;‧&nbsp;
+              <span
+                style={{
+                  cursor:
+                    this.props.post.commentCount > 0 ? 'pointer' : 'default'
+                }}
+              >
+                评论 ({this.props.post.commentCount})
+              </span>{' '}
+              &nbsp;‧&nbsp;
               {displayTimestamp(this.props.post.timestamp)}
             </div>
           </Row>
@@ -68,10 +87,10 @@ class PostDetail extends Component {
               onSubmit={newComment => {
                 if (newComment == null) {
                   // error
-                  Alert.warning('回复提交失败，请稍候再试')
+                  Alert.warning('评论提交失败，请稍候再试')
                 } else {
                   // success
-                  Alert.success('回复发布成功')
+                  Alert.success('评论发布成功')
                   this.setState({
                     comments: [newComment, ...this.state.comments]
                   })

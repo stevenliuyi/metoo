@@ -23,7 +23,7 @@ class EditComment extends Component {
               <FormControl
                 componentClass="textarea"
                 name="content"
-                placeholder="回复"
+                placeholder="在此输入评论内容"
                 defaultValue=""
               />
             </div>
