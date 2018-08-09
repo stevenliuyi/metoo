@@ -99,6 +99,16 @@
   resize: none !important;
 }
 
+#post-content > textarea:focus {
+  border: solid 2px #10e3ea !important;
+  transition: none !important;
+}
+
+textarea:focus {
+  border: solid 2px #10e3ea !important;
+  transition: none !important;
+}
+
 #edit-post-buttonbar {
   position: absolute;
   right: 10px;
@@ -142,6 +152,8 @@
 textarea {
   resize: none;
   border-radius: 0px !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
 }
 
 .list-group-item {

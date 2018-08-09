@@ -29,6 +29,10 @@ class EditPost extends Component {
         minConstraints={[0, 200]}
         maxConstraints={[Infinity, window.innerHeight * 0.8]}
         axis="y"
+        onResizeStart={e => {
+          e.preventDefault()
+          document.querySelector('#post-content > textarea').focus()
+        }}
       >
         <div id="post-content">
           <FormControl

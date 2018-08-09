@@ -34,6 +34,12 @@ class EditComment extends Component {
             minConstraints={[0, 40]}
             maxConstraints={[Infinity, window.innerHeight * 0.6]}
             axis="y"
+            onResizeStart={e => {
+              e.preventDefault()
+              document
+                .querySelector(`#resizable-${this.props.postId} > textarea`)
+                .focus()
+            }}
           >
             <FormControl
               componentClass="textarea"
