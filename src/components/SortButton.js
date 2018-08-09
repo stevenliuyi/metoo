@@ -3,7 +3,7 @@ import { DropdownButton, MenuItem } from 'react-bootstrap'
 import { MdSort, MdDone } from 'react-icons/md'
 
 const SortButton = props => (
-  <div id="sort-button">
+  <div className="sort-button">
     <DropdownButton
       noCaret
       id="sort-dropdown"

@@ -54,7 +54,7 @@ class EditPost extends Component {
           ref={el => (this.captcha = el)}
           sitekey="6LeaEGkUAAAAAOLDd81ewgo_R7gbHzoaMUV7NkWH"
           onResolved={this.onResolved}
-          locale="zh-cn"
+          locale="zh-CN"
         />
       </ResizableBox>
     )

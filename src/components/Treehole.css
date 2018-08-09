@@ -152,3 +152,8 @@ textarea {
 .grecaptcha-badge {
   z-index: 5000;
 }
+
+#post-sort-button > .dropdown > button {
+  padding: 0px 3px 0px 3px !important;
+  margin-top: -15px !important;
+}

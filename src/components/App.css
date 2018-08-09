@@ -136,7 +136,7 @@ a {
   color: #10e3ea;
 }
 
-#sort-button {
+.sort-button {
   text-align: left;
   width: 100%;
   position: absolute;

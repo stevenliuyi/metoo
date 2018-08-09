@@ -59,7 +59,7 @@ class EditComment extends Component {
           ref={el => (this.captcha = el)}
           sitekey="6LeaEGkUAAAAAOLDd81ewgo_R7gbHzoaMUV7NkWH"
           onResolved={this.onResolved}
-          local="zh-cn"
+          locale="zh-CN"
         />
       </div>
     )

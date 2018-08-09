@@ -22,6 +22,7 @@ import './Treehole.css'
 import Header from './Header'
 import PostDetail from './PostDetail'
 import EditPost from './EditPost'
+import PostSortButton from './PostSortButton'
 
 const alertOptions = {
   position: 'bottom',
@@ -33,12 +34,14 @@ class Treehole extends Component {
   state = {
     posts: [],
     editPost: false,
-    status: 'loading'
+    status: 'loading',
+    // 1 - newest first; 2 - oldest first; 3 - most commented first
+    sortMethod: 1
   }
 
   update = () => {
     this.setState({ status: 'loading' })
-    fetchAllPosts().then(res => {
+    fetchAllPosts(this.state.sortMethod).then(res => {
       if (res == null) {
         this.setState({ status: 'error' })
       } else {
@@ -53,12 +56,16 @@ class Treehole extends Component {
     })
   }
 
+  sortToggle = val => {
+    this.setState({ sortMethod: parseInt(val, 10) })
+  }
+
   componentDidMount() {
     this.update()
-    window.recaptchaOptions = {
-      lang: 'zh-cn',
-      useRecaptchaNet: true
-    }
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.sortMethod !== this.state.sortMethod) this.update()
   }
 
   render() {
@@ -84,6 +91,10 @@ class Treehole extends Component {
               <MdRefresh size={30} />
             </span>
           </OverlayTrigger>
+          <PostSortButton
+            sortToggle={this.sortToggle}
+            sortMethod={this.state.sortMethod}
+          />
           <OverlayTrigger
             placement="bottom"
             overlay={<Tooltip id="submit">发布新内容</Tooltip>}

@@ -1,7 +1,10 @@
-const url = 'https://metoo-treehole.appspot.com'
+const url =
+  process.env.NODE_ENV === 'development'
+    ? 'http://localhost:1989'
+    : 'https://metoo-treehole.appspot.com'
 
-export const fetchAllPosts = () =>
-  fetch(`${url}/posts/getAll`, {
+export const fetchAllPosts = sortMethod =>
+  fetch(`${url}/posts/getAll/${sortMethod != null ? sortMethod : ''}`, {
     method: 'GET',
     headers: new Headers({
       'Content-Type': 'application/json'
