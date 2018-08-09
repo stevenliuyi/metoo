@@ -2,18 +2,17 @@ import React, { Component } from 'react'
 import { FormControl } from 'react-bootstrap'
 import { ButtonToolbar, Button } from 'react-bootstrap'
 import { ResizableBox } from 'react-resizable'
-import ReCAPTCHA from 'react-google-recaptcha'
+import Recaptcha from 'react-google-invisible-recaptcha'
 import { submitComment } from '../utils/api'
 
 class EditComment extends Component {
-  state = {
-    captcha: null
+  onSubmit = () => {
+    this.captcha.execute()
   }
 
-  submitComment = e => {
-    e.preventDefault()
+  onResolved = () => {
     const newComment = {
-      captcha: this.state.captcha,
+      captcha: this.captcha.getResponse(),
       content: document.querySelector(
         `#resizable-${this.props.postId} > textarea`
       ).value,
@@ -43,12 +42,6 @@ class EditComment extends Component {
               defaultValue=""
             />
           </ResizableBox>
-          <div className="edit-captcha-box">
-            <ReCAPTCHA
-              sitekey="6LdUC2kUAAAAAIBCb8UtopdHnt5t92AShps-sRPv"
-              onChange={val => this.setState({ captcha: val })}
-            />
-          </div>
           <ButtonToolbar style={{ paddingTop: '10px' }}>
             <Button className="pull-right" onClick={() => this.props.onClose()}>
               取消
@@ -56,12 +49,18 @@ class EditComment extends Component {
             <Button
               className="pull-right"
               bsStyle="primary"
-              onClick={this.submitComment}
+              onClick={this.onSubmit}
             >
               提交
             </Button>
           </ButtonToolbar>
         </div>
+        <Recaptcha
+          ref={el => (this.captcha = el)}
+          sitekey="6LeaEGkUAAAAAOLDd81ewgo_R7gbHzoaMUV7NkWH"
+          onResolved={this.onResolved}
+          local="zh-cn"
+        />
       </div>
     )
   }

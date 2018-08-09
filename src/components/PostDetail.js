@@ -35,30 +35,31 @@ class PostDetail extends Component {
           <Row className="post-content">{this.props.post.content}</Row>
           <Row>
             <div className="post-info">
-              {this.state.comments.length > 0 && (
-                <OverlayTrigger
-                  placement="top"
-                  overlay={
-                    <Tooltip id="expand-comments">
-                      {this.props.post.showComments ? '收起' : '展开'}
-                    </Tooltip>
-                  }
-                >
-                  <span
-                    style={{
-                      cursor: 'pointer',
-                      verticalAlign: '-webkit-baseline-middle',
-                      paddingRight: '5px'
-                    }}
+              {this.state.comments &&
+                this.state.comments.length > 0 && (
+                  <OverlayTrigger
+                    placement="top"
+                    overlay={
+                      <Tooltip id="expand-comments">
+                        {this.props.post.showComments ? '收起' : '展开'}
+                      </Tooltip>
+                    }
                   >
-                    {this.props.post.showComments ? (
-                      <FaAngleUp size={20} />
-                    ) : (
-                      <FaAngleDown size={20} />
-                    )}
-                  </span>
-                </OverlayTrigger>
-              )}
+                    <span
+                      style={{
+                        cursor: 'pointer',
+                        verticalAlign: '-webkit-baseline-middle',
+                        paddingRight: '5px'
+                      }}
+                    >
+                      {this.props.post.showComments ? (
+                        <FaAngleUp size={20} />
+                      ) : (
+                        <FaAngleDown size={20} />
+                      )}
+                    </span>
+                  </OverlayTrigger>
+                )}
               <span
                 style={{ cursor: 'pointer' }}
                 onClick={e => {

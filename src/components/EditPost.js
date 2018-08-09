@@ -1,25 +1,24 @@
 import React, { Component } from 'react'
 import { FormControl } from 'react-bootstrap'
 import { ButtonToolbar, Button } from 'react-bootstrap'
-import ReCAPTCHA from 'react-google-recaptcha'
+import Recaptcha from 'react-google-invisible-recaptcha'
 import { ResizableBox } from 'react-resizable'
 import 'react-resizable/css/styles.css'
 import { submitPost } from '../utils/api'
 
 class EditPost extends Component {
-  state = {
-    captcha: null
-  }
-
-  submitPost = e => {
-    e.preventDefault()
+  onResolved = () => {
     const newPost = {
-      captcha: this.state.captcha,
+      captcha: this.captcha.getResponse(),
       content: document.querySelector('#post-content > textarea').value
     }
     submitPost(newPost).then(newPost => {
       this.props.onSubmit(newPost)
     })
+  }
+
+  onSubmit = () => {
+    this.captcha.execute()
   }
 
   render() {
@@ -31,12 +30,6 @@ class EditPost extends Component {
         maxConstraints={[Infinity, window.innerHeight * 0.8]}
         axis="y"
       >
-        <div className="captcha-box">
-          <ReCAPTCHA
-            sitekey="6LdUC2kUAAAAAIBCb8UtopdHnt5t92AShps-sRPv"
-            onChange={val => this.setState({ captcha: val })}
-          />
-        </div>
         <div id="post-content">
           <FormControl
             componentClass="textarea"
@@ -51,12 +44,18 @@ class EditPost extends Component {
             <Button
               className="pull-right"
               bsStyle="primary"
-              onClick={this.submitPost}
+              onClick={this.onSubmit}
             >
               提交
             </Button>
           </ButtonToolbar>
         </div>
+        <Recaptcha
+          ref={el => (this.captcha = el)}
+          sitekey="6LeaEGkUAAAAAOLDd81ewgo_R7gbHzoaMUV7NkWH"
+          onResolved={this.onResolved}
+          locale="zh-cn"
+        />
       </ResizableBox>
     )
   }

@@ -1,5 +1,7 @@
+const url = 'https://metoo-treehole.appspot.com'
+
 export const fetchAllPosts = () =>
-  fetch('https://metoo-treehole.appspot.com/posts/getAll', {
+  fetch(`${url}/posts/getAll`, {
     method: 'GET',
     headers: new Headers({
       'Content-Type': 'application/json'
@@ -12,7 +14,7 @@ export const fetchAllPosts = () =>
     })
 
 export const submitPost = post =>
-  fetch('https://metoo-treehole.appspot.com/posts/add', {
+  fetch(`${url}/posts/add`, {
     method: 'POST',
     headers: new Headers({
       'Content-Type': 'application/json'
@@ -34,7 +36,7 @@ export const submitPost = post =>
     })
 
 export const fetchComments = postId =>
-  fetch(`https://metoo-treehole.appspot.com/comments/get/${postId}`, {
+  fetch(`${url}/comments/get/${postId}`, {
     method: 'GET',
     headers: new Headers({
       'Content-Type': 'application/json'
@@ -47,7 +49,7 @@ export const fetchComments = postId =>
     })
 
 export const submitComment = comment =>
-  fetch('https://metoo-treehole.appspot.com/comments/add', {
+  fetch(`${url}/comments/add`, {
     method: 'POST',
     headers: new Headers({
       'Content-Type': 'application/json'
