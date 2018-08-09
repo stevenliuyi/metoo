@@ -111,9 +111,14 @@ textarea:focus {
 
 #edit-post-buttonbar {
   position: absolute;
-  right: 10px;
+  right: 15px;
   bottom: 10px;
   z-index: 200;
+}
+
+.react-resizable-handle {
+  transform: scale(1.5);
+  transform-origin: 100% 100%;
 }
 
 .react-resizable > textarea {
@@ -168,4 +173,16 @@ textarea {
 #post-sort-button > .dropdown > button {
   padding: 0px 3px 0px 3px !important;
   margin-top: -15px !important;
+}
+
+.editor-info {
+  color: #bbb;
+  font-size: 12px;
+  vertical-align: -webkit-baseline-middle;
+  padding-right: 10px;
+}
+
+/* hide scrollbar */
+::-webkit-scrollbar {
+  width: 0px;
 }

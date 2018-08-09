@@ -4,9 +4,14 @@ import { ButtonToolbar, Button } from 'react-bootstrap'
 import Recaptcha from 'react-google-invisible-recaptcha'
 import { ResizableBox } from 'react-resizable'
 import 'react-resizable/css/styles.css'
+import Alert from 'react-s-alert'
 import { submitPost } from '../utils/api'
 
 class EditPost extends Component {
+  state = {
+    wordCount: 0
+  }
+
   onResolved = () => {
     const newPost = {
       captcha: this.captcha.getResponse(),
@@ -18,7 +23,11 @@ class EditPost extends Component {
   }
 
   onSubmit = () => {
-    this.captcha.execute()
+    if (this.state.wordCount < 10) {
+      Alert.warning('发布内容至少10字')
+    } else {
+      this.captcha.execute()
+    }
   }
 
   render() {
@@ -26,7 +35,7 @@ class EditPost extends Component {
       <ResizableBox
         height={window.innerHeight * 0.25}
         width={Infinity}
-        minConstraints={[0, 200]}
+        minConstraints={[0, 80]}
         maxConstraints={[Infinity, window.innerHeight * 0.8]}
         axis="y"
         onResizeStart={e => {
@@ -40,8 +49,16 @@ class EditPost extends Component {
             name="content"
             placeholder="分享你的故事……"
             defaultValue=""
+            onChange={e =>
+              this.setState({
+                wordCount: e.target.value.replace(/\n|\r|\t|\s/g, '').length
+              })
+            }
           />
           <ButtonToolbar id="edit-post-buttonbar">
+            <span className="editor-info">{`共 ${
+              this.state.wordCount
+            } 字`}</span>
             <Button className="pull-right" onClick={() => this.props.onClose()}>
               取消
             </Button>

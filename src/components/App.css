@@ -349,8 +349,14 @@ a {
 /* override notification styles */
 .s-alert-success {
   background-color: #10e3ea !important;
+  color: #000 !important;
 }
 
 .s-alert-warning {
   background-color: #10e3ea !important;
+  color: #000 !important;
+}
+
+.s-alert-box {
+  z-index: 10000 !important;
 }

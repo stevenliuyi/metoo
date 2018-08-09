@@ -3,11 +3,20 @@ import { FormControl } from 'react-bootstrap'
 import { ButtonToolbar, Button } from 'react-bootstrap'
 import { ResizableBox } from 'react-resizable'
 import Recaptcha from 'react-google-invisible-recaptcha'
+import Alert from 'react-s-alert'
 import { submitComment } from '../utils/api'
 
 class EditComment extends Component {
+  state = {
+    wordCount: 0
+  }
+
   onSubmit = () => {
-    this.captcha.execute()
+    if (this.state.wordCount === 0) {
+      Alert.warning('尚未输入任何评论')
+    } else {
+      this.captcha.execute()
+    }
   }
 
   onResolved = () => {
@@ -46,6 +55,11 @@ class EditComment extends Component {
               name="content"
               placeholder="在此输入评论内容"
               defaultValue=""
+              onChange={e =>
+                this.setState({
+                  wordCount: e.target.value.replace(/\n|\r|\t|\s/g, '').length
+                })
+              }
             />
           </ResizableBox>
           <ButtonToolbar style={{ paddingTop: '10px' }}>
@@ -59,6 +73,10 @@ class EditComment extends Component {
             >
               提交
             </Button>
+            <span
+              className="editor-info pull-right"
+              style={{ marginTop: '8px' }}
+            >{`共 ${this.state.wordCount} 字`}</span>
           </ButtonToolbar>
         </div>
         <Recaptcha
