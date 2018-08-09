@@ -893,6 +893,30 @@ const data = {
         title: '王五四：三十年前你对女学生做的事，任继长校长你还记得吗？'
       }
     ]
+  },
+  张耀春: {
+    photo: 'Zhang_Yaochun.jpg',
+    intro:
+      '摩拜单车前端负责人、原滴滴出行公共前端负责人、《Vue.js 权威指南》作者',
+    date: [2018, 8, 9],
+    details:
+      '摩拜单车一女员工指控张耀春（网名小春）对多位女下属有不同程度的性骚扰。',
+    quote:
+      '三番五次的要求女生去他家给自己做饭、深夜去车站接他，将职场当成自己的后宫，言语中常常暗示自己位高权重能给与对方工作上的帮助和便利。',
+    quoteby: '摩拜一女员工',
+    accusations: [
+      {
+        url:
+          'https://note.youdao.com/share/?id=d8053f7a2f111892d66ff7fabf5d8972&type=note#/',
+        title: '举报信'
+      }
+    ],
+    zhihu: [
+      {
+        url: 'https://www.zhihu.com/question/289146339',
+        title: '如何看待摩拜前端负责人小春(张耀春)疑似性骚扰女下属？'
+      }
+    ]
   }
 }
 
