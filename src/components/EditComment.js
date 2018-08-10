@@ -60,6 +60,7 @@ class EditComment extends Component {
                   wordCount: e.target.value.replace(/\n|\r|\t|\s/g, '').length
                 })
               }
+              data-gramm_editor={false}
             />
           </ResizableBox>
           <ButtonToolbar style={{ paddingTop: '10px' }}>

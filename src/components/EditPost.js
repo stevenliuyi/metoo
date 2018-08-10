@@ -54,6 +54,7 @@ class EditPost extends Component {
                 wordCount: e.target.value.replace(/\n|\r|\t|\s/g, '').length
               })
             }
+            data-gramm_editor={false}
           />
           <ButtonToolbar id="edit-post-buttonbar">
             <span className="editor-info">{`共 ${
