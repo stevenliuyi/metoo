@@ -194,3 +194,18 @@ textarea {
 .post-box:hover * .visible-on-hover {
   visibility: visible;
 }
+
+.share-button {
+  vertical-align: text-top;
+  padding-left: 15px;
+  cursor: pointer;
+}
+
+.share-site {
+  padding: 5px; 
+  cursor: pointer;
+}
+
+.share-site:hover {
+  color: var(--main-color);
+}

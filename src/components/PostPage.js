@@ -5,6 +5,7 @@ import Alert from 'react-s-alert'
 import Header from './Header'
 import Comments from './Comments'
 import EditComment from './EditComment'
+import ShareButton from './ShareButton'
 import { fetchAllPosts, fetchComments } from '../utils/api'
 
 const alertOptions = {
@@ -53,6 +54,12 @@ class PostPage extends Component {
               <Row className="post-content">{this.state.post.content}</Row>
               <Row>
                 <div className="post-info">
+                  <ShareButton
+                    url={`${window.location.origin}/treehole/${
+                      this.state.postId
+                    }`}
+                    content={this.state.post.content}
+                  />
                   <span>
                     <span
                       style={{ cursor: 'pointer' }}

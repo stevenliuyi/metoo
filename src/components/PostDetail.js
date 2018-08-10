@@ -5,6 +5,7 @@ import Alert from 'react-s-alert'
 import { FaAngleDown, FaAngleUp } from 'react-icons/fa'
 import Comments from './Comments'
 import EditComment from './EditComment'
+import ShareButton from './ShareButton'
 import { fetchComments } from '../utils/api'
 
 class PostDetail extends Component {
@@ -42,6 +43,12 @@ class PostDetail extends Component {
                     : 'visible-on-hover'
                 }
               >
+                <ShareButton
+                  url={`${window.location.origin}/treehole/${
+                    this.props.post._id
+                  }`}
+                  content={this.props.post.content}
+                />
                 {this.state.comments &&
                   this.state.comments.length > 0 && (
                     <OverlayTrigger
