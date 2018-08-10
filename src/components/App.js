@@ -11,6 +11,7 @@ import PersonDetail from './PersonDetail'
 import AvatarGrid from './AvatarGrid'
 import Footer from './Footer'
 import Treehole from './Treehole'
+import PostPage from './PostPage'
 import { setVhs } from '../utils/utils'
 import { Switch, Route } from 'react-router'
 
@@ -80,6 +81,7 @@ class App extends Component {
               )}
             />
             <Route exact path="/treehole" component={Treehole} />
+            <Route path="/treehole/:postId" component={PostPage} />
           </Switch>
         </div>
         <Footer />
