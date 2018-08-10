@@ -1,3 +1,10 @@
+:root {
+  --main-color: #10e3ea;
+  --main-color-darker: #0eccd2;
+  --muted-color: #ccc;
+  --muted-color-darker: #aeaeae;
+}
+
 @font-face {
   font-family: 'source-han-serif';
   src: url('/font/SourceHanSerifCN-Bold.eot');
@@ -56,18 +63,18 @@
 
 .thumb {
   border-radius: 50%;
-  border: 2px solid #ccc;
+  border: 2px solid var(--muted-color);
   margin: 5px;
 }
 
 .person:hover > .thumb,
 .person-highlight > .thumb {
-  border: 2px solid #10e3ea;
+  border: 2px solid var(--main-color);
 }
 
 .person:hover > .person-name,
 .person-highlight > .person-name {
-  background-color: #10e3ea;
+  background-color: var(--main-color);
   color: #fff;
 }
 
@@ -117,7 +124,7 @@
 
 #title:hover,
 #title:active {
-  color: #10e3ea !important;
+  color: var(--main-color) !important;
   cursor: pointer;
 }
 
@@ -127,13 +134,13 @@ a {
 
 
 #times {
-  color: #10e3ea;
+  color: var(--main-color);
   vertical-align: middle;
 }
 
 #number {
   font-size: 10vh;
-  color: #10e3ea;
+  color: var(--main-color);
 }
 
 .sort-button {
@@ -215,7 +222,7 @@ a {
   margin-right: 30px;
   margin-left: 15px;
   font-size: 20px;
-  color: #10e3ea;
+  color: var(--main-color);
   font-family: 'source-han-serif',serif;
   font-weight: bold;
   text-shadow: 0px 0px 3px #000;
@@ -250,7 +257,7 @@ a {
 }
 
 .circle:hover {
-  background-color: #10e3ea;
+  background-color: var(--main-color);
 }
 
 .unselectable {
@@ -272,15 +279,15 @@ a {
 /* override bootstrap tooltip styles */
 .tooltip > .tooltip-inner {
   color: #000 !important;
-  background-color: #ccc !important;
+  background-color: var(--muted-color) !important;
 }
 
 .tooltip.top .tooltip-arrow {
-  border-top-color: #ccc !important;
+  border-top-color: var(--muted-color) !important;
 }
 
 .tooltip.bottom .tooltip-arrow {
-  border-bottom-color: #ccc !important;
+  border-bottom-color: var(--muted-color) !important;
 }
 
 #subtitle {
@@ -319,7 +326,7 @@ a {
 #footer {
   height: 60px;
   font-size: 12px;
-  color: #bbb;
+  color: var(--muted-color);
   padding-top: 5px;
 }
 
@@ -335,25 +342,25 @@ a {
 }
 
 #footer > a {
-  color: #bbb;
+  color: var(--muted-color);
 }
 
 #footer > a:hover {
-  color: #10e3ea;
+  color: var(--main-color);
 }
 
 .footer-item:hover {
-  color: #10e3ea;
+  color: var(--main-color);
 }
 
 /* override notification styles */
 .s-alert-success {
-  background-color: #10e3ea !important;
+  background-color: var(--main-color) !important;
   color: #000 !important;
 }
 
 .s-alert-warning {
-  background-color: #10e3ea !important;
+  background-color: var(--main-color) !important;
   color: #000 !important;
 }
 
