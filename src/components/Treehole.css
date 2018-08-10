@@ -209,3 +209,11 @@ textarea {
 .share-site:hover {
   color: var(--main-color);
 }
+
+/* move modal to the center */
+.modal-dialog {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) !important;
+}
