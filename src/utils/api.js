@@ -1,10 +1,23 @@
 const url =
   process.env.NODE_ENV === 'development'
-    ? 'https://metoo-treehole.appspot.com'
+    ? 'http://localhost:1989'
     : 'https://metoo-treehole.appspot.com'
 
 export const fetchAllPosts = sortMethod =>
   fetch(`${url}/posts/getAll/${sortMethod != null ? sortMethod : ''}`, {
+    method: 'GET',
+    headers: new Headers({
+      'Content-Type': 'application/json'
+    })
+  })
+    .then(res => res.json())
+    .catch(err => {
+      console.log(err)
+      return null
+    })
+
+export const fetchPost = postId =>
+  fetch(`${url}/posts/get/${postId}`, {
     method: 'GET',
     headers: new Headers({
       'Content-Type': 'application/json'

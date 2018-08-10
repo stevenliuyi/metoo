@@ -6,7 +6,7 @@ import Header from './Header'
 import Comments from './Comments'
 import EditComment from './EditComment'
 import ShareButton from './ShareButton'
-import { fetchAllPosts, fetchComments } from '../utils/api'
+import { fetchPost, fetchComments } from '../utils/api'
 
 const alertOptions = {
   position: 'bottom',
@@ -23,9 +23,7 @@ class PostPage extends Component {
   }
 
   update = () => {
-    fetchAllPosts(this.state.postId).then(res =>
-      this.setState({ post: res.find(e => e._id === this.state.postId) })
-    )
+    fetchPost(this.state.postId).then(res => this.setState({ post: res }))
     fetchComments(this.state.postId).then(res =>
       this.setState({ comments: res })
     )
