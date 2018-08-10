@@ -53,7 +53,7 @@ class EditComment extends Component {
             <FormControl
               componentClass="textarea"
               name="content"
-              placeholder="在此输入评论内容"
+              placeholder="正在评论……"
               defaultValue=""
               onChange={e =>
                 this.setState({

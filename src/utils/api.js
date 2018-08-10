@@ -1,6 +1,6 @@
 const url =
   process.env.NODE_ENV === 'development'
-    ? 'http://localhost:1989'
+    ? 'https://metoo-treehole.appspot.com'
     : 'https://metoo-treehole.appspot.com'
 
 export const fetchAllPosts = sortMethod =>

@@ -186,3 +186,11 @@ textarea {
 ::-webkit-scrollbar {
   width: 0px;
 }
+
+.post-box * .visible-on-hover {
+  visibility: hidden;
+}
+
+.post-box:hover * .visible-on-hover {
+  visibility: visible;
+}

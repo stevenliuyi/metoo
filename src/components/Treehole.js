@@ -135,8 +135,10 @@ class Treehole extends Component {
                 post={post}
                 commentsToggle={() => {
                   let posts = this.state.posts
-                  posts[idx].showComments = !posts[idx].showComments
-                  this.setState({ posts })
+                  if (posts[idx].commentCount > 0) {
+                    posts[idx].showComments = !posts[idx].showComments
+                    this.setState({ posts })
+                  }
                 }}
                 commentCountInc={() => {
                   let posts = this.state.posts
