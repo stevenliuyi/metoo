@@ -26,14 +26,17 @@
 }
 
 .btn-toolbar > .btn-default,
-.btn-toolbar > .btn-primary
+.btn-toolbar > .btn-primary,
+.modal-dialog * .btn-primary
 {
   background-image: none !important;
   box-shadow: none !important;
   text-shadow: none !important;
 }
 
-.btn-toolbar > .btn-primary {
+.btn-toolbar > .btn-primary,
+.modal-dialog * .btn-primary
+{
   background-color: #000;
   color: #fff;
   border-color: #000;

@@ -9,15 +9,19 @@ import {
 import { displayTimestamp } from '../utils/utils'
 import Alert from 'react-s-alert'
 import { FaAngleDown, FaAngleUp } from 'react-icons/fa'
+import { MdDelete } from 'react-icons/md'
 import Comments from './Comments'
 import EditComment from './EditComment'
 import ShareButton from './ShareButton'
-import { fetchComments } from '../utils/api'
+import AdminModal from './AdminModal'
+import { fetchComments, deletePost } from '../utils/api'
 
 class PostDetail extends Component {
   state = {
     comments: [],
-    editComment: false
+    editComment: false,
+    adminKeyDialog: false,
+    adminKey: ''
   }
 
   update = () => {
@@ -45,6 +49,12 @@ class PostDetail extends Component {
                 <Label>测试贴</Label>
               </Row>
             )}
+          {this.props.admin &&
+            this.props.post.isDeleted && (
+              <Row>
+                <Label>已删除</Label>
+              </Row>
+            )}
           <Row className="post-content">{this.props.post.content}</Row>
           <Row>
             <div className="post-info">
@@ -61,6 +71,15 @@ class PostDetail extends Component {
                   }`}
                   content={this.props.post.content}
                 />
+                {this.props.admin && (
+                  <span
+                    className="pull-left"
+                    style={{ marginLeft: '5px', cursor: 'pointer' }}
+                    onClick={() => this.setState({ adminKeyDialog: true })}
+                  >
+                    <MdDelete size={18} />
+                  </span>
+                )}
                 {this.state.comments &&
                   this.state.comments.length > 0 && (
                     <OverlayTrigger
@@ -138,9 +157,34 @@ class PostDetail extends Component {
             />
           )}
           {this.props.post.showComments && (
-            <Comments comments={this.state.comments} admin={this.props.admin} />
+            <Comments
+              postId={this.props.post._id}
+              comments={this.state.comments}
+              admin={this.props.admin}
+              commentCountInc={this.props.commentCountInc}
+              onDelete={() => this.update()}
+            />
           )}
         </div>
+        <AdminModal
+          adminKey={this.state.adminKey}
+          show={this.state.adminKeyDialog}
+          onHide={() => this.setState({ adminKeyDialog: false, adminKey: '' })}
+          onChangeKey={e => this.setState({ adminKey: e.target.value })}
+          onSubmit={() =>
+            deletePost(this.props.post._id, this.state.adminKey).then(res => {
+              if (res == null || !res.success) {
+                if (res != null && res.error === 'wrong key')
+                  Alert.warning('密码输入错误')
+                else Alert.warning('删除失败')
+              } else {
+                Alert.success('删除成功')
+                this.setState({ adminKeyDialog: false, adminKey: '' })
+                this.props.onDelete()
+              }
+            })
+          }
+        />
       </ListGroupItem>
     )
   }

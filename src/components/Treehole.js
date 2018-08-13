@@ -146,12 +146,14 @@ class Treehole extends Component {
                     this.setState({ posts })
                   }
                 }}
-                commentCountInc={() => {
+                commentCountInc={(inc = 1, normalCommentDeleted = false) => {
                   let posts = this.state.posts
-                  posts[idx].commentCountAll += 1
-                  if (!this.props.admin) posts[idx].commentCount += 1
+                  if (!normalCommentDeleted) posts[idx].commentCountAll += inc
+                  if (!this.props.admin || normalCommentDeleted)
+                    posts[idx].commentCount += inc
                   this.setState({ posts })
                 }}
+                onDelete={() => this.update()}
               />
             ))}
           </ListGroup>

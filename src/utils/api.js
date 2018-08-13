@@ -1,6 +1,8 @@
+import md5 from 'md5'
+
 const url =
   process.env.NODE_ENV === 'development'
-    ? 'http://localhost:1989'
+    ? 'http://localhost:2089'
     : 'https://metoo-treehole.appspot.com'
 
 export const fetchAllPosts = (sortMethod, forTest = false) =>
@@ -56,6 +58,20 @@ export const submitPost = post =>
       return null
     })
 
+export const deletePost = (postId, adminKey) =>
+  fetch(`${url}/posts/delete/${postId}`, {
+    method: 'DELETE',
+    headers: new Headers({
+      'Content-Type': 'application/json'
+    }),
+    body: JSON.stringify({ adminKey: md5(adminKey) })
+  })
+    .then(res => res.json())
+    .catch(err => {
+      console.log(err)
+      return null
+    })
+
 export const fetchComments = (postId, forTest = false) =>
   fetch(`${url}/comments/${forTest ? 'test/' : ''}get/${postId}`, {
     method: 'GET',
@@ -86,6 +102,20 @@ export const submitComment = comment =>
         return res.newComment
       }
     })
+    .catch(err => {
+      console.log(err)
+      return null
+    })
+
+export const deleteComment = (postId, commentId, adminKey) =>
+  fetch(`${url}/comments/delete/${postId}/${commentId}`, {
+    method: 'DELETE',
+    headers: new Headers({
+      'Content-Type': 'application/json'
+    }),
+    body: JSON.stringify({ adminKey: md5(adminKey) })
+  })
+    .then(res => res.json())
     .catch(err => {
       console.log(err)
       return null
