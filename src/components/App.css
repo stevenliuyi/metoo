@@ -118,12 +118,12 @@
   transform: scale(1.1);
 }
 
-#title {
+.title {
   color: #000 !important;
 }
 
-#title:hover,
-#title:active {
+.title:hover,
+.title:active {
   color: var(--main-color) !important;
   cursor: pointer;
 }

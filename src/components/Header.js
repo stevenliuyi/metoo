@@ -3,13 +3,26 @@ import { FaTimes } from 'react-icons/fa'
 
 const Header = props => (
   <div>
-    <div id="title" className="h1 unselectable" onClick={props.onClick}>
+    <div
+      className={`h1 unselectable${props.onClick != null ? ' title' : ''}`}
+      onClick={props.onClick}
+    >
       <strong>
-        #MeToo{' '}
+        <span
+          className={props.onClickLeft ? 'title' : ''}
+          onClick={props.onClickLeft}
+        >
+          #MeToo
+        </span>{' '}
         <span id="times">
           <FaTimes size={30} />
         </span>{' '}
-        {props.title}
+        <span
+          className={props.onClickRight ? 'title' : ''}
+          onClick={props.onClickRight}
+        >
+          {props.title}
+        </span>
       </strong>
     </div>
     <div id="subtitle" className="text-muted">

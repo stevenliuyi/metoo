@@ -71,7 +71,11 @@ class Treehole extends Component {
   render() {
     return (
       <Grid>
-        <Header title="树洞" />
+        <Header
+          title="树洞"
+          onClickLeft={() => window.open('/', '_self')}
+          onClickRight={() => window.open('/treehole', '_self')}
+        />
         <div id="treehole-buttonbar">
           <OverlayTrigger
             placement="bottom"
