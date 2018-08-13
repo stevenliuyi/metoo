@@ -80,7 +80,16 @@ class App extends Component {
                 </Grid>
               )}
             />
-            <Route exact path="/treehole" component={Treehole} />
+            <Route
+              exact
+              path="/treehole"
+              render={() => <Treehole admin={false} />}
+            />
+            <Route
+              exact
+              path="/treehole/admin"
+              render={() => <Treehole admin={true} />}
+            />
             <Route path="/treehole/:postId" component={PostPage} />
           </Switch>
         </div>

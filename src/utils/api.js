@@ -3,13 +3,18 @@ const url =
     ? 'http://localhost:1989'
     : 'https://metoo-treehole.appspot.com'
 
-export const fetchAllPosts = sortMethod =>
-  fetch(`${url}/posts/getAll/${sortMethod != null ? sortMethod : ''}`, {
-    method: 'GET',
-    headers: new Headers({
-      'Content-Type': 'application/json'
-    })
-  })
+export const fetchAllPosts = (sortMethod, forTest = false) =>
+  fetch(
+    `${url}/posts/${forTest ? 'test/' : ''}getAll/${
+      sortMethod != null ? sortMethod : ''
+    }`,
+    {
+      method: 'GET',
+      headers: new Headers({
+        'Content-Type': 'application/json'
+      })
+    }
+  )
     .then(res => res.json())
     .catch(err => {
       console.log(err)
@@ -51,8 +56,8 @@ export const submitPost = post =>
       return null
     })
 
-export const fetchComments = postId =>
-  fetch(`${url}/comments/get/${postId}`, {
+export const fetchComments = (postId, forTest = false) =>
+  fetch(`${url}/comments/${forTest ? 'test/' : ''}get/${postId}`, {
     method: 'GET',
     headers: new Headers({
       'Content-Type': 'application/json'

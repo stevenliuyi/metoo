@@ -15,7 +15,8 @@ class EditPost extends Component {
   onResolved = () => {
     const newPost = {
       captcha: this.captcha.getResponse(),
-      content: document.querySelector('#post-content > textarea').value
+      content: document.querySelector('#post-content > textarea').value,
+      forTest: this.props.admin
     }
     submitPost(newPost).then(newPost => {
       this.props.onSubmit(newPost)

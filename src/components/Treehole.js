@@ -41,7 +41,7 @@ class Treehole extends Component {
 
   update = () => {
     this.setState({ status: 'loading' })
-    fetchAllPosts(this.state.sortMethod).then(res => {
+    fetchAllPosts(this.state.sortMethod, this.props.admin).then(res => {
       if (res == null) {
         this.setState({ status: 'error' })
       } else {
@@ -113,6 +113,7 @@ class Treehole extends Component {
             {this.state.editPost && (
               <ListGroupItem id="edit-post-item">
                 <EditPost
+                  admin={this.props.admin}
                   onClose={() => this.setState({ editPost: false })}
                   onSubmit={newPost => {
                     if (newPost == null) {
@@ -133,16 +134,22 @@ class Treehole extends Component {
               <PostDetail
                 key={`post-${post._id}`}
                 post={post}
+                admin={this.props.admin}
                 commentsToggle={() => {
                   let posts = this.state.posts
-                  if (posts[idx].commentCount > 0) {
+                  if (
+                    (this.props.admin
+                      ? posts[idx].commentCountAll
+                      : posts[idx].commentCount) > 0
+                  ) {
                     posts[idx].showComments = !posts[idx].showComments
                     this.setState({ posts })
                   }
                 }}
                 commentCountInc={() => {
                   let posts = this.state.posts
-                  posts[idx].commentCount += 1
+                  posts[idx].commentCountAll += 1
+                  if (!this.props.admin) posts[idx].commentCount += 1
                   this.setState({ posts })
                 }}
               />

@@ -1,5 +1,11 @@
 import React, { Component } from 'react'
-import { Row, ListGroupItem, OverlayTrigger, Tooltip } from 'react-bootstrap'
+import {
+  Row,
+  ListGroupItem,
+  OverlayTrigger,
+  Tooltip,
+  Label
+} from 'react-bootstrap'
 import { displayTimestamp } from '../utils/utils'
 import Alert from 'react-s-alert'
 import { FaAngleDown, FaAngleUp } from 'react-icons/fa'
@@ -15,7 +21,7 @@ class PostDetail extends Component {
   }
 
   update = () => {
-    fetchComments(this.props.post._id).then(res =>
+    fetchComments(this.props.post._id, this.props.admin).then(res =>
       this.setState({ comments: res })
     )
   }
@@ -33,6 +39,12 @@ class PostDetail extends Component {
             if (!this.state.editComment) this.props.commentsToggle()
           }}
         >
+          {this.props.admin &&
+            this.props.post.forTest && (
+              <Row>
+                <Label>测试贴</Label>
+              </Row>
+            )}
           <Row className="post-content">{this.props.post.content}</Row>
           <Row>
             <div className="post-info">
@@ -87,10 +99,18 @@ class PostDetail extends Component {
               <span
                 style={{
                   cursor:
-                    this.props.post.commentCount > 0 ? 'pointer' : 'default'
+                    (this.props.admin
+                      ? this.props.post.commentCountAll
+                      : this.props.post.commentCount) > 0
+                      ? 'pointer'
+                      : 'default'
                 }}
               >
-                评论 ({this.props.post.commentCount})
+                评论 (
+                {this.props.admin
+                  ? this.props.post.commentCountAll
+                  : this.props.post.commentCount}
+                )
               </span>{' '}
               &nbsp;‧&nbsp;
               {displayTimestamp(this.props.post.timestamp)}
@@ -99,6 +119,7 @@ class PostDetail extends Component {
           {this.state.editComment && (
             <EditComment
               postId={this.props.post._id}
+              admin={this.props.admin}
               onClose={() => this.setState({ editComment: false })}
               onSubmit={newComment => {
                 if (newComment == null) {
@@ -117,7 +138,7 @@ class PostDetail extends Component {
             />
           )}
           {this.props.post.showComments && (
-            <Comments comments={this.state.comments} />
+            <Comments comments={this.state.comments} admin={this.props.admin} />
           )}
         </div>
       </ListGroupItem>

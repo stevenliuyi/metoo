@@ -25,7 +25,8 @@ class EditComment extends Component {
       content: document.querySelector(
         `#resizable-${this.props.postId} > textarea`
       ).value,
-      postId: this.props.postId
+      postId: this.props.postId,
+      forTest: this.props.admin
     }
     submitComment(newComment).then(newComment =>
       this.props.onSubmit(newComment)
