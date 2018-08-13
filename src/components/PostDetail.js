@@ -36,7 +36,13 @@ class PostDetail extends Component {
 
   render() {
     return (
-      <ListGroupItem>
+      <ListGroupItem
+        style={
+          this.props.post.isDeleted || this.props.post.forTest
+            ? { backgroundColor: '#fafafa' }
+            : {}
+        }
+      >
         <div
           className="post-box"
           onClick={() => {

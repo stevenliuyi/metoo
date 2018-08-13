@@ -4,7 +4,8 @@ import {
   ListGroup,
   ListGroupItem,
   OverlayTrigger,
-  Tooltip
+  Tooltip,
+  Col
 } from 'react-bootstrap'
 import {
   MdHome,
@@ -76,92 +77,94 @@ class Treehole extends Component {
           onClickLeft={() => window.open('/', '_self')}
           onClickRight={() => window.open('/treehole', '_self')}
         />
-        <div id="treehole-buttonbar">
-          <OverlayTrigger
-            placement="bottom"
-            overlay={<Tooltip id="home">返回首页</Tooltip>}
-          >
-            <Link to="/">
-              <span className="treehole-button">
-                <MdHome size={30} />
-              </span>
-            </Link>
-          </OverlayTrigger>
-          <OverlayTrigger
-            placement="bottom"
-            overlay={<Tooltip id="home">刷新</Tooltip>}
-          >
-            <span className="treehole-button" onClick={this.update}>
-              <MdRefresh size={30} />
-            </span>
-          </OverlayTrigger>
-          <PostSortButton
-            sortToggle={this.sortToggle}
-            sortMethod={this.state.sortMethod}
-          />
-          <OverlayTrigger
-            placement="bottom"
-            overlay={<Tooltip id="submit">发布新内容</Tooltip>}
-          >
-            <span
-              id="submit-button"
-              className="treehole-button"
-              onClick={() => this.setState({ editPost: true })}
+        <Col sm={12} md={8} mdOffset={2}>
+          <div id="treehole-buttonbar">
+            <OverlayTrigger
+              placement="bottom"
+              overlay={<Tooltip id="home">返回首页</Tooltip>}
             >
-              <MdAddToPhotos size={30} />
-            </span>
-          </OverlayTrigger>
-        </div>
-        {this.state.status === 'loaded' && (
-          <ListGroup>
-            {this.state.editPost && (
-              <ListGroupItem id="edit-post-item">
-                <EditPost
+              <Link to="/">
+                <span className="treehole-button">
+                  <MdHome size={30} />
+                </span>
+              </Link>
+            </OverlayTrigger>
+            <OverlayTrigger
+              placement="bottom"
+              overlay={<Tooltip id="home">刷新</Tooltip>}
+            >
+              <span className="treehole-button" onClick={this.update}>
+                <MdRefresh size={30} />
+              </span>
+            </OverlayTrigger>
+            <PostSortButton
+              sortToggle={this.sortToggle}
+              sortMethod={this.state.sortMethod}
+            />
+            <OverlayTrigger
+              placement="bottom"
+              overlay={<Tooltip id="submit">发布新内容</Tooltip>}
+            >
+              <span
+                id="submit-button"
+                className="treehole-button"
+                onClick={() => this.setState({ editPost: true })}
+              >
+                <MdAddToPhotos size={30} />
+              </span>
+            </OverlayTrigger>
+          </div>
+          {this.state.status === 'loaded' && (
+            <ListGroup>
+              {this.state.editPost && (
+                <ListGroupItem id="edit-post-item">
+                  <EditPost
+                    admin={this.props.admin}
+                    onClose={() => this.setState({ editPost: false })}
+                    onSubmit={newPost => {
+                      if (newPost == null) {
+                        // error
+                        Alert.warning('提交失败，请稍候再试')
+                      } else {
+                        Alert.success('发布成功')
+                        this.setState({
+                          posts: [newPost, ...this.state.posts],
+                          editPost: false
+                        })
+                      }
+                    }}
+                  />
+                </ListGroupItem>
+              )}
+              {this.state.posts.map((post, idx) => (
+                <PostDetail
+                  key={`post-${post._id}`}
+                  post={post}
                   admin={this.props.admin}
-                  onClose={() => this.setState({ editPost: false })}
-                  onSubmit={newPost => {
-                    if (newPost == null) {
-                      // error
-                      Alert.warning('提交失败，请稍候再试')
-                    } else {
-                      Alert.success('发布成功')
-                      this.setState({
-                        posts: [newPost, ...this.state.posts],
-                        editPost: false
-                      })
+                  commentsToggle={() => {
+                    let posts = this.state.posts
+                    if (
+                      (this.props.admin
+                        ? posts[idx].commentCountAll
+                        : posts[idx].commentCount) > 0
+                    ) {
+                      posts[idx].showComments = !posts[idx].showComments
+                      this.setState({ posts })
                     }
                   }}
-                />
-              </ListGroupItem>
-            )}
-            {this.state.posts.map((post, idx) => (
-              <PostDetail
-                key={`post-${post._id}`}
-                post={post}
-                admin={this.props.admin}
-                commentsToggle={() => {
-                  let posts = this.state.posts
-                  if (
-                    (this.props.admin
-                      ? posts[idx].commentCountAll
-                      : posts[idx].commentCount) > 0
-                  ) {
-                    posts[idx].showComments = !posts[idx].showComments
+                  commentCountInc={(inc = 1, normalCommentDeleted = false) => {
+                    let posts = this.state.posts
+                    if (!normalCommentDeleted) posts[idx].commentCountAll += inc
+                    if (!this.props.admin || normalCommentDeleted)
+                      posts[idx].commentCount += inc
                     this.setState({ posts })
-                  }
-                }}
-                commentCountInc={(inc = 1, normalCommentDeleted = false) => {
-                  let posts = this.state.posts
-                  if (!normalCommentDeleted) posts[idx].commentCountAll += inc
-                  if (!this.props.admin || normalCommentDeleted)
-                    posts[idx].commentCount += inc
-                  this.setState({ posts })
-                }}
-                onUpdate={() => this.update()}
-              />
-            ))}
-          </ListGroup>
-        )}
+                  }}
+                  onUpdate={() => this.update()}
+                />
+              ))}
+            </ListGroup>
+          )}
+        </Col>
         {this.state.status === 'loading' && (
           <div className="load-message">
             <BeatLoader

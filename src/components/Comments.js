@@ -20,7 +20,15 @@ class Comments extends Component {
       this.props.comments.length > 0 && (
         <div onClick={e => e.stopPropagation()}>
           {this.props.comments.map(comment => (
-            <div className="comment-box" key={`comment-${comment._id}`}>
+            <div
+              className="comment-box"
+              key={`comment-${comment._id}`}
+              style={
+                comment.isDeleted || comment.forTest
+                  ? { backgroundColor: '#fafafa' }
+                  : {}
+              }
+            >
               <div className="comment-content">{comment.content}</div>
               <div className="post-info">
                 {this.props.admin &&
