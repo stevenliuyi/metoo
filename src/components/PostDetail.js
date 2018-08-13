@@ -9,12 +9,12 @@ import {
 import { displayTimestamp } from '../utils/utils'
 import Alert from 'react-s-alert'
 import { FaAngleDown, FaAngleUp } from 'react-icons/fa'
-import { MdDelete } from 'react-icons/md'
+import { MdDelete, MdUndo } from 'react-icons/md'
 import Comments from './Comments'
 import EditComment from './EditComment'
 import ShareButton from './ShareButton'
 import AdminModal from './AdminModal'
-import { fetchComments, deletePost } from '../utils/api'
+import { fetchComments, deletePost, recoverPost } from '../utils/api'
 
 class PostDetail extends Component {
   state = {
@@ -77,7 +77,20 @@ class PostDetail extends Component {
                     style={{ marginLeft: '5px', cursor: 'pointer' }}
                     onClick={() => this.setState({ adminKeyDialog: true })}
                   >
-                    <MdDelete size={18} />
+                    <OverlayTrigger
+                      placement="right"
+                      overlay={
+                        <Tooltip id={`delete-recover-${this.props.post._id}`}>
+                          {!this.props.post.isDeleted ? '删除' : '恢复'}
+                        </Tooltip>
+                      }
+                    >
+                      {!this.props.post.isDeleted ? (
+                        <MdDelete size={18} />
+                      ) : (
+                        <MdUndo size={18} />
+                      )}
+                    </OverlayTrigger>
                   </span>
                 )}
                 {this.state.comments &&
@@ -162,25 +175,34 @@ class PostDetail extends Component {
               comments={this.state.comments}
               admin={this.props.admin}
               commentCountInc={this.props.commentCountInc}
-              onDelete={() => this.update()}
+              onUpdate={this.update}
             />
           )}
         </div>
         <AdminModal
           adminKey={this.state.adminKey}
           show={this.state.adminKeyDialog}
+          isDeleted={this.props.post.isDeleted}
           onHide={() => this.setState({ adminKeyDialog: false, adminKey: '' })}
           onChangeKey={e => this.setState({ adminKey: e.target.value })}
           onSubmit={() =>
-            deletePost(this.props.post._id, this.state.adminKey).then(res => {
+            (!this.props.post.isDeleted ? deletePost : recoverPost)(
+              this.props.post._id,
+              this.state.adminKey
+            ).then(res => {
               if (res == null || !res.success) {
                 if (res != null && res.error === 'wrong key')
                   Alert.warning('密码输入错误')
-                else Alert.warning('删除失败')
+                else
+                  Alert.warning(
+                    !this.props.post.isDeleted ? '删除失败' : '恢复失败'
+                  )
               } else {
-                Alert.success('删除成功')
+                Alert.success(
+                  !this.props.post.isDeleted ? '删除成功' : '恢复成功'
+                )
                 this.setState({ adminKeyDialog: false, adminKey: '' })
-                this.props.onDelete()
+                this.props.onUpdate()
               }
             })
           }

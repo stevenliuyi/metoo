@@ -28,7 +28,7 @@ class AdminModal extends Component {
                   className="pull-right"
                   onClick={this.props.onSubmit}
                 >
-                  确认删除
+                  {`确认${!this.props.isDeleted ? '删除' : '恢复'}`}
                 </Button>
               </ButtonToolbar>
             </Row>

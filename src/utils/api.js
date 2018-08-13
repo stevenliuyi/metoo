@@ -72,6 +72,20 @@ export const deletePost = (postId, adminKey) =>
       return null
     })
 
+export const recoverPost = (postId, adminKey) =>
+  fetch(`${url}/posts/recover/${postId}`, {
+    method: 'PUT',
+    headers: new Headers({
+      'Content-Type': 'application/json'
+    }),
+    body: JSON.stringify({ adminKey: md5(adminKey) })
+  })
+    .then(res => res.json())
+    .catch(err => {
+      console.log(err)
+      return null
+    })
+
 export const fetchComments = (postId, forTest = false) =>
   fetch(`${url}/comments/${forTest ? 'test/' : ''}get/${postId}`, {
     method: 'GET',
@@ -110,6 +124,20 @@ export const submitComment = comment =>
 export const deleteComment = (postId, commentId, adminKey) =>
   fetch(`${url}/comments/delete/${postId}/${commentId}`, {
     method: 'DELETE',
+    headers: new Headers({
+      'Content-Type': 'application/json'
+    }),
+    body: JSON.stringify({ adminKey: md5(adminKey) })
+  })
+    .then(res => res.json())
+    .catch(err => {
+      console.log(err)
+      return null
+    })
+
+export const recoverComment = (postId, commentId, adminKey) =>
+  fetch(`${url}/comments/recover/${postId}/${commentId}`, {
+    method: 'PUT',
     headers: new Headers({
       'Content-Type': 'application/json'
     }),

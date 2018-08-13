@@ -1,14 +1,16 @@
 import React, { Component } from 'react'
-import { Label } from 'react-bootstrap'
-import { MdDelete } from 'react-icons/md'
+import { Label, OverlayTrigger, Tooltip } from 'react-bootstrap'
+import { MdDelete, MdUndo } from 'react-icons/md'
 import Alert from 'react-s-alert'
 import AdminModal from './AdminModal'
 import { displayTimestamp } from '../utils/utils'
-import { deleteComment } from '../utils/api'
+import { deleteComment, recoverComment } from '../utils/api'
 
 class Comments extends Component {
   state = {
     currentCommentId: null,
+    currentCommentIsDeleted: false,
+    currentCommentForTest: false,
     adminKeyDialog: false,
     adminKey: ''
   }
@@ -49,11 +51,26 @@ class Comments extends Component {
                     onClick={() =>
                       this.setState({
                         adminKeyDialog: true,
-                        currentCommentId: comment._id
+                        currentCommentId: comment._id,
+                        currentCommentIsDeleted: comment.isDeleted,
+                        currentCommentForTest: comment.forTest
                       })
                     }
                   >
-                    <MdDelete size={18} />
+                    <OverlayTrigger
+                      placement="left"
+                      overlay={
+                        <Tooltip id={`delete-recover-comment-${comment._id}`}>
+                          {!comment.isDeleted ? '删除' : '恢复'}
+                        </Tooltip>
+                      }
+                    >
+                      {!comment.isDeleted ? (
+                        <MdDelete size={18} />
+                      ) : (
+                        <MdUndo size={18} />
+                      )}
+                    </OverlayTrigger>
                   </span>
                 )}
                 {displayTimestamp(comment.timestamp)}
@@ -62,13 +79,16 @@ class Comments extends Component {
           ))}
           <AdminModal
             adminKey={this.state.adminKey}
+            isDeleted={this.state.currentCommentIsDeleted}
             show={this.state.adminKeyDialog}
             onHide={() =>
               this.setState({ adminKeyDialog: false, adminKey: '' })
             }
             onChangeKey={e => this.setState({ adminKey: e.target.value })}
             onSubmit={() =>
-              deleteComment(
+              (!this.state.currentCommentIsDeleted
+                ? deleteComment
+                : recoverComment)(
                 this.props.postId,
                 this.state.currentCommentId,
                 this.state.adminKey
@@ -76,11 +96,26 @@ class Comments extends Component {
                 if (res == null || !res.success) {
                   if (res != null && res.error === 'wrong key')
                     Alert.warning('密码输入错误')
-                  else Alert.warning('评论删除失败')
+                  else
+                    Alert.warning(
+                      !this.state.currentCommentIsDeleted
+                        ? '评论删除失败'
+                        : '评论恢复失败'
+                    )
                 } else {
-                  Alert.success('评论删除成功')
+                  Alert.success(
+                    !this.state.currentCommentIsDeleted
+                      ? '评论删除成功'
+                      : '评论恢复成功'
+                  )
                   this.setState({ adminKeyDialog: false, adminKey: '' })
-                  this.props.onDelete()
+                  if (!this.state.currentCommentIsDeleted) {
+                    this.props.commentCountInc(
+                      -1,
+                      !this.state.currentCommentForTest
+                    )
+                  }
+                  this.props.onUpdate()
                 }
               })
             }

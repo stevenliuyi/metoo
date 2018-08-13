@@ -153,7 +153,7 @@ class Treehole extends Component {
                     posts[idx].commentCount += inc
                   this.setState({ posts })
                 }}
-                onDelete={() => this.update()}
+                onUpdate={() => this.update()}
               />
             ))}
           </ListGroup>

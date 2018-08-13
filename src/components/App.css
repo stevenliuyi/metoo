@@ -290,6 +290,14 @@ a {
   border-bottom-color: var(--muted-color) !important;
 }
 
+.tooltip.right .tooltip-arrow {
+  border-right-color: var(--muted-color) !important;
+}
+
+.tooltip.left .tooltip-arrow {
+  border-left-color: var(--muted-color) !important;
+}
+
 #subtitle {
   margin-top: -10px;
   margin-bottom: 10px;
