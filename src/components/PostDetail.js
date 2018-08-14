@@ -8,7 +8,7 @@ import {
 } from 'react-bootstrap'
 import { displayTimestamp } from '../utils/utils'
 import Alert from 'react-s-alert'
-import { FaAngleDown, FaAngleUp } from 'react-icons/fa'
+import { FaAngleDown, FaAngleUp, FaAngleRight } from 'react-icons/fa'
 import { MdDelete, MdUndo } from 'react-icons/md'
 import Comments from './Comments'
 import EditComment from './EditComment'
@@ -61,7 +61,31 @@ class PostDetail extends Component {
                 <Label>已删除</Label>
               </Row>
             )}
-          <Row className="post-content">{this.props.post.content}</Row>
+          <Row className="post-content">
+            {this.props.post.content.substring(0, 500)}
+            {this.props.post.content.length > 500 && (
+              <span>
+                ...
+                <Label
+                  className="full-text-button unselectable"
+                  onClick={() =>
+                    window.open(
+                      `${window.location.origin}/treehole/${
+                        this.props.post._id
+                      }`,
+                      '_self'
+                    )
+                  }
+                >
+                  <FaAngleRight
+                    size={12}
+                    style={{ verticalAlign: 'text-top', fontWeight: 'normal' }}
+                  />
+                  查看全文
+                </Label>
+              </span>
+            )}
+          </Row>
           <Row>
             <div className="post-info">
               <span

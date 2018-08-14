@@ -109,7 +109,10 @@ class Treehole extends Component {
               <span
                 id="submit-button"
                 className="treehole-button"
-                onClick={() => this.setState({ editPost: true })}
+                onClick={() => {
+                  this.setState({ editPost: true })
+                  document.querySelector('#post-content > textarea').focus()
+                }}
               >
                 <MdAddToPhotos size={30} />
               </span>

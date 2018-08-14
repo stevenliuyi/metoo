@@ -32,8 +32,12 @@ export const sort = (data, sortMethod) =>
             : -1
       )
 
-export const displayTimestamp = timestamp => {
-  return moment(timestamp)
+export const displayTimestamp = timestamp =>
+  moment(timestamp)
     .locale('zh-cn')
     .fromNow()
-}
+
+export const displayFullTimestamp = timestamp =>
+  moment(timestamp)
+    .locale('zh-cn')
+    .format('lll')
