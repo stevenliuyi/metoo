@@ -7,6 +7,7 @@
   text-align: right;
   cursor: pointer;
   padding-right: 10px;
+  padding-bottom: 10px;
 }
 
 .treehole-button {
@@ -227,5 +228,35 @@ textarea {
 }
 
 .full-text-button:hover {
+  background-color: var(--main-color);
+}
+
+#search-box {
+  width: 120px;
+  position: relative;
+}
+
+#search-text {
+  width: 120px;
+  font-size: 12px;
+  border: solid 1px var(--muted-color) !important;
+  box-shadow: none !important;
+  border-radius: 9999px;
+  position: absolute;
+  padding-right: 30px;
+}
+
+#search-text:focus {
+  border: solid 2px var(--main-color) !important;
+}
+
+#search-icon {
+  color: var(--muted-color);
+  position: absolute;
+  margin-top: 5px;
+  margin-left: -30px;
+}
+
+.highlight-text {
   background-color: var(--main-color);
 }

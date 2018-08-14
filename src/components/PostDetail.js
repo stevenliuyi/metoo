@@ -15,6 +15,7 @@ import EditComment from './EditComment'
 import ShareButton from './ShareButton'
 import AdminModal from './AdminModal'
 import { fetchComments, deletePost, recoverPost } from '../utils/api'
+import { escapeRegExp } from '../utils/utils'
 
 class PostDetail extends Component {
   state = {
@@ -62,7 +63,21 @@ class PostDetail extends Component {
               </Row>
             )}
           <Row className="post-content">
-            {this.props.post.content.substring(0, 500)}
+            <span
+              dangerouslySetInnerHTML={{
+                __html:
+                  this.props.searchText === ''
+                    ? this.props.post.content.substring(0, 500)
+                    : this.props.post.content
+                        .substring(0, 500)
+                        .replace(
+                          new RegExp(escapeRegExp(this.props.searchText), 'g'),
+                          `<span class="highlight-text">${
+                            this.props.searchText
+                          }</span>`
+                        )
+              }}
+            />
             {this.props.post.content.length > 500 && (
               <span>
                 ...

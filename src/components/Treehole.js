@@ -18,12 +18,13 @@ import { BeatLoader } from 'react-spinners'
 import Alert from 'react-s-alert'
 import 'react-s-alert/dist/s-alert-default.css'
 import 'react-s-alert/dist/s-alert-css-effects/stackslide.css'
-import { fetchAllPosts } from '../utils/api'
+import { fetchAllPosts, searchPosts } from '../utils/api'
 import './Treehole.css'
 import Header from './Header'
 import PostDetail from './PostDetail'
 import EditPost from './EditPost'
 import PostSortButton from './PostSortButton'
+import SearchPost from './SearchPost'
 
 const alertOptions = {
   position: 'bottom',
@@ -37,12 +38,24 @@ class Treehole extends Component {
     editPost: true,
     status: 'loading',
     // 1 - newest first; 2 - oldest first; 3 - most commented first
-    sortMethod: 1
+    sortMethod: 1,
+    searchText: ''
   }
 
   update = () => {
     this.setState({ status: 'loading' })
-    fetchAllPosts(this.state.sortMethod, this.props.admin).then(res => {
+
+    let fetchedPosts
+    if (this.state.searchText === '')
+      fetchedPosts = fetchAllPosts(this.state.sortMethod, this.props.admin)
+    else
+      fetchedPosts = searchPosts(
+        this.state.searchText,
+        this.state.sortMethod,
+        this.props.admin
+      )
+
+    fetchedPosts.then(res => {
       if (res == null) {
         this.setState({ status: 'error' })
       } else {
@@ -82,6 +95,11 @@ class Treehole extends Component {
         />
         <Col sm={12} md={8} mdOffset={2}>
           <div id="treehole-buttonbar">
+            <SearchPost
+              searchText={this.state.searchText}
+              onChange={e => this.setState({ searchText: e.target.value })}
+              onSearch={() => this.update()}
+            />
             <OverlayTrigger
               placement="bottom"
               overlay={<Tooltip id="home">返回首页</Tooltip>}
@@ -148,6 +166,7 @@ class Treehole extends Component {
                   key={`post-${post._id}`}
                   post={post}
                   admin={this.props.admin}
+                  searchText={this.state.searchText}
                   commentsToggle={() => {
                     let posts = this.state.posts
                     if (
@@ -171,26 +190,26 @@ class Treehole extends Component {
               ))}
             </ListGroup>
           )}
-        </Col>
-        {this.state.status === 'loading' && (
-          <div className="load-message">
-            <BeatLoader
-              color={'#bbb'}
-              size={20}
-              loading={true}
-              loaderStyle={{ textAlign: 'center' }}
-            />
-            <div id="loading-text">数据读取中</div>
-          </div>
-        )}
-        {this.state.status === 'error' && (
-          <div className="load-message">
-            <MdErrorOutline size={64} color={'#bbb'} />
-            <div id="error-text" onClick={this.update}>
-              数据读取失败，请刷新重试。
+          {this.state.status === 'loading' && (
+            <div className="load-message">
+              <BeatLoader
+                color={'#bbb'}
+                size={20}
+                loading={true}
+                loaderStyle={{ textAlign: 'center' }}
+              />
+              <div id="loading-text">数据读取中</div>
             </div>
-          </div>
-        )}
+          )}
+          {this.state.status === 'error' && (
+            <div className="load-message">
+              <MdErrorOutline size={64} color={'#bbb'} />
+              <div id="error-text" onClick={this.update}>
+                数据读取失败，请刷新重试。
+              </div>
+            </div>
+          )}
+        </Col>
         <Alert stack={{ limit: 3 }} {...alertOptions} />
       </Grid>
     )

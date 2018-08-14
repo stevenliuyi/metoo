@@ -23,6 +23,23 @@ export const fetchAllPosts = (sortMethod, forTest = false) =>
       return null
     })
 
+export const searchPosts = (text, sortMethod, forTest = false) =>
+  fetch(
+    `${url}/posts/${forTest ? 'test/' : ''}search/${text}/${
+      sortMethod != null ? sortMethod : ''
+    }`,
+    {
+      method: 'GET',
+      headers: new Headers({
+        'Content-Type': 'application/json'
+      })
+    }
+  )
+    .then(res => res.json())
+    .catch(err => {
+      console.log(err)
+      return null
+    })
 export const fetchPost = postId =>
   fetch(`${url}/posts/get/${postId}`, {
     method: 'GET',

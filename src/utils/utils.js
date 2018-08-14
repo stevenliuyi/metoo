@@ -41,3 +41,6 @@ export const displayFullTimestamp = timestamp =>
   moment(timestamp)
     .locale('zh-cn')
     .format('lll')
+
+export const escapeRegExp = string =>
+  string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
