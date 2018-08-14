@@ -260,7 +260,8 @@ a {
   background-color: var(--main-color);
 }
 
-.unselectable {
+.unselectable,
+.s-alert-box {
  -webkit-user-select: none;
  -moz-user-select: none;
  -ms-user-select: none;

@@ -30,11 +30,11 @@ class Comments extends Component {
               }
             >
               <div className="comment-content">{comment.content}</div>
-              <div className="post-info">
+              <div className="post-info unseletable">
                 {this.props.admin &&
                   comment.forTest && (
                     <Label
-                      className="pull-left"
+                      className="pull-left unselectable"
                       style={{ marginLeft: '20px', marginTop: '5px' }}
                     >
                       测试评论

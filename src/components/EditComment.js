@@ -76,7 +76,7 @@ class EditComment extends Component {
               提交
             </Button>
             <span
-              className="editor-info pull-right"
+              className="editor-info pull-right unselectable"
               style={{ marginTop: '8px' }}
             >{`共 ${this.state.wordCount} 字`}</span>
           </ButtonToolbar>

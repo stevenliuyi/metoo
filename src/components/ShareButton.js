@@ -95,7 +95,7 @@ class ShareButton extends Component {
             onClick={e => e.stopPropagation()}
           >
             <QRCode value={this.props.url} size={100} />
-            <div style={{ paddingTop: '5px' }}>
+            <div className="unselectable" style={{ paddingTop: '5px' }}>
               请使用微信“扫一扫”分享该链接
             </div>
           </Modal.Body>

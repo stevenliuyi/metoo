@@ -53,7 +53,7 @@ class PostPage extends Component {
               <div className="post-box">
                 <Row className="post-content">{this.state.post.content}</Row>
                 <Row>
-                  <div className="post-info">
+                  <div className="post-info unselectable">
                     <ShareButton
                       url={`${window.location.origin}/treehole/${
                         this.state.postId

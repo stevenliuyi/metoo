@@ -53,13 +53,13 @@ class PostDetail extends Component {
           {this.props.admin &&
             this.props.post.forTest && (
               <Row>
-                <Label>测试贴</Label>
+                <Label className="unselectable">测试贴</Label>
               </Row>
             )}
           {this.props.admin &&
             this.props.post.isDeleted && (
               <Row>
-                <Label>已删除</Label>
+                <Label className="unselectable">已删除</Label>
               </Row>
             )}
           <Row className="post-content">
@@ -102,7 +102,7 @@ class PostDetail extends Component {
             )}
           </Row>
           <Row>
-            <div className="post-info">
+            <div className="post-info unselectable">
               <span
                 className={
                   this.props.post.showComments || this.state.editComment
