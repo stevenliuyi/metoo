@@ -68,6 +68,8 @@ class Treehole extends Component {
 
   componentDidUpdate(prevProps, prevState) {
     if (prevState.sortMethod !== this.state.sortMethod) this.update()
+    if (!prevState.editPost && this.state.editPost)
+      document.querySelector('#post-content > textarea').focus()
   }
 
   render() {
@@ -110,8 +112,9 @@ class Treehole extends Component {
                 id="submit-button"
                 className="treehole-button"
                 onClick={() => {
-                  this.setState({ editPost: true })
-                  document.querySelector('#post-content > textarea').focus()
+                  if (this.state.editPost)
+                    document.querySelector('#post-content > textarea').focus()
+                  else this.setState({ editPost: true })
                 }}
               >
                 <MdAddToPhotos size={30} />
