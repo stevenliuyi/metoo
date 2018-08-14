@@ -34,7 +34,7 @@ const alertOptions = {
 class Treehole extends Component {
   state = {
     posts: [],
-    editPost: false,
+    editPost: true,
     status: 'loading',
     // 1 - newest first; 2 - oldest first; 3 - most commented first
     sortMethod: 1
@@ -62,6 +62,7 @@ class Treehole extends Component {
   }
 
   componentDidMount() {
+    if (this.props.admin) this.setState({ editPost: false })
     this.update()
   }
 
