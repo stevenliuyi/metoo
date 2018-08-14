@@ -10,6 +10,7 @@ import { displayTimestamp } from '../utils/utils'
 import Alert from 'react-s-alert'
 import { FaAngleDown, FaAngleUp, FaAngleRight } from 'react-icons/fa'
 import { MdDelete, MdUndo } from 'react-icons/md'
+import { withRouter } from 'react-router-dom'
 import Comments from './Comments'
 import EditComment from './EditComment'
 import ShareButton from './ShareButton'
@@ -84,12 +85,7 @@ class PostDetail extends Component {
                 <Label
                   className="full-text-button unselectable"
                   onClick={() =>
-                    window.open(
-                      `${window.location.origin}/treehole/${
-                        this.props.post._id
-                      }`,
-                      '_self'
-                    )
+                    this.props.history.push(`/treehole/${this.props.post._id}`)
                   }
                 >
                   <FaAngleRight
@@ -257,4 +253,4 @@ class PostDetail extends Component {
   }
 }
 
-export default PostDetail
+export default withRouter(PostDetail)

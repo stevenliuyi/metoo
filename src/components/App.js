@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap/dist/css/bootstrap-theme.css'
 import { Grid } from 'react-bootstrap'
 import { isMobile } from 'react-device-detect'
+import { withRouter } from 'react-router-dom'
 import data from '../data/data.js'
 import Header from './Header'
 import Messages from './Messages'
@@ -22,10 +23,29 @@ class App extends Component {
   }
 
   componentDidMount() {
+    const gtag = window.gtag
+    if (typeof gtag === 'function') {
+      gtag('config', 'UA-123965687-1', {
+        page_location: window.location.href,
+        page_path: window.location.pathname
+      })
+    }
+
     // set vh-related styles on mobile devices
     if (isMobile) {
       setVhs()
       window.addEventListener('deviceorientation', setVhs)
+    }
+  }
+
+  componentDidUpdate({ location, history }) {
+    const gtag = window.gtag
+    if (location.pathname === this.props.location.pathname) return
+    if (history.action === 'PUSH' && typeof gtag === 'function') {
+      gtag('config', 'UA-123965687-1', {
+        page_location: window.location.href,
+        page_path: window.location.pathname
+      })
     }
   }
 
@@ -99,4 +119,4 @@ class App extends Component {
   }
 }
 
-export default App
+export default withRouter(App)

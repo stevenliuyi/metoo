@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { Grid, Row, ListGroupItem, Col } from 'react-bootstrap'
-import { displayFullTimestamp } from '../utils/utils'
+import { withRouter } from 'react-router-dom'
 import Alert from 'react-s-alert'
+import { displayFullTimestamp } from '../utils/utils'
 import Header from './Header'
 import Comments from './Comments'
 import EditComment from './EditComment'
@@ -44,8 +45,8 @@ class PostPage extends Component {
       <div>
         <Header
           title="树洞"
-          onClickLeft={() => window.open('/', '_self')}
-          onClickRight={() => window.open('/treehole', '_self')}
+          onClickLeft={() => this.props.history.push('/')}
+          onClickRight={() => this.props.history.push('/treehole')}
         />
         <Grid>
           <Col sm={12} md={8} mdOffset={2}>
@@ -112,4 +113,4 @@ class PostPage extends Component {
   }
 }
 
-export default PostPage
+export default withRouter(PostPage)

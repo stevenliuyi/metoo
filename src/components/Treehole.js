@@ -13,7 +13,7 @@ import {
   MdAddToPhotos,
   MdErrorOutline
 } from 'react-icons/md'
-import { Link } from 'react-router-dom'
+import { Link, withRouter } from 'react-router-dom'
 import { BeatLoader } from 'react-spinners'
 import Alert from 'react-s-alert'
 import 'react-s-alert/dist/s-alert-default.css'
@@ -90,8 +90,8 @@ class Treehole extends Component {
       <Grid>
         <Header
           title="树洞"
-          onClickLeft={() => window.open('/', '_self')}
-          onClickRight={() => window.open('/treehole', '_self')}
+          onClickLeft={() => this.props.history.push('/')}
+          onClickRight={() => this.props.history.push('/treehole')}
         />
         <Col sm={12} md={8} mdOffset={2}>
           <div id="treehole-buttonbar">
@@ -216,4 +216,4 @@ class Treehole extends Component {
   }
 }
 
-export default Treehole
+export default withRouter(Treehole)
