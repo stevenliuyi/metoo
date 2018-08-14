@@ -917,6 +917,22 @@ const data = {
         title: '如何看待摩拜前端负责人小春(张耀春)疑似性骚扰女下属？'
       }
     ]
+  },
+  杨雄里: {
+    photo: 'Yang_Xiongli.jpg',
+    intro: '复旦大学脑科学研究院首任院长、中国科学院院士',
+    date: [2018, 8, 12],
+    details:
+      '美国韦恩州立大学（Wayne State University）医学院研究员陆绮发文表示，其2005年左右在复旦大学神经生物学研究所就读期间，曾在办公室内被所长杨雄里强吻。',
+    quote: '他帮我开门，当时两人距离很近，他忽然就把我搂住，亲我的嘴唇。',
+    quoteby: '原复旦学生、旅美学者陆绮',
+    accusations: [
+      {
+        url:
+          'https://mp.weixin.qq.com/s?__biz=MzIyMTIwMjM0Nw==&mid=2651706151&idx=1&sn=7e6ea5ce17f41246b3f5105c5e19bdea&chksm=8c3921e3bb4ea8f5b0fe24465c040eb0a1ab0e0b6158f3de1362844debdbe05c6e6d2f35776f&mpshare=1&scene=1&srcid=0812dOIOrF7YS84rshZoSTvK&pass_ticket=l%2BOVDTJ4AiYmmtQIVcTgiCnCAarIZWwDN6neyD75YIMgpRPvffqAkzXuHvXFL%2F6E#rd',
+        title: '复旦杨雄里教授，您还记得您强吻过的女学生吗？'
+      }
+    ]
   }
 }
 
