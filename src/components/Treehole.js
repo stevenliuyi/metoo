@@ -98,7 +98,10 @@ class Treehole extends Component {
             <SearchPost
               searchText={this.state.searchText}
               onChange={e => this.setState({ searchText: e.target.value })}
-              onSearch={() => this.update()}
+              onSearch={() => {
+                this.setState({ editPost: false })
+                this.update()
+              }}
             />
             <OverlayTrigger
               placement="bottom"

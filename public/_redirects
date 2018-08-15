@@ -1,0 +1,3 @@
+# Redirect default Netlify subdomain to primary domain
+https://metoochina.netlify.com/* https://metoochina.me/:splat 301!
+/*    /index.html   200
