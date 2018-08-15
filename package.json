@@ -12,6 +12,7 @@
     "react-device-detect": "^1.5.9",
     "react-dom": "^16.4.1",
     "react-google-invisible-recaptcha": "^0.2.8",
+    "react-helmet": "^5.2.0",
     "react-icons": "^3.0.1",
     "react-resizable": "^1.7.5",
     "react-router-dom": "^4.3.1",

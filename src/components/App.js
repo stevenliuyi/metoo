@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap-theme.css'
 import { Grid } from 'react-bootstrap'
 import { isMobile } from 'react-device-detect'
 import { withRouter } from 'react-router-dom'
+import { Helmet } from 'react-helmet'
 import data from '../data/data.js'
 import Header from './Header'
 import Messages from './Messages'
@@ -60,6 +61,17 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <Helmet>
+          <title>#MeToo 在中国</title>
+          <meta
+            name="description"
+            content={`2017年起 #MeToo 运动席卷全球，在中国有以下${
+              Object.keys(data).length
+            }人被指控性骚扰或性侵犯。`}
+          />
+          <meta property="og:title" content={'#MeToo 在中国'} />
+          <meta property="og:url" content={window.location.origin} />
+        </Helmet>
         <div id="content">
           <Switch>
             <Route

@@ -16,6 +16,7 @@ import {
 } from 'react-icons/md'
 import { Link, withRouter } from 'react-router-dom'
 import { BeatLoader } from 'react-spinners'
+import { Helmet } from 'react-helmet'
 import Alert from 'react-s-alert'
 import 'react-s-alert/dist/s-alert-default.css'
 import 'react-s-alert/dist/s-alert-css-effects/stackslide.css'
@@ -92,6 +93,14 @@ class Treehole extends Component {
   render() {
     return (
       <Grid>
+        <Helmet>
+          <title>#MeToo 在中国 | 树洞</title>
+          <meta property="og:title" content={'#MeToo 在中国 | 树洞'} />
+          <meta
+            property="og:url"
+            content={`${window.location.origin}/treehole`}
+          />
+        </Helmet>
         <Header
           title="树洞"
           onClickLeft={() => this.props.history.push('/')}

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Grid, Row, ListGroupItem, Col } from 'react-bootstrap'
 import { withRouter } from 'react-router-dom'
 import Alert from 'react-s-alert'
+import { Helmet } from 'react-helmet'
 import { displayFullTimestamp } from '../utils/utils'
 import Header from './Header'
 import Comments from './Comments'
@@ -43,6 +44,14 @@ class PostPage extends Component {
 
     return (
       <div>
+        <Helmet>
+          <title>#MeToo 在中国 | 树洞</title>
+          <meta property="og:title" content={'#MeToo 在中国 | 树洞'} />
+          <meta
+            property="og:url"
+            content={`${window.location.origin}/treehole/${this.state.postId}`}
+          />
+        </Helmet>
         <Header
           title="树洞"
           onClickLeft={() => this.props.history.push('/')}
