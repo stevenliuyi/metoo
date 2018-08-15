@@ -11,7 +11,8 @@ import {
   MdHome,
   MdRefresh,
   MdAddToPhotos,
-  MdErrorOutline
+  MdErrorOutline,
+  MdClear
 } from 'react-icons/md'
 import { Link, withRouter } from 'react-router-dom'
 import { BeatLoader } from 'react-spinners'
@@ -39,18 +40,20 @@ class Treehole extends Component {
     status: 'loading',
     // 1 - newest first; 2 - oldest first; 3 - most commented first
     sortMethod: 1,
-    searchText: ''
+    searchText: '',
+    submittedSearchText: ''
   }
 
-  update = () => {
+  update = text => {
+    const searchText = text != null ? text : this.state.searchText
     this.setState({ status: 'loading' })
 
     let fetchedPosts
-    if (this.state.searchText === '')
+    if (searchText === '')
       fetchedPosts = fetchAllPosts(this.state.sortMethod, this.props.admin)
     else
       fetchedPosts = searchPosts(
-        this.state.searchText,
+        searchText,
         this.state.sortMethod,
         this.props.admin
       )
@@ -80,7 +83,8 @@ class Treehole extends Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
-    if (prevState.sortMethod !== this.state.sortMethod) this.update()
+    if (prevState.sortMethod !== this.state.sortMethod)
+      this.update(this.state.submittedSearchText)
     if (!prevState.editPost && this.state.editPost)
       document.querySelector('#post-content > textarea').focus()
   }
@@ -99,7 +103,10 @@ class Treehole extends Component {
               searchText={this.state.searchText}
               onChange={e => this.setState({ searchText: e.target.value })}
               onSearch={() => {
-                this.setState({ editPost: false })
+                this.setState({
+                  editPost: false,
+                  submittedSearchText: this.state.searchText
+                })
                 this.update()
               }}
             />
@@ -117,7 +124,10 @@ class Treehole extends Component {
               placement="bottom"
               overlay={<Tooltip id="home">刷新</Tooltip>}
             >
-              <span className="treehole-button" onClick={this.update}>
+              <span
+                className="treehole-button"
+                onClick={() => this.update(this.submittedSearchText)}
+              >
                 <MdRefresh size={30} />
               </span>
             </OverlayTrigger>
@@ -142,6 +152,27 @@ class Treehole extends Component {
               </span>
             </OverlayTrigger>
           </div>
+          {this.state.submittedSearchText !== '' && (
+            <div id="search-result" className="muted-text">
+              {`共 ${this.state.posts.length} 条包含“`}
+              <strong>{this.state.submittedSearchText}</strong>
+              {'”的树洞贴'}
+              <OverlayTrigger
+                placement="top"
+                overlay={<Tooltip id="clear-result">清除搜索结果</Tooltip>}
+              >
+                <span
+                  id="search-clear"
+                  onClick={() => {
+                    this.setState({ searchText: '', submittedSearchText: '' })
+                    this.update('')
+                  }}
+                >
+                  <MdClear size={16} />
+                </span>
+              </OverlayTrigger>
+            </div>
+          )}
           {this.state.status === 'loaded' && (
             <ListGroup>
               {this.state.editPost && (
@@ -188,7 +219,7 @@ class Treehole extends Component {
                       posts[idx].commentCount += inc
                     this.setState({ posts })
                   }}
-                  onUpdate={() => this.update()}
+                  onUpdate={() => this.update(this.state.submittedSearchText)}
                 />
               ))}
             </ListGroup>
