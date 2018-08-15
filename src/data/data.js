@@ -933,6 +933,95 @@ const data = {
         title: '复旦杨雄里教授，您还记得您强吻过的女学生吗？'
       }
     ]
+  },
+  朱长振: {
+    photo: 'Zhu_Changzheng.jpg',
+    intro: '《大河报》记者',
+    date: [2018, 7, 26],
+    details:
+      '一女记者发文指控朱长振于2012年夏天借谈公益为由将她带到家中，并试图对她性侵。',
+    quote:
+      '他突然站起来，朝我扑了上来……我清楚记得当时还狠咬他的舌头，导致他放开了一下，但一直压着我（超级恶心）。',
+    quoteby: '匿名女记者',
+    accusations: [
+      {
+        url:
+          'https://www.weibo.com/3229198652/GrKHZzlkt?type=comment#_rnd1534365712562',
+        title: '我曾被大河报记者朱长振试图性侵'
+      }
+    ]
+  },
+  王先胜: {
+    photo: 'Wang_Xiansheng.jpg',
+    intro: '原广东省民政厅副巡视员、广州市公益慈善联合会会长',
+    date: [2018, 7, 26],
+    details:
+      '公益人士赵海伶在微信公众号“自绝于江湖”实名指控王先胜曾在一饭局上对其性骚扰，并指出她的一位同事亦有过类似遭遇。',
+    quote:
+      '没想到他用两只手一下子用力握住了我的手，身体前倾（我都能闻到他身上的酒味），摩挲起我的手掌心来。',
+    quoteby: '赵海伶',
+    accusations: [
+      {
+        url: 'https://mp.weixin.qq.com/s/hcO0wb0J0YHqttf34pS6Gw',
+        title: '一个关于谁营造了性侵环境的故事'
+      },
+      {
+        url: 'https://mp.weixin.qq.com/s/kjPtC2qI9u0psStOPSWCMw',
+        title: '关于性骚扰情境的认知问题'
+      }
+    ]
+  },
+  霍庆川: {
+    photo: 'Huo_Qingchuan.jpg',
+    intro: '“金动未来”创始人、原浙江敦和慈善基金会秘书长助理',
+    date: [2018, 7, 26],
+    details:
+      '一媒体人在微信公众号“自绝于江湖”上发文，指霍庆川曾于2012年在电影院对其性骚扰，并在电影散场后强吻了她。',
+    quote: '以为一切都结束的时候，霍庆川居然就在熙熙攘攘在大街上抱着我强吻。',
+    quoteby: '匿名媒体人',
+    accusations: [
+      {
+        url: 'https://mp.weixin.qq.com/s/MIyF-pdPQh--9_75tWKjrg',
+        title: '关于“霍庆川骚扰”事件的说明'
+      }
+    ]
+  },
+  刘国强: {
+    photo: 'Liu_Guoqiang.jpg',
+    intro: '心目小马国际学院首席运营官、副院长',
+    date: [2018, 7, 24],
+    details: '微信公众号“自绝于江湖”上有网友匿名爆料刘国强曾对其多次性骚扰。',
+    quote: '突然，他把手放在了我的右手上，我的脑子顿时一片空白，身体也僵住了。',
+    quoteby: '匿名',
+    accusations: [
+      {
+        url: 'https://mp.weixin.qq.com/s/u4-eRbFN4WPesGoxWkOgtw',
+        title: '刘国强性骚扰事件当事人自述'
+      }
+    ]
+  },
+  刘猛: {
+    photo: 'Liu_Meng.jpg',
+    intro: '知名公益人士、心理援助专家、一天公益理事长',
+    date: [2018, 7, 27],
+    details: '两位女社工指控刘猛多次对她们实施性骚扰与性侵犯。',
+    quote:
+      '他从腰后面抱住了我！并且完全没有放手的意思！他全程没有讲一句话，一直用自己的行动想把我带进他的氛围。',
+    quoteby: '刘丽（化名）',
+    accusations: [
+      {
+        url:
+          'https://mp.weixin.qq.com/s?__biz=MzIxNDE2MjM2Mw==&mid=2652151553&idx=1&sn=e3437e158c07826a6261ee39100209fd&chksm=8c4bf1d5bb3c78c374f742d91ec152a8f271c0eb48393c4a8dfa3a241f8354c9816b522e744d&scene=21#wechat_redirect',
+        title: '打破沉默进行时：揭露成都社工界“大佬”刘猛骚扰女社工'
+      }
+    ],
+    links: [
+      {
+        url:
+          'https://mp.weixin.qq.com/s?__biz=MzIxNDE2MjM2Mw==&mid=2652151624&idx=1&sn=595c80d7c7916c1e2048e4322a0be680&chksm=8c4bf19cbb3c788a6cc3556e3a7044a78e322a37807ea64bafa0d83afdd4826ad1646d9d9c27&mpshare=1&scene=1&srcid=0813G3dVqTWw9OZsFPOg2ybG&pass_ticket=G6X%2BQWeS3Bc3c%2BqwuP5yO6EFMrajKQ9%2FF6d7O%2FE3%2BSug83JD9y9aanBBmIU0gVoM#rd',
+        title: '川震社工明星刘猛性侵女员工立案：被害者要求其退出公益圈'
+      }
+    ]
   }
 }
 
