@@ -1055,7 +1055,7 @@ const data = {
     details: '两位女社工指控刘猛多次对她们实施性骚扰与性侵犯。',
     quote:
       '他从腰后面抱住了我！并且完全没有放手的意思！他全程没有讲一句话，一直用自己的行动想把我带进他的氛围。',
-    quoteby: '刘丽（化名）',
+    quoteby: '女社工刘丽（化名）',
     accusations: [
       {
         url:
@@ -1068,6 +1068,85 @@ const data = {
         url:
           'https://mp.weixin.qq.com/s?__biz=MzIxNDE2MjM2Mw==&mid=2652151624&idx=1&sn=595c80d7c7916c1e2048e4322a0be680&chksm=8c4bf19cbb3c788a6cc3556e3a7044a78e322a37807ea64bafa0d83afdd4826ad1646d9d9c27&mpshare=1&scene=1&srcid=0813G3dVqTWw9OZsFPOg2ybG&pass_ticket=G6X%2BQWeS3Bc3c%2BqwuP5yO6EFMrajKQ9%2FF6d7O%2FE3%2BSug83JD9y9aanBBmIU0gVoM#rd',
         title: '川震社工明星刘猛性侵女员工立案：被害者要求其退出公益圈'
+      }
+    ]
+  },
+  yang_guoqiang: {
+    name: '杨国强',
+    photo: 'Yang_Guoqiang.jpg',
+    intro: '新华社英语电视台台长',
+    date: [2018, 7, 31],
+    details:
+      '一女生林鲟在微信公众号“074职场女性法律热线”上发文表示杨国强于2016年春通过微信对其性骚扰。此后，又有其他女性表示有过被杨国强性骚扰的经历。',
+    quote:
+      '通过手机屏幕我感到被一个中老年猥琐大叔隔空强吻了一下，胃里一阵恶心。',
+    quoteby: '林鲟',
+    accusations: [
+      {
+        url: 'https://mp.weixin.qq.com/s/qxAxAc3VxCdTVbLT5I2RdA',
+        title: '我们要求新华社调查杨国强性骚扰事件并公开结果！'
+      }
+    ]
+  },
+  liang_dong: {
+    name: '梁栋',
+    photo: 'Liang_Dong.jpg',
+    intro: '山东中医药大学副教授、山东省中医院乳腺甲状腺外科副主任医师',
+    date: [2018, 8, 10],
+    details:
+      '原山东中医药大学学生仇英燃实名举报其硕士导师梁栋，指梁栋在其硕士研究生期间曾对其两次性骚扰与一次性侵。',
+    quote:
+      '他就开始从我背后一只手搂着我脖子，另一只手摸我胸，搂着我脖子的劲很大，同时他呼吸变得很粗，我开始挣扎，没挣脱，他又把一只手从后面伸进我内裤里，把我压到床上。',
+    quoteby: '原山东中医大学生仇英燃',
+    accusations: [
+      { url: 'https://weibo.com/6538278553/GueZdghRU', title: '仇英燃指控微博' }
+    ],
+    zhihu: [
+      {
+        url: 'https://www.zhihu.com/question/289880955',
+        title: '如何看待山东中医药大学导师梁栋性侵事件？'
+      }
+    ]
+  },
+  mi_yanjun: {
+    name: '米彦军',
+    intro: '山西大学外国语学院日语系副教授',
+    date: [2018, 7, 29],
+    details:
+      '“托奶王天王”在微博代一山西大学学生发文，文中指控米彦军长期言语性骚扰女学生。',
+    quote:
+      '（米彦军）提到过在日本的时候看到电梯里看到一个手很白的漂亮女孩子，就想摸她。',
+    quoteby: '山西大学一学生',
+    accusations: [
+      { url: 'https://www.weibo.com/2322946220/Gsd2XfLCj', title: '指控微博' }
+    ]
+  },
+  wang_guangliang: {
+    name: '王光亮',
+    photo: 'Non_Arkaraprasertkul.jpg',
+    intro: '建筑师，哈佛大学社会人类学博士、原悉尼大学城市建筑学系高级讲师',
+    date: [2018, 7, 31],
+    details:
+      '《南方人物周刊》的报道《恋爱暴力中的性与爱》中描述了H博士在与伊婷（化名）近一年的亲密关系中屡次对其施加性虐待及各种暴力行为。后证实H博士即王光亮（Non Arkaraprasertkul，泰籍华裔），并有海内外多家高校的女学生与女教师表示王光亮曾对她们有过不同程度的性骚扰与性侵犯。',
+    quote:
+      '在性上面我完全任由其摆布，一切都是以他自我满足为中心。他想来就来，想怎么来就怎么来。经常是我还在学习、写字、回复工作邮件，他一时兴起，然后他结束就结束了。',
+    quoteby: '伊婷（化名）',
+    accusations: [
+      {
+        url: 'http://blog.sina.com.cn/s/blog_68cd22cb0102xuvl.html',
+        title: '请哈佛博士王光亮停止针对女性的暴力和性侵并离开学术圈'
+      }
+    ],
+    links: [
+      {
+        url: 'http://news.ifeng.com/a/20180725/59397660_0.shtml',
+        title: '恋爱暴力中的性与爱'
+      }
+    ],
+    zhihu: [
+      {
+        url: 'https://www.zhihu.com/question/287917238',
+        title: '如何看待哈佛博士王光亮涉嫌性侵和性暴力事件？'
       }
     ]
   }
