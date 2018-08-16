@@ -22,7 +22,7 @@ export const setVhs = () => {
 export const sort = (data, sortMethod) =>
   sortMethod === 1
     ? // sort by pinyin
-      Object.keys(data).sort((a, b) => a.localeCompare(b, 'zh-CN'))
+      Object.keys(data).sort()
     : // sort by accusation date
       Object.keys(data).sort(
         (a, b) =>
