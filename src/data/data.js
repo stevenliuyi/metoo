@@ -1,5 +1,6 @@
 const data = {
-  沈阳: {
+  shen_yang: {
+    name: '沈阳',
     photo: 'Shen_Yang.jpg',
     intro:
       '长江学者特聘教授，原北京大学中文系副主任、南京大学文学院语言学系主任',
@@ -39,7 +40,8 @@ const data = {
       }
     ]
   },
-  张康之: {
+  zhang_kangzhi: {
+    name: '张康之',
     photo: 'Zhang_Kangzhi.jpg',
     intro: '长江学者特聘教授，中国人民大学行政管理学系教授',
     date: [2018, 4, 13],
@@ -56,7 +58,8 @@ const data = {
       }
     ]
   },
-  顾海兵: {
+  gu_haibin: {
+    name: '顾海兵',
     photo: 'Gu_Haibin.jpg',
     intro: '中国人民大学经济学院教授',
     date: [2018, 4, 11],
@@ -80,7 +83,8 @@ const data = {
       }
     ]
   },
-  姚树洁: {
+  yao_shujie: {
+    name: '姚树洁',
     photo: 'Yao_Shujie.jpg',
     intro: '长江学者特聘教授，重庆大学经济学教授、诺丁汉大学经济学教授',
     date: [2018, 7, 28],
@@ -94,7 +98,8 @@ const data = {
       }
     ]
   },
-  朱军: {
+  zhu_jun: {
+    name: '朱军',
     photo: 'Zhu_Jun.jpeg',
     intro: '中央电视台主持人',
     date: [2018, 7, 26],
@@ -129,7 +134,8 @@ const data = {
       }
     ]
   },
-  谢伦灿: {
+  xie_luncan: {
+    name: '谢伦灿',
     photo: 'Xie_Luncan.jpg',
     intro: '中国传媒大学文化产业研究院副院长、教授',
     date: [2018, 7, 26],
@@ -158,7 +164,8 @@ const data = {
       }
     ]
   },
-  蔡翔: {
+  cai_xiang: {
+    name: '蔡翔',
     photo: 'Cai_Xiang.gif',
     intro: '原中国传媒大学副校长',
     date: [2018, 7, 27],
@@ -174,8 +181,9 @@ const data = {
       }
     ]
   },
-  雷闯: {
-    photo: 'Lei_Chuan.jpg',
+  lei_chuang: {
+    name: '雷闯',
+    photo: 'Lei_Chuang.jpg',
     intro: '知名公益人、亿友公益创始人',
     date: [2018, 7, 23],
     details:
@@ -201,7 +209,8 @@ const data = {
       }
     ]
   },
-  徐钢: {
+  xu_gang: {
+    name: '徐钢',
     photo: 'Xu_Gang.jpg',
     intro: '美国伊利诺伊大学香槟分校（UIUC）东亚研究系副教授',
     date: [2018, 3, 10],
@@ -228,7 +237,8 @@ const data = {
       }
     ]
   },
-  张鹏: {
+  zhang_peng: {
+    name: '张鹏',
     photo: 'Zhang_Peng.jpg',
     intro: '中山大学社会学与人类学学院教授、青年长江学者',
     date: [2018, 4, 8],
@@ -257,7 +267,8 @@ const data = {
       }
     ]
   },
-  袁天鹏: {
+  yuan_tianpeng: {
+    name: '袁天鹏',
     photo: 'Yuan_Tianpeng.jpg',
     intro: '议事规则专家',
     date: [2018, 7, 20],
@@ -272,7 +283,8 @@ const data = {
       }
     ]
   },
-  冯永锋: {
+  feng_yongfeng: {
+    name: '冯永锋',
     photo: 'Feng_Yongfeng.jpg',
     intro: '知名环保人士、自然大学发起人',
     date: [2018, 7, 23],
@@ -298,7 +310,8 @@ const data = {
       }
     ]
   },
-  章文: {
+  zhang_wen: {
+    name: '章文',
     photo: 'Zhang_Wen.jpg',
     intro: '知名媒体人',
     date: [2018, 7, 24],
@@ -335,7 +348,8 @@ const data = {
       }
     ]
   },
-  张弛: {
+  zhang_chi: {
+    name: '张弛',
     photo: 'Zhang_Chi.jpg',
     intro: '作家',
     date: [2018, 7, 25],
@@ -350,7 +364,8 @@ const data = {
       }
     ]
   },
-  孙冕: {
+  sun_mian: {
+    name: '孙冕',
     photo: 'Sun_Mian.jpg',
     intro: '《新周刊》创始人、社长',
     date: [2018, 7, 25],
@@ -365,7 +380,8 @@ const data = {
       }
     ]
   },
-  熊培云: {
+  xiong_peiyun: {
+    name: '熊培云',
     photo: 'Xiong_Peiyun.jpg',
     intro: '南开大学副教授、公共知识分子',
     date: [2018, 7, 25],
@@ -387,7 +403,8 @@ const data = {
       }
     ]
   },
-  释学诚: {
+  shi_xuecheng: {
+    name: '释学诚',
     photo: 'Shi_Xuecheng.jpeg',
     intro: '中国佛教学会会长、全国政协常委、北京龙泉寺住持',
     date: [2018, 8, 1],
@@ -411,7 +428,8 @@ const data = {
       }
     ]
   },
-  信力建: {
+  xin_lijian: {
+    name: '信力建',
     photo: 'Xin_Lijian.jpg',
     intro: '民办教育专家、信孚教育集团创始人',
     date: [2018, 7, 25],
@@ -433,7 +451,8 @@ const data = {
       }
     ]
   },
-  张锦雄: {
+  zhang_jinxiong: {
+    name: '张锦雄',
     photo: 'Zhang_Jinxiong.jpg',
     intro: '同性恋运动人士，香港彩虹与彩虹中国创办人',
     date: [2018, 7, 24],
@@ -448,7 +467,8 @@ const data = {
       }
     ]
   },
-  赵秉志: {
+  zhao_binzhi: {
+    name: '赵秉志',
     photo: 'Zhao_Binzhi.jpg',
     intro: '原北京师范大学刑事法律科学研究院院长',
     date: [2018, 7, 24],
@@ -467,7 +487,8 @@ const data = {
       }
     ]
   },
-  陈小武: {
+  chen_xiaowu: {
+    name: '陈小武',
     photo: 'Chen_Xiaowu.jpg',
     intro: '原长江学者特聘教授、北京航空航天大学计算机学院教授',
     date: [2017, 10, 15],
@@ -500,7 +521,8 @@ const data = {
       }
     ]
   },
-  张晓: {
+  zhang_xiao: {
+    name: '张晓',
     photo: 'Zhang_Xiao.jpg',
     intro: '西北大学新闻传播学院教师',
     date: [2018, 7, 29],
@@ -519,7 +541,8 @@ const data = {
       }
     ]
   },
-  周斌: {
+  zhou_bin: {
+    name: '周斌',
     photo: 'Zhou_Bin.png',
     intro: '南昌大学国学研究院原副院长',
     date: [2017, 12, 19],
@@ -548,7 +571,8 @@ const data = {
       }
     ]
   },
-  刘坚军: {
+  liu_jianjun: {
+    name: '刘坚军',
     photo: 'Liu_Jianjun.jpeg',
     intro: '宁波羽毛球队总教练，前羽毛球世界冠军',
     date: [2018, 7, 26],
@@ -570,7 +594,8 @@ const data = {
       }
     ]
   },
-  张伟: {
+  zhang_wei: {
+    name: '张伟',
     photo: 'Zhang_Wei.jpeg',
     intro: '宁波羽毛球队教练，前羽毛球国家队队员',
     date: [2018, 7, 26],
@@ -593,7 +618,8 @@ const data = {
       }
     ]
   },
-  周翊: {
+  zhou_yi: {
+    name: '周翊',
     photo: 'Zhou_Yi.jpeg',
     intro: '迷笛公司副总裁',
     date: [2018, 7, 28],
@@ -614,7 +640,8 @@ const data = {
       }
     ]
   },
-  曾志伟: {
+  zeng_zhiwei: {
+    name: '曾志伟',
     photo: 'Eric_Tsang.jpeg',
     intro: '香港知名演员',
     date: [2018, 1, 10],
@@ -642,7 +669,8 @@ const data = {
       }
     ]
   },
-  邓光荣: {
+  deng_guangrong: {
+    name: '邓光荣',
     photo: 'Alan_Tang.jpeg',
     intro: '香港知名演员',
     date: [2018, 1, 10],
@@ -655,7 +683,8 @@ const data = {
       }
     ]
   },
-  薛原: {
+  xue_yuan: {
+    name: '薛原',
     photo: 'Xue_Yuan.jpeg',
     intro: '对外经贸大学统计学院副教授',
     date: [2018, 1, 11],
@@ -671,7 +700,8 @@ const data = {
       }
     ]
   },
-  司屠: {
+  situ: {
+    name: '司屠',
     photo: 'Situ.jpg',
     intro: '作家',
     date: [2018, 7, 26],
@@ -686,7 +716,8 @@ const data = {
       }
     ]
   },
-  谢灿: {
+  xie_can: {
+    name: '谢灿',
     photo: 'Xie_Can.jpg',
     intro: '北京大学生命科学学院教授',
     date: [2018, 2, 5],
@@ -709,7 +740,8 @@ const data = {
       }
     ]
   },
-  邓飞: {
+  deng_fei: {
+    name: '邓飞',
     photo: 'Deng_Fei.jpg',
     intro: '知名记者、公益人，《凤凰周刊》记者部主任',
     date: [2018, 7, 27],
@@ -729,7 +761,8 @@ const data = {
       }
     ]
   },
-  肖开愚: {
+  xiao_kaiyu: {
+    name: '肖开愚',
     photo: 'Xiao_Kaiyu.jpg',
     intro: '诗人、河南大学教授',
     date: [2018, 5, 5],
@@ -750,7 +783,8 @@ const data = {
       }
     ]
   },
-  陈国昌: {
+  chen_guochang: {
+    name: '陈国昌',
     photo: 'Chen_Guochang.jpg',
     intro: '广东外语外贸大学新闻与传播学院教师',
     date: [2018, 7, 28],
@@ -766,7 +800,8 @@ const data = {
       }
     ]
   },
-  徐蜀辰: {
+  xu_shucheng: {
+    name: '徐蜀辰',
     photo: 'Xu_Shucheng.jpg',
     intro:
       '同济大学建筑与城市规划学院博士生、苏黎世联邦理工学院未来城市研究室助理研究员',
@@ -787,7 +822,8 @@ const data = {
       }
     ]
   },
-  王以培: {
+  wang_yipei: {
+    name: '王以培',
     photo: 'Wang_Yipei.jpg',
     intro: '诗人、原中国人民大学文学院副教授',
     date: [2018, 5, 28],
@@ -801,7 +837,8 @@ const data = {
       }
     ]
   },
-  谢耘耕: {
+  xie_yungeng: {
+    name: '谢耘耕',
     photo: 'Xie_Yungeng.jpg',
     intro: '原上海交通大学媒体与与设计学院副院长',
     date: [2018, 4, 25],
@@ -814,7 +851,8 @@ const data = {
       }
     ]
   },
-  周非: {
+  zhou_fei: {
+    name: '周非',
     photo: 'Zhou_Fei.jpg',
     intro: '世界自然基金会（WWF）北京代表处项目总监',
     date: [2018, 7, 25],
@@ -826,7 +864,8 @@ const data = {
       { url: 'https://weibo.com/1757351275/GrAAXrgdU', title: '王琪指控微博' }
     ]
   },
-  熊广基: {
+  xiong_guangji: {
+    name: '熊广基',
     photo: 'Xiong_Guangji.jpg',
     intro: '湖南大学经济与贸易学院副教授',
     date: [2018, 8, 2],
@@ -849,7 +888,8 @@ const data = {
       }
     ]
   },
-  潘杰客: {
+  pan_jieke: {
+    name: '潘杰客',
     photo: 'Pan_Jieke.jpg',
     intro: '“为你读诗”创始人',
     date: [2018, 7, 26],
@@ -877,7 +917,8 @@ const data = {
       }
     ]
   },
-  任继长: {
+  ren_jichang: {
+    name: '任继长',
     photo: 'Ren_Jichang.jpg',
     intro: '杭州文澜中学校长、余杭高级中学总校长，原全国人大代表',
     date: [2018, 8, 3],
@@ -894,7 +935,8 @@ const data = {
       }
     ]
   },
-  张耀春: {
+  zhang_yaochun: {
+    name: '张耀春',
     photo: 'Zhang_Yaochun.jpg',
     intro:
       '摩拜单车前端负责人、原滴滴出行公共前端负责人、《Vue.js 权威指南》作者',
@@ -918,7 +960,8 @@ const data = {
       }
     ]
   },
-  杨雄里: {
+  yang_xiongli: {
+    name: '杨雄里',
     photo: 'Yang_Xiongli.jpg',
     intro: '复旦大学脑科学研究院首任院长、中国科学院院士',
     date: [2018, 8, 12],
@@ -934,7 +977,8 @@ const data = {
       }
     ]
   },
-  朱长振: {
+  zhu_changzheng: {
+    name: '朱长振',
     photo: 'Zhu_Changzheng.jpg',
     intro: '《大河报》记者',
     date: [2018, 7, 26],
@@ -951,7 +995,8 @@ const data = {
       }
     ]
   },
-  王先胜: {
+  wang_xiansheng: {
+    name: '王先胜',
     photo: 'Wang_Xiansheng.jpg',
     intro: '原广东省民政厅副巡视员、广州市公益慈善联合会会长',
     date: [2018, 7, 26],
@@ -971,7 +1016,8 @@ const data = {
       }
     ]
   },
-  霍庆川: {
+  huo_qingchuan: {
+    name: '霍庆川',
     photo: 'Huo_Qingchuan.jpg',
     intro: '“金动未来”创始人、原浙江敦和慈善基金会秘书长助理',
     date: [2018, 7, 26],
@@ -986,7 +1032,8 @@ const data = {
       }
     ]
   },
-  刘国强: {
+  liu_guoqiang: {
+    name: '刘国强',
     photo: 'Liu_Guoqiang.jpg',
     intro: '心目小马国际学院首席运营官、副院长',
     date: [2018, 7, 24],
@@ -1000,7 +1047,8 @@ const data = {
       }
     ]
   },
-  刘猛: {
+  liu_meng: {
+    name: '刘猛',
     photo: 'Liu_Meng.jpg',
     intro: '知名公益人士、心理援助专家、一天公益理事长',
     date: [2018, 7, 27],

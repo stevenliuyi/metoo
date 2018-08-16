@@ -2,15 +2,11 @@ import React, { Component } from 'react'
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap/dist/css/bootstrap-theme.css'
-import { Grid } from 'react-bootstrap'
 import { isMobile } from 'react-device-detect'
 import { withRouter } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
 import data from '../data/data.js'
-import Header from './Header'
-import Messages from './Messages'
-import PersonDetail from './PersonDetail'
-import AvatarGrid from './AvatarGrid'
+import Main from './Main'
 import Footer from './Footer'
 import Treehole from './Treehole'
 import PostPage from './PostPage'
@@ -19,7 +15,6 @@ import { Switch, Route } from 'react-router'
 
 class App extends Component {
   state = {
-    currentPerson: null,
     sortMethod: 1
   }
 
@@ -56,8 +51,6 @@ class App extends Component {
     document.getElementById('people-grid').scrollTop = 0
   }
 
-  updatePerson = name => this.setState({ currentPerson: name })
-
   render() {
     return (
       <div className="App">
@@ -76,46 +69,20 @@ class App extends Component {
           <Switch>
             <Route
               exact
-              path="/"
-              render={() => (
-                <Grid>
-                  <Header
-                    title="中国"
-                    onClick={() => this.updatePerson(null)}
-                  />
-                  <div id="info-wrapper">
-                    <div id="info">
-                      {this.state.currentPerson == null ? (
-                        <Messages number={Object.keys(data).length} />
-                      ) : (
-                        <PersonDetail
-                          name={this.state.currentPerson}
-                          data={data[this.state.currentPerson]}
-                        />
-                      )}
-                    </div>
-                    {this.state.currentPerson != null && (
-                      <img
-                        id="photo"
-                        className="unselectable"
-                        src="/images/alexander-krivitskiy-575481-unsplash.jpg"
-                        alt="woman"
-                      />
-                    )}
-                  </div>
-                  <AvatarGrid
-                    data={data}
-                    sortToggle={this.sortToggle}
-                    updatePerson={this.updatePerson}
-                    {...this.state}
-                  />
-                </Grid>
-              )}
+              path="/treehole"
+              render={() => <Treehole admin={false} />}
             />
             <Route
               exact
-              path="/treehole"
-              render={() => <Treehole admin={false} />}
+              path="/:name?"
+              render={({ match }) => (
+                <Main
+                  data={data}
+                  name={match.params.name}
+                  sortToggle={this.sortToggle}
+                  {...this.state}
+                />
+              )}
             />
             <Route
               exact

@@ -5,6 +5,7 @@ import Links from './Links'
 class PersonDetail extends Component {
   render() {
     const {
+      name,
       intro,
       date,
       details,
@@ -18,7 +19,7 @@ class PersonDetail extends Component {
     return (
       <div id="detail-box">
         <div id="person-information">
-          <div>{this.props.name}</div>
+          <div>{name}</div>
           <div className="intro">{intro}</div>
           <div className="intro">
             {`${date[0]}年${date[1]}月${date[2]}日被指控`}
