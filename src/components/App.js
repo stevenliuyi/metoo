@@ -62,8 +62,26 @@ class App extends Component {
               Object.keys(data).length
             }人被指控性骚扰或性侵犯。`}
           />
-          <meta property="og:title" content={'#MeToo 在中国'} />
+          <meta name="keywords" content="Metoo, 米兔, 中国, 性骚扰, 性侵" />
+          <meta name="url" content={window.location.origin} />
+          <meta property="og:title" content="#MeToo 在中国" />
+          <meta property="og:type" content="website" />
+          <meta
+            property="og:image"
+            contet={`${window.location.origin}/images/metoo-china.jpg`}
+          />
+          <meta property="og:image:alt" content="#MeToo × 中国" />
           <meta property="og:url" content={window.location.origin} />
+          <meta
+            property="og:description"
+            content={`2017年起 #MeToo 运动席卷全球，在中国有以下${
+              Object.keys(data).length
+            }人被指控性骚扰或性侵犯。`}
+          />
+          <meta property="og:locale" content="zh_CN" />
+          <meta property="og:email" content="contact@metoochina.me" />
+          <meta property="fb:app_id" content="1749911795057434" />
+          <meta name="twitter:card" content="summary_large_image" />
         </Helmet>
         <div id="content">
           <Switch>

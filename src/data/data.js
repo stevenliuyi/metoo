@@ -933,6 +933,12 @@ const data = {
           'https://chinadigitaltimes.net/chinese/2018/08/%E7%8E%8B%E4%BA%94%E5%9B%9B%EF%BC%9A%E4%B8%89%E5%8D%81%E5%B9%B4%E5%89%8D%E4%BD%A0%E5%AF%B9%E5%A5%B3%E5%AD%A6%E7%94%9F%E5%81%9A%E7%9A%84%E4%BA%8B%EF%BC%8C%E4%BB%BB%E7%BB%A7%E9%95%BF%E6%A0%A1%E9%95%BF/',
         title: '王五四：三十年前你对女学生做的事，任继长校长你还记得吗？'
       }
+    ],
+    zhihu: [
+      {
+        url: 'https://www.zhihu.com/question/288186433',
+        title: '杭州文澜中学校长任继长有没有猥亵女学生？'
+      }
     ]
   },
   zhang_yaochun: {

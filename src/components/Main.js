@@ -58,6 +58,12 @@ class Main extends Component {
                 window.location.origin
               }/${this.state.currentPerson.replace('_', '-')}`}
             />
+            <meta
+              property="og:description"
+              content={`${data[this.state.currentPerson].name} - ${
+                data[this.state.currentPerson].details
+              }`}
+            />
           </Helmet>
         )}
         <Header title="中国" onClick={() => this.props.history.push('/')} />

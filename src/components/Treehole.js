@@ -95,11 +95,18 @@ class Treehole extends Component {
       <Grid>
         <Helmet>
           <title>#MeToo 在中国 | 树洞</title>
-          <meta property="og:title" content={'#MeToo 在中国 | 树洞'} />
+          <meta name="description" content="告别沉默，勇敢发声" />
+          <meta property="og:title" content="#MeToo 在中国 | 树洞" />
+          <meta
+            property="og:image"
+            content={`${window.location.origin}/images/metoo-treehole.jpg`}
+          />
+          <meta property="og:image:alt" content="#MeToo × 树洞" />
           <meta
             property="og:url"
             content={`${window.location.origin}/treehole`}
           />
+          <meta property="og:description" content="告别沉默，勇敢发声" />
         </Helmet>
         <Header
           title="树洞"
