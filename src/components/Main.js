@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap/dist/css/bootstrap-theme.css'
 import { Grid } from 'react-bootstrap'
 import { withRouter } from 'react-router-dom'
+import { Helmet } from 'react-helmet'
 import data from '../data/data.js'
 import Header from './Header'
 import Messages from './Messages'
@@ -29,6 +30,29 @@ class Main extends Component {
   render() {
     return (
       <Grid>
+        {this.state.currentPerson != null && (
+          <Helmet>
+            <title>{`#MeToo 在中国 | ${
+              data[this.state.currentPerson].name
+            }`}</title>
+            <meta
+              name="description"
+              content={`${data[this.state.currentPerson].name} - ${
+                data[this.state.currentPerson].details
+              }`}
+            />
+            <meta
+              property="og:title"
+              content={`#MeToo 在中国 | ${data[this.state.currentPerson].name}`}
+            />
+            <meta
+              property="og:url"
+              content={`${
+                window.location.origin
+              }/${this.state.currentPerson.replace('_', '-')}`}
+            />
+          </Helmet>
+        )}
         <Header title="中国" onClick={() => this.props.history.push('/')} />
         <div id="info-wrapper">
           <div id="info">
