@@ -20,9 +20,10 @@ class Main extends Component {
     if (name !== this.props.name) {
       // hyphens are preferred in the URLs
       // see https://support.google.com/webmasters/answer/76329?hl=en
-      const newPerson = this.props.name.includes('-')
-        ? this.props.name.replace('-', '_')
-        : this.props.name
+      const newPerson =
+        this.props.name != null && this.props.name.includes('-')
+          ? this.props.name.replace('-', '_')
+          : this.props.name
       this.setState({ currentPerson: newPerson })
     }
   }
