@@ -2,7 +2,7 @@ import md5 from 'md5'
 
 const url =
   process.env.NODE_ENV === 'development'
-    ? 'http://localhost:2089'
+    ? 'https://metoo-treehole.appspot.com'
     : 'https://metoo-treehole.appspot.com'
 
 export const fetchAllPosts = (sortMethod, forTest = false) =>
