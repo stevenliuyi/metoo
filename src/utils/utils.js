@@ -6,7 +6,7 @@ import 'moment/locale/zh-cn'
 export const setVhs = () => {
   const vh = window.innerHeight
   if (document.getElementById('content') != null)
-    document.getElementById('content').style.minHeight = `${vh - 60}px`
+    document.getElementById('content').style.minHeight = `${vh - 90}px`
   if (document.getElementById('info-wrapper') != null)
     document.getElementById('info-wrapper').style.height = `${0.35 * vh}px`
   if (document.getElementById('people-grid') != null)

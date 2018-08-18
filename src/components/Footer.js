@@ -27,6 +27,9 @@ const Footer = props => (
     </OverlayTrigger>
     &nbsp;‧&nbsp;
     <span className="footer-item">2018</span>
+    <div style={{ paddingTop: '10px' }}>
+      本站内容皆从网络公开渠道收集，仅供参考，本站不对所涉及指控的真实性背书。
+    </div>
   </div>
 )
 
