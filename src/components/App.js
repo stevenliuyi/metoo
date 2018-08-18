@@ -68,7 +68,7 @@ class App extends Component {
           <meta property="og:type" content="website" />
           <meta
             property="og:image"
-            contet={`${window.location.origin}/images/metoo-china.jpg`}
+            content={`${window.location.origin}/images/metoo-china.jpg`}
           />
           <meta property="og:image:alt" content="#MeToo × 中国" />
           <meta property="og:url" content={window.location.origin} />
@@ -79,7 +79,6 @@ class App extends Component {
             }人被指控性骚扰或性侵犯。`}
           />
           <meta property="og:locale" content="zh_CN" />
-          <meta property="og:email" content="contact@metoochina.me" />
           <meta property="fb:app_id" content="1749911795057434" />
           <meta name="twitter:card" content="summary_large_image" />
         </Helmet>
