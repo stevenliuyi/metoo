@@ -111,7 +111,7 @@
 #messages {
   margin-left: 20px;
   margin-right: 20px;
-  transition: all .2s ease-in-out;
+  transition: all .5s ease-in-out;
 }
 
 #messages:hover {
