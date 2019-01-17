@@ -1133,6 +1133,24 @@ const data = {
         title: '如何看待哈佛博士王光亮涉嫌性侵和性暴力事件？'
       }
     ]
+  },
+  zhou_hongfei: {
+    name: '周洪双',
+    photo: 'Zhou_Hongshuang.jpg',
+    intro: '光明日报记者',
+    date: [2018, 9, 29],
+    details:
+      '原光明日报实习生“灵灵虎儿”在微博指控周洪双曾于2016年在酒店房间对其实施性侵犯，并于此后持续纠缠、骚扰。',
+    quote:
+      '但他并未停止，他把手伸进我的裙子里，捏我的腰、背、肩膀，用力抓掐我的胸部，我求他不要这样，我觉得很疼，但他听到我这样说，仿佛受到某种刺激而更显兴面。',
+    quoteby: '灵灵虎儿（网名）',
+    accusations: [
+      {
+        url:
+          'https://chinadigitaltimes.net/chinese/2018/10/%E7%81%B5%E7%81%B5%E8%99%8E%E5%84%BF%EF%BC%9A%E5%85%89%E6%98%8E%E6%97%A5%E6%8A%A5%E8%AE%B0%E8%80%85%E5%91%A8%E6%B4%AA%E5%8F%8C%E6%80%A7%E4%BE%B5%E5%AE%9E%E4%B9%A0%E7%94%9F/',
+        title: '指控微博'
+      }
+    ]
   }
 }
 
