@@ -800,28 +800,6 @@ const data = {
       }
     ]
   },
-  xu_shucheng: {
-    name: '徐蜀辰',
-    photo: 'Xu_Shucheng.jpg',
-    intro:
-      '同济大学建筑与城市规划学院博士生、苏黎世联邦理工学院未来城市研究室助理研究员',
-    date: [2018, 3, 27],
-    details:
-      '公众号“白沙漠”指控徐蜀辰性骚扰女研究生，此后又有多位女生在知乎等平台爆料徐蜀辰的性骚扰行为。',
-    quote:
-      '以他有权利修改我的成绩，来逼我和他约会甚至做一些龌龊的事情，每次拒绝之后就会恼羞成怒。',
-    quoteby: '同济一女生',
-    links: [
-      {
-        url: 'https://mp.weixin.qq.com/s/7mHi5aHY8OF7W6neX-zYEw',
-        title: '致每一个关心徐蜀辰涉嫌性骚扰同济女研究生事件的我们'
-      },
-      {
-        url: 'http://archive.li/t1bXj',
-        title: '时间轴——徐蜀辰涉嫌性骚扰同济女研究生事件'
-      }
-    ]
-  },
   wang_yipei: {
     name: '王以培',
     photo: 'Wang_Yipei.jpg',
