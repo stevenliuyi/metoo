@@ -1,6 +1,7 @@
 import React from 'react'
 import { Tooltip, OverlayTrigger } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
+import { GoMarkGithub } from 'react-icons/go'
 
 const Footer = props => (
   <div id="footer" className="unselectable">
@@ -27,6 +28,12 @@ const Footer = props => (
     </OverlayTrigger>
     &nbsp;‧&nbsp;
     <span className="footer-item">2018－2019</span>
+    &nbsp;&nbsp;
+    <OverlayTrigger placement="top" overlay={<Tooltip>本站源码</Tooltip>}>
+      <a href="https://github.com/stevenliuyi/metoo">
+        <GoMarkGithub size={15} style={{ transform: 'translateY(2px)' }} />
+      </a>
+    </OverlayTrigger>
     <div style={{ padding: '10px 20px 0px 20px' }}>
       本站内容皆从网络公开渠道收集，仅供参考，本站不对所涉及指控的真实性背书。
     </div>
