@@ -38,7 +38,12 @@ const data = {
         url: 'https://www.zhihu.com/question/271367761',
         title: '如何看待南京大学文学院针对沈阳发表的声明？'
       }
-    ]
+    ],
+    progress: {
+      text: '行政处罚',
+      link:
+        'https://t.cj.sina.com.cn/articles/view/6468995530/1819509ca01900dd38'
+    }
   },
   zhang_kangzhi: {
     name: '张康之',
@@ -131,8 +136,17 @@ const data = {
       {
         url: 'https://www.zhihu.com/question/286946568',
         title: '如何看待朱军被爆性骚扰？'
+      },
+      {
+        url: 'https://www.zhihu.com/question/296142968',
+        title:
+          '如何看待微博用户麦烧同学和弦子与她的朋友们被央视主持人朱军起诉？'
       }
-    ]
+    ],
+    progress: {
+      text: '受害人、爆料人被起诉，受害人反诉',
+      link: 'http://ent.sina.com.cn/s/m/2018-10-23/doc-ihmuuiyw5033670.shtml'
+    }
   },
   xie_luncan: {
     name: '谢伦灿',
@@ -235,7 +249,12 @@ const data = {
         url: 'https://www.zhihu.com/question/268889325',
         title: '如何评价 UIUC 教授徐钢造谣并威胁揭露他的王敖教授？'
       }
-    ]
+    ],
+    progress: {
+      text: '爆料人被起诉',
+      link:
+        'https://mp.weixin.qq.com/s?__biz=MzI2MjMzODUzOA==&mid=2247486940&idx=1&sn=6066e94acb8377a0ece896948dc9968b&'
+    }
   },
   zhang_peng: {
     name: '张鹏',
@@ -265,7 +284,11 @@ const data = {
         url: 'https://www.zhihu.com/question/284462232',
         title: '如何看待文章《她曾以为自己能逃开教授的手》？'
       }
-    ]
+    ],
+    progress: {
+      text: '行政处罚',
+      link: 'http://www.bjnews.com.cn/news/2018/07/10/494526.html'
+    }
   },
   yuan_tianpeng: {
     name: '袁天鹏',
@@ -424,9 +447,13 @@ const data = {
       {
         url:
           'https://zh.wikipedia.org/wiki/%E9%87%8A%E5%AD%A6%E8%AF%9A#%E7%96%91%E4%BC%BC%E4%B8%8D%E6%B3%95%E8%A1%8C%E4%B8%BA',
-        title: '释学诚#疑似不法行为'
+        title: '释学诚#举报落马'
       }
-    ]
+    ],
+    progress: {
+      text: '刑事调查',
+      link: 'http://www.sara.gov.cn/xwfb/xwjj20170905093618359691/583630.htm'
+    }
   },
   xin_lijian: {
     name: '信力建',
@@ -485,7 +512,11 @@ const data = {
         title:
           '如何看待北师大刑法学院院长、知名法学家赵秉志因生活作风问题被处分？'
       }
-    ]
+    ],
+    progress: {
+      text: '行政处罚',
+      link: 'https://m.sohu.com/a/243087690_118622'
+    }
   },
   chen_xiaowu: {
     name: '陈小武',
@@ -519,7 +550,11 @@ const data = {
           'https://zh.wikipedia.org/wiki/Me_Too#%E9%99%88%E5%B0%8F%E6%AD%A6%E4%BA%8B%E4%BB%B6',
         title: 'Me Too#陈小武事件'
       }
-    ]
+    ],
+    progress: {
+      text: '行政处罚',
+      link: 'http://www.xinhuanet.com/2018-01/12/c_1122248091.htm'
+    }
   },
   zhang_xiao: {
     name: '张晓',
@@ -539,7 +574,11 @@ const data = {
         url: 'https://www.zhihu.com/question/287458925',
         title: '如何评价西北大学张晓事件？'
       }
-    ]
+    ],
+    progress: {
+      text: '行政处罚',
+      link: 'http://www.cnr.cn/sxpd/sx/20180806/t20180806_524324617.shtml'
+    }
   },
   zhou_bin: {
     name: '周斌',
@@ -569,7 +608,11 @@ const data = {
         url: 'https://www.zhihu.com/question/264328124',
         title: '如何评价南昌大学国学院性侵事件？'
       }
-    ]
+    ],
+    progress: {
+      text: '举报人撤诉',
+      link: 'https://www.zhihu.com/question/297857430'
+    }
   },
   liu_jianjun: {
     name: '刘坚军',
@@ -759,7 +802,11 @@ const data = {
         url: 'https://mp.weixin.qq.com/s/ap7Bj3XiJ2R1CgHigodVmA',
         title: '「未遂」之后呢？成功say NO又如何？'
       }
-    ]
+    ],
+    progress: {
+      text: '爆料人被起诉',
+      link: 'http://www.sohu.com/a/276149060_642628'
+    }
   },
   xiao_kaiyu: {
     name: '肖开愚',
@@ -813,7 +860,11 @@ const data = {
         url: 'http://news.dwnews.com/china/news/2018-05-28/60060882.html',
         title: '北京高校再曝性侵案 中国人大开除知名副教授'
       }
-    ]
+    ],
+    progress: {
+      text: '被撤职',
+      link: 'http://news.dwnews.com/china/news/2018-05-28/60060882.html'
+    }
   },
   xie_yungeng: {
     name: '谢耘耕',
@@ -827,7 +878,11 @@ const data = {
         url: 'http://news.dwnews.com/china/news/2018-04-25/60054276.html',
         title: '涉嫌性骚扰 上海交大副院长被撤职'
       }
-    ]
+    ],
+    progress: {
+      text: '被撤职',
+      link: 'http://news.dwnews.com/china/news/2018-04-25/60054276.html'
+    }
   },
   zhou_fei: {
     name: '周非',
@@ -840,7 +895,11 @@ const data = {
     quoteby: '原WWF员工王琪',
     accusations: [
       { url: 'https://weibo.com/1757351275/GrAAXrgdU', title: '王琪指控微博' }
-    ]
+    ],
+    progress: {
+      text: '受害人被起诉',
+      link: 'https://weibo.com/1757351275/GDo7a2Ky7'
+    }
   },
   xiong_guangji: {
     name: '熊广基',
@@ -864,7 +923,11 @@ const data = {
         title:
           '如何评价湖南大学熊广基（原名熊伟）课堂上疑似传销，及其猥亵女学生事件？'
       }
-    ]
+    ],
+    progress: {
+      text: '行政处罚',
+      link: 'https://www.weibo.com/1851726313/GwgnQ2MUI'
+    }
   },
   pan_jieke: {
     name: '潘杰客',
@@ -1050,10 +1113,15 @@ const data = {
     links: [
       {
         url:
-          'https://mp.weixin.qq.com/s?__biz=MzIxNDE2MjM2Mw==&mid=2652151624&idx=1&sn=595c80d7c7916c1e2048e4322a0be680&chksm=8c4bf19cbb3c788a6cc3556e3a7044a78e322a37807ea64bafa0d83afdd4826ad1646d9d9c27&mpshare=1&scene=1&srcid=0813G3dVqTWw9OZsFPOg2ybG&pass_ticket=G6X%2BQWeS3Bc3c%2BqwuP5yO6EFMrajKQ9%2FF6d7O%2FE3%2BSug83JD9y9aanBBmIU0gVoM#rd',
+          'https://mp.weixin.qq.com/s?__biz=MzIxNDE2MjM2Mw==&mid=2652151624&idx=1&sn=595c80d7c7916c1e2048e4322a0be680',
         title: '川震社工明星刘猛性侵女员工立案：被害者要求其退出公益圈'
       }
-    ]
+    ],
+    progress: {
+      text: '被害人起诉',
+      link:
+        'https://mp.weixin.qq.com/s?__biz=MzIxNDE2MjM2Mw==&mid=2652151624&idx=1&sn=595c80d7c7916c1e2048e4322a0be680'
+    }
   },
   yang_guoqiang: {
     name: '杨国强',

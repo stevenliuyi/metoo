@@ -215,6 +215,13 @@ a {
   font-size: 14px;
 }
 
+#detail-links {
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
 #quote {
   width: 50%;
   text-align: right;
@@ -270,7 +277,24 @@ a {
 
 .link {
   font-size: 14px;
-  padding-bottom: 20px;
+  margin-right: 10px;
+  padding-bottom: 5px;
+}
+
+.link-label {
+  margin-right: 2px;
+}
+
+.link-progress {
+  vertical-align: middle;
+  margin-left: 2px;
+  font-size: 12px;
+  font-weight: normal;
+  color: #fff !important;
+}
+
+a > .link-progress:hover {
+  color: var(--main-color) !important;
 }
 
 .icon {
