@@ -26,7 +26,7 @@ const Footer = props => (
       <a href="mailto:contact@metoochina.me">联系我们</a>
     </OverlayTrigger>
     &nbsp;‧&nbsp;
-    <span className="footer-item">2018</span>
+    <span className="footer-item">2018－2019</span>
     <div style={{ padding: '10px 20px 0px 20px' }}>
       本站内容皆从网络公开渠道收集，仅供参考，本站不对所涉及指控的真实性背书。
     </div>

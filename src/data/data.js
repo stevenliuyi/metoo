@@ -26,7 +26,7 @@ const data = {
       {
         url:
           'https://zh.wikipedia.org/wiki/%E6%B2%88%E9%98%B3%E4%BA%8B%E4%BB%B6',
-        title: '沈阳事件 '
+        title: '沈阳事件'
       }
     ],
     zhihu: [
@@ -610,7 +610,7 @@ const data = {
       }
     ],
     progress: {
-      text: '举报人撤诉',
+      text: '受害人撤诉',
       link: 'https://www.zhihu.com/question/297857430'
     }
   },
@@ -667,9 +667,9 @@ const data = {
     intro: '迷笛公司副总裁',
     date: [2018, 7, 28],
     details:
-      '微博网友“我是落生”代一21岁女生发文指控周翊，表示她在2017年太湖迷笛音乐节做志愿者期间被周翊性侵，事后她被诊断为应激障碍与抑郁症。',
+      '微博网友“我是落生”代一21岁女生（再见罗丝）发文指控周翊，表示她在2017年太湖迷笛音乐节做志愿者期间被周翊性侵，事后她被诊断为应激障碍与抑郁症。',
     quote: '对所有女孩来说难忘的第一次，变成了让我难忘的噩梦和痛苦。',
-    quoteby: '匿名',
+    quoteby: '再见罗丝（网名）',
     accusations: [
       {
         url: 'https://www.weibo.com/5822334131/GrZtr9aZL',
@@ -681,7 +681,11 @@ const data = {
         url: 'https://www.zhihu.com/question/287291964',
         title: '如何看待微博里迷笛志愿者被性侵，以及张帆校长的回复？'
       }
-    ]
+    ],
+    progress: {
+      text: '受害人被起诉',
+      link: 'https://weibo.com/6384844902/H40We8iPf'
+    }
   },
   zeng_zhiwei: {
     name: '曾志伟',
@@ -1118,7 +1122,7 @@ const data = {
       }
     ],
     progress: {
-      text: '被害人起诉',
+      text: '受害人起诉',
       link:
         'https://mp.weixin.qq.com/s?__biz=MzIxNDE2MjM2Mw==&mid=2652151624&idx=1&sn=595c80d7c7916c1e2048e4322a0be680'
     }
@@ -1219,6 +1223,101 @@ const data = {
         title: '指控微博'
       }
     ]
+  },
+  wu_yonghong: {
+    name: '吴永厚',
+    photo: 'Wu_Yonghong.jpg',
+    intro: '甘肃庆阳六中教师',
+    date: [2018, 6, 20],
+    details:
+      '曾在庆阳六中就读的李奕奕于2018年6月20日跳楼自杀，后被爆出她在校期间曾被班主任吴永厚猥亵。',
+    quote: '我只感觉到了无边的黑暗、恐惧、羞辱还有恶心。',
+    quoteby: '李奕奕',
+    accusations: [
+      {
+        url: 'https://zhuanlan.zhihu.com/p/38544776',
+        title: '李奕奕生前控诉状'
+      }
+    ],
+    links: [
+      {
+        url: 'https://news.qq.com/a/20180626/001374.htm',
+        title: '甘肃庆阳通报女生跳楼事件：被班主任猥亵后4次自杀未遂'
+      }
+    ],
+    wikipedia: [
+      {
+        url:
+          'https://zh.wikipedia.org/wiki/%E5%BA%86%E9%98%B3%E5%A5%B3%E7%94%9F%E8%B7%B3%E6%A5%BC%E4%BA%8B%E4%BB%B6',
+        title: '庆阳女生跳楼事件'
+      }
+    ],
+    progress: {
+      text: '刑事诉讼',
+      link: 'http://china.caixin.com/2018-08-24/101318496.html'
+    }
+  },
+  zheng_mingzhang: {
+    name: '郑明璋',
+    intro: '临沂大学文学院教授',
+    date: [2018, 6, 30],
+    details:
+      '网友发贴爆料郑明璋长期骚扰女学生，并晒出其与一女生王清（化名）的聊天记录为证。',
+    quote:
+      '后来她考上了。读研时对我说，每次和我在一起，一会儿底下就湿了，特想让我做。',
+    quoteby: '郑明璋发给女生王清（化名）的微信',
+    links: [
+      {
+        url:
+          'https://tw.news.appledaily.com/international/realtime/20180701/1383199/',
+        title: '淫棍副教授骨折照約砲　稱女學生「和我在一起就濕」'
+      }
+    ],
+    progress: {
+      text: '行政处罚',
+      link: 'https://new.qq.com/omn/20180630/20180630A0JORD.html'
+    }
+  },
+  song_xiewei: {
+    name: '宋协伟',
+    photo: 'Song_Xiewei.jpg',
+    intro: '中央美术学院设计学院院长',
+    date: [2018, 8, 6],
+    details: '清华大学教授常江在微博发文称一中央美院学生指控宋协伟涉嫌猥亵。',
+    quote: '在咖啡店直接吻我，硬把舌头伸进嘴。',
+    quoteby: '中央美院一已毕业女生',
+    links: [
+      {
+        url: 'http://news.dwnews.com/china/news/2018-08-06/60075839.html',
+        title: '中央美院院长被举报猥亵 巴结前党委书记内幕曝光'
+      }
+    ]
+  },
+  gao_lei: {
+    name: '高雷',
+    intro: '长春中医药大学体育老师',
+    date: [2018, 7, 29],
+    details: '新浪微博网友“可爱的虫二二”指控高雷曾在学校仓库房里对其性骚扰。',
+    quote:
+      '他说别出声，随即强吻、摸胸、摸私处。在我推开他的时候，强行抓着我的手放在他的生殖器上。',
+    accusations: [
+      {
+        url: 'https://www.weibo.com/5863604021/GsaQ9pWyv',
+        title: '指控微博'
+      }
+    ],
+    links: [
+      {
+        url:
+          'http://jl.sina.com.cn/news/s/2018-07-30/detail-ihfxsxzi0855279.shtml',
+        title: '女生曝遭体育老师性骚扰 长春中医药大学已开展调查'
+      }
+    ],
+    progress: {
+      text: '行政处罚',
+      link:
+        'http://jl.sina.com.cn/news/s/2018-08-05/detail-ihhhczfa6430017.shtml'
+    }
   }
 }
 
