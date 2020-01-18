@@ -1317,7 +1317,22 @@ const data = {
       text: '行政处罚',
       link:
         'http://jl.sina.com.cn/news/s/2018-08-05/detail-ihhhczfa6430017.shtml'
-    }
+    },
+    yao_shunxi: {
+    name: '姚舜熙',
+    photo: 'Yao_Shunxi.jpg',
+    intro: '中央美术学院副教授',
+    date: [2019, 6, 10],
+    details: '40余名学生联名举报央美教授姚舜熙涉嫌猥亵。',
+    quote: '他以关心我的名义来摸我的心跳，但是他的手却直接摸到了胸部，上下挪动。',
+    quoteby: '中央美院一已毕业女生',
+    links: [
+      {
+        url: 'https://ishare.ifeng.com/c/s/7tCRKSBoPuU',
+        title: '“让我摸摸你的心跳快不快” 40余名学生联名举报央美教授涉嫌猥亵'
+      }
+    ]
+  },
   }
 }
 
