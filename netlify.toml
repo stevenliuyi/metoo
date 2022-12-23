@@ -1,0 +1,3 @@
+[build.environment]
+  NODE_VERSION = "8"
+  RUBY_VERSION = "2.7.4"
